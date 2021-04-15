@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Ancient Rim - Oriental/Desert Edition (unfinished)</name>
+  <author>koni</author>
+  <supportedVersions>
+    <li>1.0</li>
+    <li>1.1</li>
+  </supportedVersions>
+  <packageId>koni.ar.orient</packageId>
+  <description>Ancient Rim is a mod series that expands the cultural and technological timeline beyond the vanilla neolithic, industrial and spacer stages.
+This submod contains everything related to the ancient civilizations of Egypt and the old Orient.
+
+Details:
+
+Ancient Rim - Desert Edition is in development and only includes some pieces of Egyptian clothing and weaponry.
+Armour, furniture etc. as well as Persian and Mesopotamian styled items may follow.
+	</description>
+  <modDependencies>
+    <li>
+      <packageId>koni.ar.core</packageId>
+      <displayName>Ancient Rim - core</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/1734135259</steamWorkshopUrl>
+      <downloadUrl>https://www.dropbox.com/s/uisn03906v4be4y/AR_Core.7z?dl=0</downloadUrl>
+    </li>
+  </modDependencies>
+</ModMetaData>

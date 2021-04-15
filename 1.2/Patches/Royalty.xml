@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Esquire -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/RoyalTitleDef[defName = "Esquire"]/requiredApparel/li[1]/allowedTags</xpath>
+    <value>
+      <li>EgyptianNoble</li>
+      <li>EgyptianRoyal</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/RoyalTitleDef[defName = "Esquire"]/requiredApparel/li[2]/allowedTags</xpath>
+    <value>
+      <li>EgyptianNoble</li>
+      <li>EgyptianRoyal</li>
+    </value>
+  </Operation>
+  <!-- Knight -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/RoyalTitleDef[defName = "Knight"]/requiredApparel/li[1]/allowedTags</xpath>
+    <value>
+      <li>EgyptianNoble</li>
+      <li>EgyptianRoyal</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/RoyalTitleDef[defName = "Knight"]/requiredApparel/li[2]/allowedTags</xpath>
+    <value>
+      <li>EgyptianNoble</li>
+      <li>EgyptianRoyal</li>
+    </value>
+  </Operation>
+  <!-- Praetor -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/RoyalTitleDef[defName = "Praetor"]/requiredApparel/li[1]/allowedTags</xpath>
+    <value>
+      <li>EgyptianNoble</li>
+      <li>EgyptianRoyal</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/RoyalTitleDef[defName = "Praetor"]/requiredApparel/li[2]/allowedTags</xpath>
+    <value>
+      <li>EgyptianNoble</li>
+      <li>EgyptianRoyal</li>
+    </value>
+  </Operation>
+  <!-- Baron -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/RoyalTitleDef[defName = "Baron"]/requiredApparel/li[1]/allowedTags</xpath>
+    <value>
+      <li>EgyptianNoble</li>
+      <li>EgyptianRoyal</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/RoyalTitleDef[defName = "Baron"]/requiredApparel/li[2]/allowedTags</xpath>
+    <value>
+      <li>EgyptianNoble</li>
+      <li>EgyptianRoyal</li>
+    </value>
+  </Operation>
+  <!-- Count -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/RoyalTitleDef[defName = "Count"]/requiredApparel/li[1]/allowedTags</xpath>
+    <value>
+      <li>EgyptianNoble</li>
+      <li>EgyptianRoyal</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/RoyalTitleDef[defName = "Count"]/requiredApparel/li[2]/allowedTags</xpath>
+    <value>
+      <li>EgyptianNoble</li>
+      <li>EgyptianRoyal</li>
+    </value>
+  </Operation>
+  <!-- Duke and above -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/RoyalTitleDef[@Name="BaseEmpireTitleNPC"]/requiredApparel/li[1]/allowedTags</xpath>
+    <value>
+      <li>EgyptianNoble</li>
+      <li>EgyptianRoyal</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/RoyalTitleDef[@Name="BaseEmpireTitleNPC"]/requiredApparel/li[2]/allowedTags</xpath>
+    <value>
+      <li>EgyptianNoble</li>
+      <li>EgyptianRoyal</li>
+    </value>
+  </Operation>
+</Patch>
