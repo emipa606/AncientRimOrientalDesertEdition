@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <workGiverDef>
+    <defName>DoBillsMakeWeaponsB_AR</defName>
+    <label>make weapons</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Smithing</workType>
+    <priorityInType>115</priorityInType>
+    <fixedBillGiverDefs>
+      <li>AR_Smithy_Orient</li>
+    </fixedBillGiverDefs>
+    <verb>smith</verb>
+    <gerund>smithing at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </workGiverDef>
+</Defs>
