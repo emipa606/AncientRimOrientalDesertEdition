@@ -54,7 +54,7 @@
       </li>
     </tools>
     <comps>
-      <li Class="AncientRimShields.CompProperties_Shield">
+      <li Class="PawnShields.CompProperties_Shield">
         <wieldedGraphic>
           <graphicClass>Graphic_Multi</graphicClass>
           <texPath>Items/Shields/Tower</texPath>

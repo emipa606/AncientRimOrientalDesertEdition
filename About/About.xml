@@ -12,6 +12,11 @@
   </supportedVersions>
   <modDependencies>
     <li>
+      <packageId>jecrell.jecstools</packageId>
+      <displayName>JecsTools</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/932008009</steamWorkshopUrl>
+    </li>
+    <li>
       <packageId>CarnySenpai.EnableOversizedWeapons</packageId>
       <displayName>Enable Oversized Weapons</displayName>
       <steamWorkshopUrl>steam://url/CommunityFilePage/2543371889</steamWorkshopUrl>
@@ -23,6 +28,7 @@
     </li>
   </modDependencies>
   <loadAfter>
+    <li>jecrell.jecstools</li>
     <li>CarnySenpai.EnableOversizedWeapons</li>
     <li>Mlie.AncientRimCore</li>
   </loadAfter>
