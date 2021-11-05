@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HugsLib.UpdateFeatureDef Abstract="true" Name="UpdateFeatureBase">
+		<modNameReadable>AncientRimOrientalDesertEdition</modNameReadable>
+		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2458187428</linkUrl>
+	</HugsLib.UpdateFeatureDef>
+	<HugsLib.UpdateFeatureDef ParentName="UpdateFeatureBase">
+		<defName>AncientRimOrientalDesertEdition_1_0_3_0</defName>
+		<assemblyVersion>1.0.3.0</assemblyVersion>
+		<content>The smithy is now possible to build out of any metal. This will make it usable earlier as you do not have to research steel before using it. You might get an error if trying to deconstruct an older smithy as it is not made of any stuff. You can remove it with dev-tools or destroy it to remove it. Unfortunate but this is a limitation in the game.
+</content>
+	</HugsLib.UpdateFeatureDef>
+</Defs>
+

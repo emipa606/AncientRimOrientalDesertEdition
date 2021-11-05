@@ -1,5 +1,8 @@
 # Changelog for AncientRimOrientalDesertEdition
 
+1.0.3.0 - The smithy is now buildable of any metal
+
+
 1.0.2.0 - Added back Jecs tools dependency for shields compatibility reasons
 
 
