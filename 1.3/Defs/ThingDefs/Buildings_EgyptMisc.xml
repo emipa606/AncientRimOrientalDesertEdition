@@ -16,6 +16,7 @@
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
     </graphicData>
+	<dominantStyleCategory MayRequire="Sarg.AlphaMemes">AM_Kemetic</dominantStyleCategory>
     <size>(1,2)</size>
     <pathCost>70</pathCost>
     <castEdgeShadows>true</castEdgeShadows>
@@ -26,7 +27,7 @@
     <building>
       <ai_chillDestination>false</ai_chillDestination>
       <preventDeteriorationInside>true</preventDeteriorationInside>
-      <haulToContainerDuration>500</haulToContainerDuration>
+      <haulToContainerDuration>100</haulToContainerDuration>
       <fullGraveGraphicData>
         <texPath>Buildings/Misc/SarcophagusFull</texPath>
         <graphicClass>Graphic_Multi</graphicClass>
@@ -50,17 +51,32 @@
           </specialFiltersToDisallow>
         </filter>
       </defaultStorageSettings>
-    </building>
+		<buildingTags>
+			<li>RitualFocus</li>
+		</buildingTags>
+	</building>
+
+	<placeWorkers>
+		<li>PlaceWorker_RitualFocus</li>
+    </placeWorkers>
     <statBases>
       <WorkToBuild>3400</WorkToBuild>
       <MaxHitPoints>250</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Beauty>40</Beauty>
+	  <StyleDominance MayRequire="Sarg.AlphaMemes">500</StyleDominance>
     </statBases>
-    <stuffCategories>
-      <li>Woody</li>
+	<stuffCategories>
       <li>Metallic</li>
-      <li>Stony</li>
+      <li>Woody</li>
+	  <li>Stony</li>
+	  
+	  <!-- Mod support -->
+      <li MayRequire="Dubwise.Rimefeller">Plastic</li>
+      <li MayRequire="Dubwise.Rimefeller">Composite</li>
+      <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
     <inspectorTabs>
       <li>ITab_Storage</li>
@@ -88,9 +104,8 @@
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <staticSunShadowHeight>0.3</staticSunShadowHeight>
     <designationCategory>Misc</designationCategory>
-    <researchPrerequisites>
-      <li>ComplexFurniture</li>
-      <li>AR_Project_Oriental_Culture</li>
-    </researchPrerequisites>
+	<researchPrerequisites>
+		<li>AR_Project_Oriental_Culture</li>
+	</researchPrerequisites>
   </ThingDef>
 </Defs>

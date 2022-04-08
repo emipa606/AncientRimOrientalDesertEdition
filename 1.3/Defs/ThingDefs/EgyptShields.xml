@@ -3,34 +3,43 @@
   <ThingDef Name="OrientShields" Abstract="True" ParentName="BaseAncientShield">
     <recipeMaker>
       <recipeUsers>
-        <li>AR_Smithy_Orient</li>
+		<li>ElectricSmithy</li>
+		<li>FueledSmithy</li>
       </recipeUsers>
     </recipeMaker>
   </ThingDef>
   <!--0==============================0 General 0==============================0 -->
   <ThingDef ParentName="OrientShields">
     <defName>AR_TowerShield</defName>
-    <label>wooden tower shield</label>
+    <label>tower shield</label>
+	<description Inherit="False">A tall and heavy shield. Tower shields are the size of a man and designed to protect its user from all projectiles, covering him from head to toe.</description>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>Items/Shields/Tower_south</texPath>
       <drawSize>(1.2, 1.2)</drawSize>
     </graphicData>
-    <description>A tall and heavy shield.</description>
     <equipmentType>None</equipmentType>
-    <techLevel>Medieval</techLevel>
+    <techLevel>Neolithic</techLevel>
     <statBases>
       <WorkToMake>10000</WorkToMake>
       <MaxHitPoints>150</MaxHitPoints>
-      <Mass>1.0</Mass>
+      <Mass>1</Mass>
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.65</MoveSpeed>
     </equippedStatOffsets>
     <equippedAngleOffset>0</equippedAngleOffset>
-    <costList>
-      <WoodLog>110</WoodLog>
-    </costList>
+	<!-- SHUT MY MOUTH AND SLAP MY GRANDMA! IT NOW ACCEPTS STUFF!! -->
+	<costStuffCount>110</costStuffCount>
+	<stuffCategories>
+      <li>Woody</li>
+	  
+	  <!-- Mod support -->
+      <li MayRequire="Dubwise.Rimefeller">Plastic</li>
+      <li MayRequire="Dubwise.Rimefeller">Composite</li>
+      <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
+    </stuffCategories>
     <weaponTags>
       <li>ShieldsOrientHeavy</li>
     </weaponTags>

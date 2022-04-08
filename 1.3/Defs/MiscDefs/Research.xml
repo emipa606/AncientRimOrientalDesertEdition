@@ -2,9 +2,9 @@
 <Defs>
   <ResearchProjectDef>
     <defName>AR_Project_Oriental_Culture</defName>
-    <label>Oriental culture</label>
+    <label>Egyptian culture</label>
     <description>Discover the Egyptian and Mesopotamian way of life, like furniture and clothing.</description>
-    <baseCost>5000</baseCost>
+    <baseCost>2000</baseCost>
     <techLevel>Neolithic</techLevel>
     <tags>
       <li>EgyptStart</li>

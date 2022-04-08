@@ -15,7 +15,7 @@
       <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Smith</soundWorking>
       <recipeUsers>
-        <li>AR_Smithy_Orient</li>
+        <li>ElectricSmithy</li><li>FueledSmithy</li>
       </recipeUsers>
       <defaultIngredientFilter>
         <categories>

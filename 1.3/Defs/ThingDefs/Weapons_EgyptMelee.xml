@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef Name="BaseMeleeWeapon_Orient" Abstract="True" ParentName="BaseWeapon">
-    <techLevel>Medieval</techLevel>
+    <techLevel>Neolithic</techLevel>
     <smeltable>true</smeltable>
     <thingCategories>
       <li>WeaponsMelee</li>
@@ -13,7 +13,7 @@
       <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Smith</soundWorking>
       <recipeUsers>
-        <li>AR_Smithy_Orient</li>
+        <li>ElectricSmithy</li><li>FueledSmithy</li>
       </recipeUsers>
       <defaultIngredientFilter>
         <categories>
@@ -30,14 +30,14 @@
       <li>ITab_Art</li>
     </inspectorTabs>
     <comps>
-      <!--li><compClass>CompOversizedWeapon.CompOversizedWeapon</compClass></li-->
+      <li><compClass>CompOversizedWeapon.CompOversizedWeapon</compClass></li>
       <li>
         <compClass>CompQuality</compClass>
       </li>
       <li Class="CompProperties_Art">
         <nameMaker>NamerArtWeaponMelee</nameMaker>
         <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
-        <minQualityForArtistic>Excellent</minQualityForArtistic>
+        <minQualityForArtistic>Good</minQualityForArtistic>
       </li>
     </comps>
   </ThingDef>
@@ -45,36 +45,45 @@
   <ThingDef ParentName="BaseMeleeWeapon_Orient">
     <defName>AR_Khopesh</defName>
     <label>kopesh</label>
-    <description>A strangely curved sword which is at its concave side sharpened. Unboviosly it's good for both cutting for fencing.</description>
+    <description>A strangely curved sword which is at its concave side sharpened. It is good for both cutting and slashing.</description>
     <graphicData>
       <texPath>Items/Weapons/Khopesh</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costStuffCount>70</costStuffCount>
     <stuffCategories>
-      <li>Metallic</li>
+		<li>Metallic</li>
+
+		<!-- Mod Support -->
+	  	<li MayRequire="Dubwise.Rimefeller">Plastic</li>
+		<li MayRequire="Dubwise.Rimefeller">Composite</li>
+		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+		<li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
+		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
     <statBases>
       <WorkToMake>11500</WorkToMake>
-      <Mass>1</Mass>
+      <Mass>0.5</Mass>
     </statBases>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <weaponTags>
-      <li>EgyptianNoble</li>
+		<li>EgyptianLight</li>
+		<li>EgyptianNoble</li>
     </weaponTags>
     <tools>
       <li>
         <label>handle</label>
         <capacities>
-          <li>Blunt</li>
+          <li>Poke</li>
         </capacities>
         <power>9</power>
-        <cooldownTime>2</cooldownTime>
+        <cooldownTime>1</cooldownTime>
+		<chanceFactor>0.33</chanceFactor>
       </li>
       <li>
         <label>point</label>
         <capacities>
-          <li>Stab</li>
+          <li>Cut</li>
         </capacities>
         <power>16</power>
         <cooldownTime>1.5</cooldownTime>
@@ -83,6 +92,7 @@
         <label>edge</label>
         <capacities>
           <li>Cut</li>
+		  <li>Scratch</li>
         </capacities>
         <power>19</power>
         <cooldownTime>2</cooldownTime>
@@ -103,28 +113,33 @@
   <ThingDef ParentName="BaseMeleeWeapon_Orient">
     <defName>AR_SimpleAxe</defName>
     <label>simple axe</label>
-    <description>An primitve axe made from a wooden hanlde and a casted head.</description>
+    <description>A primitve axe made from a wooden hanlde and a casted head.</description>
     <graphicData>
       <texPath>Items/Weapons/Axe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
     </graphicData>
-    <costStuffCount>50</costStuffCount>
+    <costStuffCount>70</costStuffCount>
     <costList>
-      <WoodLog>50</WoodLog>
+      <WoodLog>15</WoodLog>
     </costList>
     <statBases>
       <WorkToMake>10000</WorkToMake>
       <Mass>1.6</Mass>
     </statBases>
     <equippedAngleOffset>-65</equippedAngleOffset>
-    <stuffCategories>
-      <li>Metallic</li>
+    <stuffCategories Inherit="False">
+		<li>Metallic</li>
+	  
+		<!-- Mod Support -->
+	  	<li MayRequire="Dubwise.Rimefeller">Plastic</li>
+		<li MayRequire="Dubwise.Rimefeller">Composite</li>
+		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
     <weaponTags>
-      <li>EgyptianLight</li>
-      <li>MedievalMeleeBasic</li>
-      <li>NeolithicMeleeBasic</li>
+		<li>Axe</li>
+		<li>EgyptianLight</li>
+		<li>NeolithicMeleeBasic</li>
     </weaponTags>
     <tools>
       <li>
@@ -133,7 +148,8 @@
           <li>Poke</li>
         </capacities>
         <power>9</power>
-        <cooldownTime>2</cooldownTime>
+        <cooldownTime>1</cooldownTime>
+		<chanceFactor>0.15</chanceFactor>
       </li>
       <li>
         <label>head</label>
@@ -146,14 +162,15 @@
     </tools>
     <recipeMaker>
       <skillRequirements>
-        <Crafting>3</Crafting>
+        <Crafting>0</Crafting>
       </skillRequirements>
     </recipeMaker>
   </ThingDef>
+
   <ThingDef ParentName="BaseMeleeWeapon_Orient">
     <defName>AR_EyeAxe</defName>
     <label>eye axe</label>
-    <description>An axe which head has two remarkable holes refering as eyes.</description>
+    <description>An axe with a head that has two remarkable holes; these holes look like like eyes and are what give the axe its name.</description>
     <graphicData>
       <texPath>Items/Weapons/EyeAxe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -162,7 +179,7 @@
     </graphicData>
     <costStuffCount>60</costStuffCount>
     <costList>
-      <WoodLog>60</WoodLog>
+      <WoodLog>30</WoodLog>
     </costList>
     <statBases>
       <WorkToMake>17500</WorkToMake>
@@ -170,11 +187,25 @@
     </statBases>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <stuffCategories>
-      <li>Metallic</li>
+		<li>Metallic</li>
+		
+		<!-- Mod Support -->
+	  	<li MayRequire="Dubwise.Rimefeller">Plastic</li>
+		<li MayRequire="Dubwise.Rimefeller">Composite</li>
+		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+		<li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
+		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
     <weaponTags>
-      <li>EgyptianNoble</li>
-      <li>EgyptianHeavy</li>
+		<li>Axe</li>
+		<li>EgyptianNoble</li>
+		<li>EgyptianHeavy</li>
+	  
+		<!-- Mod Support -->
+		<li>PeeledWeapon</li>
+		<li>PeeledWeaponMelee</li>
+		<li>PeeledWeaponMeleeBasic</li>
+		<li>GnomeMelee</li>
     </weaponTags>
     <tools>
       <li>
@@ -183,7 +214,8 @@
           <li>Poke</li>
         </capacities>
         <power>10</power>
-        <cooldownTime>2</cooldownTime>
+        <cooldownTime>1</cooldownTime>
+		<chanceFactor>0.15</chanceFactor>
       </li>
       <li>
         <label>head</label>
@@ -200,10 +232,11 @@
       </skillRequirements>
     </recipeMaker>
   </ThingDef>
+
   <ThingDef ParentName="BaseMeleeWeapon_Orient">
     <defName>AR_FanAxe</defName>
     <label>fan axe</label>
-    <description>An axe a very remarkable shape that its head is in an horizantal angle fixed at its shaft. Thought such an axe was never found by archeologist; only visible from hieroglyphs.</description>
+    <description>An axe with a very remarkable shape. Its head is in at a horizantal angle fixed at its shaft. On Old Earth, such an axe was never found by archeologists; it was only visible in hieroglyphics. However, transplanted Kemetic societies confirmed the initial hunch that this device had widespread use with Egyptian warriors.</description>
     <graphicData>
       <texPath>Items/Weapons/FanAxe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -212,7 +245,7 @@
     </graphicData>
     <costStuffCount>60</costStuffCount>
     <costList>
-      <WoodLog>60</WoodLog>
+      <WoodLog>40</WoodLog>
     </costList>
     <statBases>
       <WorkToMake>17500</WorkToMake>
@@ -223,8 +256,14 @@
       <li>Metallic</li>
     </stuffCategories>
     <weaponTags>
-      <li>EgyptianNoble</li>
-      <li>EgyptianHeavy</li>
+		<li>EgyptianNoble</li>
+		<li>EgyptianHeavy</li>
+
+		<!-- Mod Support -->
+		<li>PeeledWeapon</li>
+		<li>PeeledWeaponMelee</li>
+		<li>PeeledWeaponMeleeBasic</li>
+		<li>GnomeMelee</li>
     </weaponTags>
     <tools>
       <li>
@@ -239,6 +278,7 @@
         <label>head</label>
         <capacities>
           <li>Cut</li>
+		  <li>Stab</li> <!--  Cleaving -->
         </capacities>
         <power>27</power>
         <cooldownTime>3</cooldownTime>

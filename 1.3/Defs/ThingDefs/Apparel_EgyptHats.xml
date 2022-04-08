@@ -301,7 +301,7 @@
     <defName>AR_VultureCrown</defName>
     <label>Vulture Crown</label>
     <description>An egyptian kind of crown that resembles a vulture.</description>
-    <techLevel>Medieval</techLevel>
+    <techLevel>Neolithic</techLevel>
     <graphicData>
       <texPath>Items/Apparel/VultureCrownOnMap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -341,7 +341,7 @@
     <defName>AR_Usekh</defName>
     <label>Usekh</label>
     <description>A collar with many jewels.</description>
-    <techLevel>Medieval</techLevel>
+    <techLevel>Neolithic</techLevel>
     <graphicData>
       <texPath>Items/Apparel/UsekhOnMap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
