@@ -4,20 +4,21 @@
   <ThingDef ParentName="AncientHatMakeableBase">
     <defName>AR_Headscarf</defName>
     <label>egyptian headscarf</label>
-    <description>A rectangular piece of cloth worn around the head of common people from the Nile.</description>
+    <description>A rectangular piece of cloth worn around the head of common people from the Nile. Perfect for keeping people cool in the hot desert heat.</description>
     <graphicData>
       <texPath>Items/Apparel/HeadWrapOnMap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costStuffCount>25</costStuffCount>
     <stuffCategories>
-      <li>Fabric</li>
+		<li>Fabric</li>
+		<li>Leathery</li>
     </stuffCategories>
     <statBases>
-      <WorkToMake>6000</WorkToMake>
+      <WorkToMake>850</WorkToMake>
       <Mass>0.1</Mass>
       <StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Heat>0.6</StuffEffectMultiplierInsulation_Heat>
+      <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>0.8</EquipDelay>
     </statBases>
     <apparel>
@@ -29,10 +30,18 @@
         <li>Overhead</li>
       </layers>
       <tags>
-        <li>EgyptianBasic</li>
+		<li>EgyptianBasic</li>
+		
+		<!-- Mod Support -->
+		<li>BeetWear</li>
+		<li>JeubWear</li>
+		<li>ST_GnomeClothing</li>
+		<li>islam_head</li>
+		<li>Muslim_apparel</li>
       </tags>
       <defaultOutfitTags>
-        <li>Worker</li>
+		<li>Worker</li>
+		<li>Slave</li>
       </defaultOutfitTags>
     </apparel>
     <recipeMaker>
@@ -51,24 +60,25 @@
       </options>
     </colorGenerator>
   </ThingDef>
+
   <ThingDef ParentName="AncientHatMakeableBase">
     <defName>AR_SkullCap</defName>
-    <label>scull cap</label>
-    <description>A cap for the head.</description>
+    <label>skull cap</label>
+    <description>A cap for the head. Used by men for basic heat protection.</description>
     <graphicData>
       <texPath>Items/Apparel/CapOnMap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costStuffCount>15</costStuffCount>
     <stuffCategories>
-      <li>Fabric</li>
-      <li>Leathery</li>
+		<li>Fabric</li>
+		<li>Leathery</li>
     </stuffCategories>
     <statBases>
-      <WorkToMake>3000</WorkToMake>
-      <Mass>0.05</Mass>
-      <StuffEffectMultiplierInsulation_Heat>0.6</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>0.8</EquipDelay>
+      <WorkToMake>1000</WorkToMake>
+      <Mass>0.01</Mass>
+      <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.1</EquipDelay>
     </statBases>
     <apparel>
       <bodyPartGroups>
@@ -79,10 +89,15 @@
         <li>Overhead</li>
       </layers>
       <tags>
-        <li>EgyptianNoble</li>
+		<li>Neolithic</li>
+		<li>EgyptianBasic</li>
+		<li>EgyptianLight</li>
+		<li>OrientalLight</li>
       </tags>
+	  <gender>Male</gender>
       <defaultOutfitTags>
         <li>Worker</li>
+		<li>Slave</li>
       </defaultOutfitTags>
     </apparel>
     <recipeMaker>
@@ -101,11 +116,12 @@
       </options>
     </colorGenerator>
   </ThingDef>
+
   <!-- Military -->
   <ThingDef ParentName="AncientHatMakeableBase">
     <defName>AR_PaddedHelmet</defName>
     <label>egyptian padded helmet</label>
-    <description>A head covering set of laminar textile stripes..</description>
+    <description>A head covering set of laminar textile stripes.</description>
     <graphicData>
       <texPath>Items/Apparel/PaddedOnMap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -116,10 +132,10 @@
       <li>Leathery</li>
     </stuffCategories>
     <statBases>
-      <WorkToMake>6000</WorkToMake>
+      <WorkToMake>5000</WorkToMake>
       <Mass>1</Mass>
-      <StuffEffectMultiplierArmor>0.43</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Heat>0.6</StuffEffectMultiplierInsulation_Heat>
+      <StuffEffectMultiplierArmor>0.8</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>0.8</EquipDelay>
     </statBases>
     <apparel>
@@ -131,8 +147,10 @@
         <li>Overhead</li>
       </layers>
       <tags>
-        <li>OriantalLight</li>
-        <li>OriantalMedium</li>
+        <li>OrientalLight</li>
+        <li>OrientalMedium</li>
+		<li>EgyptianLight</li>
+		<li>EgyptianMedium</li>
       </tags>
       <defaultOutfitTags>
         <li>Soldier</li>
@@ -157,30 +175,45 @@
       </options>
     </colorGenerator>
   </ThingDef>
+
   <!-- Royal -->
   <ThingDef ParentName="AncientHatMakeableBase">
     <defName>AR_Nemes</defName>
     <label>Nemes</label>
-    <description>A crown that is made after the headscarf. It was popular to the Pharaos trough all era and not bound to ceremonies.</description>
+    <description>By far the most iconic crown in a pharaoh's wardrobe, the Nemes is a crown adapted from the headscarf. It was popular to the Pharaohs through all eras and, unlike the Pshent, it was not bound to ceremonies. Pharaohs wore this casually as a symbol of their authority and to cover their scalp, because Egyptian peasants were not allowed to see their pharaoh's head uncovered.</description>
     <graphicData>
-      <texPath>Items/Apparel/NemesOnMap</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+		<texPath>Items/Apparel/NemesOnMap</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<shaderType>CutoutComplex</shaderType>
     </graphicData>
+	<!-- SHUT MY MOUTH AND SLAP MY GRANDMA! IT NOW ACCEPTS STUFF! -->
+    <costStuffCount>100</costStuffCount>
+    <stuffCategories>
+		<li>Fabric</li>
+		<li>Leathery</li>
+
+		<!-- Mod Support -->
+		<li MayRequire="Dubwise.Rimefeller">Plastic</li>
+		<li MayRequire="Dubwise.Rimefeller">Composite</li>
+    </stuffCategories>
     <costList>
-      <Cloth>50</Cloth>
       <Gold>50</Gold>
     </costList>
     <statBases>
-      <WorkToMake>10000</WorkToMake>
-      <Mass>0.05</Mass>
-      <ArmorRating_Sharp>0.04</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.02</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.10</ArmorRating_Heat>
-      <Insulation_Heat>3</Insulation_Heat>
-      <EquipDelay>0.8</EquipDelay>
+		<WorkToMake>10000</WorkToMake>
+		<Mass>0.05</Mass>
+		<!--
+		<ArmorRating_Sharp>0.04</ArmorRating_Sharp>
+		<ArmorRating_Blunt>0.02</ArmorRating_Blunt>
+		<ArmorRating_Heat>0.10</ArmorRating_Heat>
+		-->
+		<StuffEffectMultiplierArmor>0.8</StuffEffectMultiplierArmor>
+		<StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
+		<EquipDelay>1.8</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <SocialImpact>0.5</SocialImpact>
+		<SocialImpact>0.5</SocialImpact>
+		<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.5</SlaveSuppressionOffset>
     </equippedStatOffsets>
     <apparel>
       <bodyPartGroups>
@@ -191,43 +224,55 @@
         <li>Overhead</li>
       </layers>
       <tags>
-        <li>EgyptianRoyal</li>
+		<li>EgyptianRoyal</li>
+		<li>Royal</li>
+		<li>RoyalTier1</li>
+		<li>RoyalTier2</li>
+		<li>RoyalTier3</li>
+		<li>RoyalTier4</li>
+		<li>RoyalTier5</li>
+		<li>RoyalTier6</li>
+		<li>RoyalTier7</li>
       </tags>
       <defaultOutfitTags>
         <li>Worker</li>
+		<li>Soldier</li>
       </defaultOutfitTags>
     </apparel>
     <recipeMaker>
       <researchPrerequisite>AR_Project_Oriental_Culture</researchPrerequisite>
       <skillRequirements>
-        <Crafting>6</Crafting>
+        <Crafting>5</Crafting>
       </skillRequirements>
     </recipeMaker>
   </ThingDef>
+
   <ThingDef ParentName="AncientHatMakeableBase">
     <defName>AR_Khepresh</defName>
-    <label>Khepresh</label>
-    <description>Also known as blue crown or war crown is a headgear for the Pharaos. It was mostly worn for war ceremonies and in battle.</description>
+    <label>Khepresh Crown</label>
+    <description>Also known as the blue crown or war crown, the Khepresh Crown was mostly worn by the Pharaoh when leading his armies or strategizing battle plans with his advisors.</description>
     <graphicData>
       <texPath>Items/Apparel/KhepreshOnMap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+	<tradeability>Sellable</tradeability>
     <costList>
       <Cloth>50</Cloth>
-      <Gold>50</Gold>
+      <Gold>10</Gold>
     </costList>
     <statBases>
-      <WorkToMake>10000</WorkToMake>
+      <WorkToMake>17000</WorkToMake>
       <Mass>0.05</Mass>
       <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.07</ArmorRating_Blunt>
       <ArmorRating_Heat>0.10</ArmorRating_Heat>
-      <Insulation_Heat>3</Insulation_Heat>
+      <Insulation_Heat>20</Insulation_Heat>
       <EquipDelay>0.8</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <SocialImpact>0.25</SocialImpact>
-      <PainShockThreshold>0.10</PainShockThreshold>
+		<SocialImpact>0.25</SocialImpact>
+		<PainShockThreshold>0.15</PainShockThreshold>
+		<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.4</SlaveSuppressionOffset>
     </equippedStatOffsets>
     <apparel>
       <bodyPartGroups>
@@ -241,7 +286,7 @@
         <li>EgyptianRoyal</li>
       </tags>
       <defaultOutfitTags>
-        <li>Worker</li>
+        <li>Soldier</li>
       </defaultOutfitTags>
     </apparel>
     <recipeMaker>
@@ -251,35 +296,138 @@
       </skillRequirements>
     </recipeMaker>
   </ThingDef>
+
   <ThingDef ParentName="AncientHatMakeableBase">
     <defName>AR_CylindricalCrown</defName>
-    <label>Cylindrical Crown</label>
-    <description>A crown in cylindrical shape. It was popular to the Pharaos trough all era and not bound to ceremonies.</description>
+    <label>Cylindrical Nomarch Crown</label>
+    <description>A crown in cylindrical shape. Nomarchs, the regional governors of Egypt, were known for wearing hats like this.</description>
     <graphicData>
       <texPath>Items/Apparel/CylindricalOnMap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <costList>
-      <Cloth>50</Cloth>
-      <Gold>50</Gold>
-    </costList>
+	<costList>
+		<Cloth>50</Cloth>
+		<Gold>50</Gold>
+	</costList>
     <statBases>
-      <WorkToMake>10000</WorkToMake>
+      <WorkToMake>7000</WorkToMake>
       <Mass>0.05</Mass>
-      <ArmorRating_Sharp>0.04</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.02</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.10</ArmorRating_Heat>
-      <Insulation_Heat>3</Insulation_Heat>
+      <ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.40</ArmorRating_Heat>
+      <Insulation_Heat>13</Insulation_Heat>
       <EquipDelay>0.8</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <SocialImpact>0.5</SocialImpact>
+		<SocialImpact>0.2</SocialImpact>
+		<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
     </equippedStatOffsets>
     <apparel>
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
       <wornGraphicPath>Items/Apparel/Hats/Cylindrical</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>EgyptianNomarch</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+      <researchPrerequisite>AR_Project_Oriental_Culture</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>2</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="OrientArmourMakeableBase">
+    <defName>AR_VultureCrown</defName>
+    <label>Vulture Crown</label>
+    <description>An Egyptian kind of crown that resembles a vulture.</description>
+    <techLevel>Neolithic</techLevel>
+    <graphicData>
+      <texPath>Items/Apparel/VultureCrownOnMap</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>50</costStuffCount>
+    <stuffCategories>
+		<li>Metallic</li>
+
+		<!-- Mod Support -->
+		<li MayRequire="Dubwise.Rimefeller">Composite</li>
+		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+    </stuffCategories>
+    <statBases>
+		<MaxHitPoints>800</MaxHitPoints>
+		<WorkToMake>9000</WorkToMake>
+		<Mass>1</Mass>
+		<EquipDelay>1.1</EquipDelay>
+		<StuffEffectMultiplierInsulation_Heat>2</StuffEffectMultiplierInsulation_Heat>
+    </statBases>
+    <equippedStatOffsets>
+		<SocialImpact>0.2</SocialImpact>
+		<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.5</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Items/Apparel/Hats/Vulture</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <defaultOutfitTags>
+        <li>Worker</li>
+		<li>Soldier</li>
+      </defaultOutfitTags>
+      <tags>
+		<li>EgyptianRoyal</li>
+      </tags>
+    </apparel>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+
+
+  <ThingDef ParentName="AncientHatMakeableBase">
+    <defName>TSP_AR_Egypt_DoubleCrown</defName>
+    <label>Pschent Crown</label>
+    <description>The final and most important crown worn by Pharaohs of Egypt. \n The Pschent Crown consisted of two parts: the Hedjet, which represented Upper Egypt, and the Deshret, which represented Lower Egypt. Combined, the Pschent Crown was a symbol of the Pharaoh's divinity and his control over the united Egyptian territory. As such, its usage for the most important ceremonies and rituals governing the religious principle of Ma'at (balance) and appeasement of the Egyptian pantheon. \n \n In less formal ceremonies, the Pharaoh would sometimes wear just the constituant parts of the crown, depending on what part of Egypt he was currently in.</description>
+    <graphicData>
+      <texPath>Items/Apparel/TSP_AR_Pschent_Dropped</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+		<Cloth>100</Cloth>
+		<Gold>50</Gold>
+    </costList>
+    <statBases>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>0.1</Mass>
+      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+      <ArmorRating_Heat>1</ArmorRating_Heat>
+      <Insulation_Heat>40</Insulation_Heat>
+      <EquipDelay>3</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+		<SocialImpact>0.5</SocialImpact>
+		<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.8</SlaveSuppressionOffset> <!-- Pharaohs were worshipped as gods and this hat is the symbol of their divinity -->
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Items/Apparel/Hats/TSP_Pschent/TSP_Pschent</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -297,46 +445,8 @@
       </skillRequirements>
     </recipeMaker>
   </ThingDef>
-  <ThingDef ParentName="OrientArmourMakeableBase">
-    <defName>AR_VultureCrown</defName>
-    <label>Vulture Crown</label>
-    <description>An egyptian kind of crown that resembles a vulture.</description>
-    <techLevel>Neolithic</techLevel>
-    <graphicData>
-      <texPath>Items/Apparel/VultureCrownOnMap</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <costStuffCount>50</costStuffCount>
-    <stuffCategories>
-      <li>Metallic</li>
-    </stuffCategories>
-    <statBases>
-      <MaxHitPoints>80</MaxHitPoints>
-      <WorkToMake>8000</WorkToMake>
-      <Mass>0.7</Mass>
-      <EquipDelay>0.8</EquipDelay>
-    </statBases>
-    <equippedStatOffsets>
-      <SocialImpact>0.2</SocialImpact>
-    </equippedStatOffsets>
-    <apparel>
-      <bodyPartGroups>
-        <li>UpperHead</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Items/Apparel/Hats/Vulture</wornGraphicPath>
-      <layers>
-        <li>Overhead</li>
-      </layers>
-      <tags>
-        <li>EgyptianRoyal</li>
-      </tags>
-    </apparel>
-    <recipeMaker>
-      <skillRequirements>
-        <Crafting>3</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-  </ThingDef>
+
+
   <!--ThingDef ParentName="OrientArmourMakeableBase">
     <defName>AR_Usekh</defName>
     <label>Usekh</label>
@@ -369,7 +479,7 @@
         <li>Overhead</li>
       </layers>
       <tags>
-		<li>Egyptian</li>
+		<li>EgyptianNoble</li>
       </tags>
     </apparel>
 	<recipeMaker>
