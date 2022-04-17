@@ -120,7 +120,7 @@
   <!-- Military -->
   <ThingDef ParentName="AncientHatMakeableBase">
     <defName>AR_PaddedHelmet</defName>
-    <label>egyptian padded helmet</label>
+    <label>padded helmet</label>
     <description>A head covering set of laminar textile stripes.</description>
     <graphicData>
       <texPath>Items/Apparel/PaddedOnMap</texPath>
@@ -151,6 +151,10 @@
         <li>OrientalMedium</li>
 		<li>EgyptianLight</li>
 		<li>EgyptianMedium</li>
+		<li>Neolithic</li>
+		<li>Tribal</li>
+		<li>MedievalMilitary</li>
+		<li>MedievalArmorBasic</li>
       </tags>
       <defaultOutfitTags>
         <li>Soldier</li>

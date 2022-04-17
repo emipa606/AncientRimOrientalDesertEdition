@@ -8,7 +8,7 @@
     <category>Building</category>
     <description>An impassable wall inscribed with hieroglyphs. Capable of holding up a roof.</description>
     <graphicData>
-      <texPath>Buildings/Structure/wall</texPath>
+      <texPath>Buildings/Structure/hieroglyphwall</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <linkType>CornerFiller</linkType>
       <linkFlags>
@@ -33,7 +33,7 @@
 		<WorkToBuild>400</WorkToBuild>
 		<Flammability>0.2</Flammability>
 		<Beauty>5</Beauty>
-		<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
+		<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">10</StyleDominance>
     </statBases>
     <costStuffCount>5</costStuffCount>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
@@ -65,6 +65,7 @@
 		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
 		<li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
 		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+		<li MayRequire="taoschagic.igloo">Snowy</li>
     </stuffCategories>
     <building>
       <isInert>true</isInert>
@@ -81,6 +82,7 @@
     </damageMultipliers>
     <researchPrerequisites>
 		<li>AR_Project_Oriental_Culture</li>
+		<li MayRequire="VanillaExpanded.VFEArt">VFE_Res_WallCarvings</li>
     </researchPrerequisites>
   </ThingDef>
 </Defs>

@@ -279,6 +279,7 @@
   </thingDef>
 
   <!-- Military -->
+  <!--
   <thingDef ParentName="OrientArmourMakeableBase">
     <defName>AR_BandArmour</defName>
     <description>Just some bands crossed over the torso. Not very protective, but it is better than nothing at all.</description>
@@ -288,11 +289,12 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costStuffCount>20</costStuffCount>
+	<generateCommonality>0.2</generateCommonality>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
 	  
-	  <!-- Mod Support -->
+	  Mod Support
       <li MayRequire="Dubwise.Rimefeller">Plastic</li>
       <li MayRequire="Dubwise.Rimefeller">Composite</li>
     </stuffCategories>
@@ -318,9 +320,6 @@
       </layers>
       <tags>
 		<li>OrientalLight</li>
-		<li>OrientalMedium</li>
-		<li>EgyptianLight</li>
-		<li>MedievalArmorBasic</li>
 		<li>Tribal</li>
 		<li>Neolithic</li>
       </tags>
@@ -328,7 +327,8 @@
         <li>Soldier</li>
       </defaultOutfitTags>
     </apparel>
-	<comps Inherit="False"> <!-- Does not care about Quality -->
+	Does not care about Quality
+	<comps Inherit="False">
 	</comps>
 	<recipeMaker>
 		<recipeUsers Inherit="False">
@@ -338,6 +338,7 @@
 		</recipeUsers>
 	</recipeMaker>
   </thingDef>
+  -->
 
   <thingDef ParentName="OrientArmourMakeableBase">
     <defName>AR_PaddedCuirass</defName>

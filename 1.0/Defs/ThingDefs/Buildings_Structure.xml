@@ -8,7 +8,7 @@
     <category>Building</category>
     <description>An impassable wall inscribed with hieroglyphs. Capable of holding up a roof.</description>
     <graphicData>
-      <texPath>Buildings/Structure/wall</texPath>
+      <texPath>Buildings/Structure/hieroglyphwall</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <linkType>CornerFiller</linkType>
       <linkFlags>
