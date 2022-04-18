@@ -11,6 +11,88 @@
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
 	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism]/addDesignators</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism]/addDesignatorGroups</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism]/addDesignatorGroups</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/TerrainDef[@Name="AM_KemeticTileStoneBase"]/researchPrerequisites</xpath>
+			<value>
+				<li>AR_Project_Oriental_Culture</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/TerrainDef[@Name="AM_Floor_KemeticFineTiles"]/researchPrerequisites</xpath>
+			<value>
+				<li>AR_Project_Oriental_Culture</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/TerrainDef[defName="AM_KemeticSlab_Medium"]/researchPrerequisites</xpath>
+			<value>
+				<li>AR_Project_Oriental_Culture</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/TerrainDef[defName="AM_KemeticSlab_Broad"]/researchPrerequisites</xpath>
+			<value>
+				<li>AR_Project_Oriental_Culture</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
 	<!-- Reconfigured Alpha Memes Pyramid for this Mod -->
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
@@ -25,6 +107,7 @@
 					<description>A gigantic structure whose outer surfaces are triangular and converge to a single step at the top.</description>
 					<thingClass Inherit="Flase">Building_Grave</thingClass>
 					<designationCategory>Misc</designationCategory>
+					<forceDebugSpawnable>true</forceDebugSpawnable>
 					<graphicData>
 						<graphicClass>Graphic_Single</graphicClass>
 						<texPath>Things/Building/BuildingStyles/Kemetic/AM_Pyramid</texPath>
@@ -221,18 +304,15 @@
 							<drawAssignmentOverlay>false</drawAssignmentOverlay>
 							<compClass>CompAssignableToPawn_Grave</compClass>
 						</li>
-						<li Class="CompProperties_AssignableToPawn">
-							<drawAssignmentOverlay>false</drawAssignmentOverlay>
-							<compClass>CompAssignableToPawn_Grave</compClass>
-						</li>
 					</comps>
 					<placeWorkers>
+						<li>PlaceWorker_RitualFocusNoArrow</li>
 						<li>PlaceWorker_MeditationOffsetBuildingsNear</li>
 						<li>PlaceWorker_RitualFocus</li>
 						<li>PlaceWorker_NotUnderRoof</li>
 					</placeWorkers>
 					<ritualFocus>
-						<spectateDistance>2~12</spectateDistance>
+						<spectateDistance>2~6</spectateDistance>
 						<allowedSpectateSides>All</allowedSpectateSides>
 					</ritualFocus>
 				</ThingDef>
