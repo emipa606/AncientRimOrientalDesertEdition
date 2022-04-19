@@ -10,6 +10,7 @@
 			<li>EgyptStart</li>
 		</tags>
 		<prerequisites>
+			<li>Stonecutting</li>
 			<li MayRequire="VanillaExpanded.VFEArt">VFE_Res_Obelisk</li>
 		</prerequisites>
 		<tab>AR_ResearchTab</tab>

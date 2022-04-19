@@ -6,6 +6,7 @@
 		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
+			<success>Always</success>
 			<xpath>Defs/ThingDef[defName="AM_Pyramid"]</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
@@ -16,7 +17,8 @@
 		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
-			<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism]/addDesignators</xpath>
+			<success>Always</success>
+			<xpath>/Defs/StyleCategoryDef[defName="AM_Kemetic"]/addDesignators</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
@@ -26,17 +28,8 @@
 		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
-			<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism]/addDesignatorGroups</xpath>
-		</match>
-		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
-	</Operation>
-	
-	<Operation Class="PatchOperationConditional">
-	<!-- DO THE GENTILES KNOW? -->
-		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
-		<!-- If they do, SHUT IT DOWN. -->
-		<match Class="PatchOperationRemove">
-			<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism]/addDesignatorGroups</xpath>
+			<success>Always</success>
+			<xpath>/Defs/StyleCategoryDef[defName="AM_Kemetic"]/addDesignatorGroups</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
 	</Operation>
@@ -46,6 +39,7 @@
 		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/TerrainDef[@Name="AM_KemeticTileStoneBase"]/researchPrerequisites</xpath>
 			<value>
 				<li>AR_Project_Oriental_Culture</li>
@@ -59,6 +53,7 @@
 		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/TerrainDef[@Name="AM_Floor_KemeticFineTiles"]/researchPrerequisites</xpath>
 			<value>
 				<li>AR_Project_Oriental_Culture</li>
@@ -70,9 +65,38 @@
 	<Operation Class="PatchOperationConditional">
 	<!-- Does this exist? -->
 		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/TerrainDef[@Name="AM_KemeticTileStoneBase"]/canGenerateDefaultDesignator</xpath>
+			<value>
+				<canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/TerrainDef[defName="AM_KemeticSlab_Medium"]/researchPrerequisites</xpath>
+			<success>Always</success>
+			<xpath>/Defs/TerrainDef[@Name="AM_KemeticFineStoneTiles"]</xpath>
+			<value>
+				<canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="AM_KemeticSlab_Medium"]/researchPrerequisites</xpath>
 			<value>
 				<li>AR_Project_Oriental_Culture</li>
 			</value>
@@ -85,7 +109,8 @@
 		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
-			<xpath>/Defs/TerrainDef[defName="AM_KemeticSlab_Broad"]/researchPrerequisites</xpath>
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="AM_KemeticSlab_Broad"]/researchPrerequisites</xpath>
 			<value>
 				<li>AR_Project_Oriental_Culture</li>
 			</value>
@@ -99,13 +124,15 @@
 		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs</xpath>
 			<value>
-				<ThingDef ParentName="BuildingBase">
+				<ThingDef ParentName="SteleBase">
 					<defName>TSP_AR_AM_Pyramid</defName>
 					<label>pyramid</label>
 					<description>A gigantic structure whose outer surfaces are triangular and converge to a single step at the top.</description>
-					<thingClass Inherit="Flase">Building_Grave</thingClass>
+					<category>Building</category>
+					<thingClass Inherit="False">Building_Grave</thingClass>
 					<designationCategory>Misc</designationCategory>
 					<forceDebugSpawnable>true</forceDebugSpawnable>
 					<graphicData>
@@ -142,19 +169,21 @@
 						<Flammability>0</Flammability>
 						<MeditationFocusStrength>0.3</MeditationFocusStrength>
 						<StyleDominance MayRequire="Sarg.AlphaMemes">10000</StyleDominance>
+						<SellPriceFactor>0</SellPriceFactor>
 					</statBases>
 					<altitudeLayer>MoteOverhead</altitudeLayer>
 					<passability>Impassable</passability>
 					<selectable>true</selectable>
 					<neverMultiSelect>true</neverMultiSelect>
-					<useStuffTerrainAffordance>true</useStuffTerrainAffordance>
+					<useStuffTerrainAffordance>false</useStuffTerrainAffordance>
 					<blockWind>true</blockWind>
 					<staticSunShadowHeight>2</staticSunShadowHeight>
 					<castEdgeShadows>true</castEdgeShadows>
 					<fillPercent>1</fillPercent>
-					<canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+					<canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
 					<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
 					<costStuffCount>1000</costStuffCount>
+					<tradeability>None</tradeability>
 					<stuffCategories>
 						<li>Stony</li>
 					</stuffCategories>
@@ -162,7 +191,7 @@
 						<preventDeteriorationInside>true</preventDeteriorationInside>
 						<haulToContainerDuration>0.001</haulToContainerDuration>
 						<sowTag>SupportPlantsOnly</sowTag>
-						<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+						<canPlaceOverImpassablePlant>true</canPlaceOverImpassablePlant>
 						<fullGraveGraphicData>
 							<texPath>Things/Building/BuildingStyles/Kemetic/AM_Pyramid</texPath>
 							<graphicClass>Graphic_Single</graphicClass>
@@ -235,13 +264,18 @@
 					<damageMultipliers>
 						<li>
 							<damageDef>Bomb</damageDef>
-							<multiplier>2.25</multiplier>
+							<multiplier>3</multiplier>
 						</li>
 						<li>
 							<damageDef>Demolish</damageDef>
 							<multiplier>1.5</multiplier>
 						</li>
+						<li>
+							<damageDef>Poke</damageDef>
+							<multiplier>0</multiplier>
+						</li>
 					</damageMultipliers>
+					
 					<comps Inherit="False">
 						<li>
 							<compClass>CompQuality</compClass>
@@ -301,7 +335,7 @@
 							</plantsToNotOverwrite>
 						</li>
 						<li Class="CompProperties_AssignableToPawn">
-							<drawAssignmentOverlay>false</drawAssignmentOverlay>
+							<drawAssignmentOverlay>true</drawAssignmentOverlay>
 							<compClass>CompAssignableToPawn_Grave</compClass>
 						</li>
 					</comps>

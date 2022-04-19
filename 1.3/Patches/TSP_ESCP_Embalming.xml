@@ -6,6 +6,7 @@
 		<xpath>/Defs/ThingDef[defName="ESCP_DunmerAshlanderMummy"]</xpath>
 		<!-- If they do, SHUT IT DOWN. -->
 		<match Class="PatchOperationRemove">
+			<success>Always</success>
 			<xpath>Defs/ThingDef[defName="ESCP_DunmerAshlanderMummy"]/maxTechLevelToBuild</xpath>
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
@@ -16,6 +17,7 @@
 		<xpath>/Defs/ResearchProjectDef[defName="ESCP_DunmerBurialPit"]</xpath>
 		<!-- If it does, add this. -->
 		<match Class="PatchOperationAdd">
+			<success>Always</success>
 			<xpath>/Defs/ResearchProjectDef[defName="ESCP_DunmerBurialPit"]/tags</xpath>
 			<value>
 				<li>EgyptStart</li>
