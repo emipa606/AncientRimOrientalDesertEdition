@@ -26,7 +26,7 @@
       <Mass>1</Mass>
     </statBases>
     <equippedStatOffsets>
-      <MoveSpeed>-0.65</MoveSpeed>
+      <MoveSpeed>-0.5</MoveSpeed>
     </equippedStatOffsets>
     <equippedAngleOffset>0</equippedAngleOffset>
 	<!-- SHUT MY MOUTH AND SLAP MY GRANDMA! IT NOW ACCEPTS STUFF!! -->
@@ -47,7 +47,7 @@
       <li>
         <label>side</label>
         <capacities>
-          <li>Poke</li>
+          <li>Blunt</li>
         </capacities>
         <power>12</power>
         <cooldownTime>2</cooldownTime>
@@ -56,7 +56,7 @@
         <label>buckle</label>
         <labelUsedInLogging>false</labelUsedInLogging>
         <capacities>
-          <li>Blunt</li>
+          <li>Poke</li>
         </capacities>
         <power>10.0</power>
         <cooldownTime>2.0</cooldownTime>
@@ -84,7 +84,7 @@
         <shieldTakeDamage>true</shieldTakeDamage>
         <shieldTakeDamageFactor>0.4</shieldTakeDamageFactor>
         <canBeAutoDiscarded>true</canBeAutoDiscarded>
-        <healthAutoDiscardThreshold>0.2</healthAutoDiscardThreshold>
+        <healthAutoDiscardThreshold>0.01</healthAutoDiscardThreshold>
         <useFatigue>true</useFatigue>
         <damageToFatigueFactor>0.005</damageToFatigueFactor>
       </li>
