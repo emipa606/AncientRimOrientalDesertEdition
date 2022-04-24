@@ -134,7 +134,7 @@
     <statBases>
       <WorkToMake>5000</WorkToMake>
       <Mass>1</Mass>
-      <StuffEffectMultiplierArmor>0.8</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierArmor>0.9</StuffEffectMultiplierArmor>
       <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>0.8</EquipDelay>
     </statBases>
@@ -184,12 +184,13 @@
   <ThingDef ParentName="AncientHatMakeableBase">
     <defName>AR_Nemes</defName>
     <label>Nemes</label>
-    <description>By far the most iconic crown in a pharaoh's wardrobe, the Nemes is a crown adapted from the headscarf. It was popular to the Pharaohs through all eras and, unlike the Pshent, it was not bound to ceremonies. Pharaohs wore this casually as a symbol of their authority and to cover their scalp, because Egyptian peasants were not allowed to see their pharaoh's head uncovered.</description>
+    <description>By far the most iconic crown in a pharaoh's wardrobe, the Nemes is a crown adapted from the headscarf. It was popular to the Pharaohs through all eras and, unlike the Pshent, it was not bound to ceremonies. In casual and everyday situations, pharaohs wore this as a symbol of their authority and to cover their scalp, because Egyptian peasants were not allowed to see their pharaoh's head uncovered.</description>
     <graphicData>
 		<texPath>Items/Apparel/NemesOnMap</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 		<shaderType>CutoutComplex</shaderType>
     </graphicData>
+	<tradeability>Sellable</tradeability>
 	<!-- SHUT MY MOUTH AND SLAP MY GRANDMA! IT NOW ACCEPTS STUFF! -->
     <costStuffCount>100</costStuffCount>
     <stuffCategories>
@@ -201,7 +202,7 @@
 		<li MayRequire="Dubwise.Rimefeller">Composite</li>
     </stuffCategories>
     <costList>
-      <Gold>50</Gold>
+      <Gold>25</Gold>
     </costList>
     <statBases>
 		<WorkToMake>10000</WorkToMake>
@@ -216,7 +217,7 @@
 		<EquipDelay>1.8</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-		<SocialImpact>0.5</SocialImpact>
+		<SocialImpact>0.4</SocialImpact>
 		<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.5</SlaveSuppressionOffset>
     </equippedStatOffsets>
     <apparel>
@@ -316,10 +317,10 @@
     <statBases>
       <WorkToMake>7000</WorkToMake>
       <Mass>0.05</Mass>
-      <ArmorRating_Sharp>0.01</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.01</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.40</ArmorRating_Heat>
-      <Insulation_Heat>13</Insulation_Heat>
+      <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.80</ArmorRating_Heat>
+      <Insulation_Heat>20</Insulation_Heat>
       <EquipDelay>0.8</EquipDelay>
     </statBases>
     <equippedStatOffsets>
@@ -369,7 +370,7 @@
     </stuffCategories>
     <statBases>
 		<MaxHitPoints>800</MaxHitPoints>
-		<WorkToMake>9000</WorkToMake>
+		<WorkToMake>7500</WorkToMake>
 		<Mass>1</Mass>
 		<EquipDelay>1.1</EquipDelay>
 		<StuffEffectMultiplierInsulation_Heat>2</StuffEffectMultiplierInsulation_Heat>
@@ -405,7 +406,7 @@
   <ThingDef ParentName="AncientHatMakeableBase">
     <defName>TSP_AR_Egypt_DoubleCrown</defName>
     <label>Pschent Crown</label>
-    <description>The final and most important crown worn by Pharaohs of Egypt. \n The Pschent Crown consisted of two parts: the Hedjet, which represented Upper Egypt, and the Deshret, which represented Lower Egypt. Combined, the Pschent Crown was a symbol of the Pharaoh's divinity and his control over the united Egyptian territory. As such, its usage for the most important ceremonies and rituals governing the religious principle of Ma'at (balance) and appeasement of the Egyptian pantheon. \n \n In less formal ceremonies, the Pharaoh would sometimes wear just the constituant parts of the crown, depending on what part of Egypt he was currently in.</description>
+    <description>The final and most important crown worn by Pharaohs of Egypt. \n The Pschent Crown consisted of two parts: the Hedjet Crown, which represented Upper Egypt, and the Deshret Crown, which represented Lower Egypt. Combined, the Pschent Crown was a symbol of the Pharaoh's divinity and his control over the united Egyptian territory. As such, its usage was reserved for the most important ceremonies and rituals governing the religious principle of Ma'at (balance) and appeasement of the Egyptian pantheon. \n \n In less formal religious ceremonies, the Pharaoh would sometimes wear just the constituant parts of the crown, depending on what part of Egypt he was currently in.</description>
     <graphicData>
       <texPath>Items/Apparel/TSP_AR_Pschent_Dropped</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -414,6 +415,7 @@
 		<Cloth>100</Cloth>
 		<Gold>50</Gold>
     </costList>
+	<tradeability>Sellable</tradeability>
     <statBases>
       <WorkToMake>18000</WorkToMake>
       <Mass>0.1</Mass>
