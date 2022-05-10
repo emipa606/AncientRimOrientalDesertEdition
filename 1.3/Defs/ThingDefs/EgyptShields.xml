@@ -8,6 +8,7 @@
       </recipeUsers>
     </recipeMaker>
   </ThingDef>
+
   <!--0==============================0 General 0==============================0 -->
   <ThingDef ParentName="OrientShields">
     <defName>AR_TowerShield</defName>
@@ -33,6 +34,7 @@
 	<costStuffCount>110</costStuffCount>
 	<stuffCategories>
       <li>Woody</li>
+	  <li>Stony</li>
 	  
 	  <!-- Mod support -->
       <li MayRequire="Dubwise.Rimefeller">Plastic</li>
@@ -46,6 +48,7 @@
     <tools>
       <li>
         <label>side</label>
+		<labelUsedInLogging>false</labelUsedInLogging>
         <capacities>
           <li>Blunt</li>
         </capacities>

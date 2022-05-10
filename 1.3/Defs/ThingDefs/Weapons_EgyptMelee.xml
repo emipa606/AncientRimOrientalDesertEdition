@@ -3,9 +3,9 @@
   <ThingDef Name="BaseMeleeWeapon_Orient" Abstract="True" ParentName="BaseWeapon">
     <techLevel>Neolithic</techLevel>
     <smeltable>true</smeltable>
-    <thingCategories>
-      <li>WeaponsMelee</li>
-    </thingCategories>
+	<thingCategories Inherit="False">
+		<li>TSP_AR_RomanMelee</li>
+	</thingCategories>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -44,7 +44,7 @@
   <!-- ================================= Swords ================================= -->
   <ThingDef ParentName="BaseMeleeWeapon_Orient">
     <defName>AR_Khopesh</defName>
-    <label>kopesh</label>
+    <label>khopesh</label>
     <description>A strangely curved sword which is at its concave side sharpened. It is good for both cutting and slashing.</description>
     <graphicData>
       <texPath>Items/Weapons/Khopesh</texPath>
@@ -69,6 +69,7 @@
     <weaponTags>
 		<li>EgyptianLight</li>
 		<li>EgyptianNoble</li>
+		<li>GnomeMelee</li>
     </weaponTags>
     <tools>
       <li>
@@ -105,67 +106,12 @@
     </comps>
     <recipeMaker>
       <skillRequirements>
-        <Crafting>6</Crafting>
+        <Crafting>4</Crafting>
       </skillRequirements>
     </recipeMaker>
   </ThingDef>
+
   <!-- ================================= Axes ================================= -->
-  <ThingDef ParentName="BaseMeleeWeapon_Orient">
-    <defName>AR_SimpleAxe</defName>
-    <label>simple axe</label>
-    <description>A primitve axe made from a wooden hanlde and a casted head.</description>
-    <graphicData>
-      <texPath>Items/Weapons/Axe</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-    </graphicData>
-    <costStuffCount>70</costStuffCount>
-    <costList>
-      <WoodLog>15</WoodLog>
-    </costList>
-    <statBases>
-      <WorkToMake>10000</WorkToMake>
-      <Mass>1.6</Mass>
-    </statBases>
-    <equippedAngleOffset>-65</equippedAngleOffset>
-    <stuffCategories Inherit="False">
-		<li>Metallic</li>
-	  
-		<!-- Mod Support -->
-	  	<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-		<li MayRequire="Dubwise.Rimefeller">Composite</li>
-		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
-    </stuffCategories>
-    <weaponTags>
-		<li>Axe</li>
-		<li>EgyptianLight</li>
-		<li>NeolithicMeleeBasic</li>
-    </weaponTags>
-    <tools>
-      <li>
-        <label>handle</label>
-        <capacities>
-          <li>Poke</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>1</cooldownTime>
-		<chanceFactor>0.15</chanceFactor>
-      </li>
-      <li>
-        <label>head</label>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>23</power>
-        <cooldownTime>3</cooldownTime>
-      </li>
-    </tools>
-    <recipeMaker>
-      <skillRequirements>
-        <Crafting>0</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-  </ThingDef>
 
   <ThingDef ParentName="BaseMeleeWeapon_Orient">
     <defName>AR_EyeAxe</defName>
@@ -193,7 +139,6 @@
 	  	<li MayRequire="Dubwise.Rimefeller">Plastic</li>
 		<li MayRequire="Dubwise.Rimefeller">Composite</li>
 		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-		<li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
 		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
     <weaponTags>
@@ -214,7 +159,7 @@
           <li>Poke</li>
         </capacities>
         <power>10</power>
-        <cooldownTime>1</cooldownTime>
+        <cooldownTime>2</cooldownTime>
 		<chanceFactor>0.15</chanceFactor>
       </li>
       <li>
@@ -236,7 +181,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Orient">
     <defName>AR_FanAxe</defName>
     <label>fan axe</label>
-    <description>An axe with a very remarkable shape. Its head is in at a horizantal angle fixed at its shaft. On Old Earth, such an axe was never found by archeologists; it was only visible in hieroglyphics. However, transplanted Kemetic societies confirmed the initial hunch that this device had widespread use with Egyptian warriors.</description>
+    <description>An axe with a very remarkable shape. Its head is at a horizantal angle, parallel to its shaft. On Old Earth, such an axe was never found by archeologists; it was only visible in hieroglyphics. However, transplanted Kemetic societies confirmed the initial hunch that this device had widespread use with Egyptian warriors.</description>
     <graphicData>
       <texPath>Items/Weapons/FanAxe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -253,7 +198,13 @@
     </statBases>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <stuffCategories>
-      <li>Metallic</li>
+		<li>Metallic</li>
+		
+		<!-- Mod Support -->
+	  	<li MayRequire="Dubwise.Rimefeller">Plastic</li>
+		<li MayRequire="Dubwise.Rimefeller">Composite</li>
+		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
     <weaponTags>
 		<li>EgyptianNoble</li>
