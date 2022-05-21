@@ -6,7 +6,7 @@
     <description>An ornamented burial receptacle for the honored dead.</description>
     <thingClass>Building_Sarcophagus</thingClass>
     <graphicData>
-      <texPath>Buildings/Misc/Sarcophagus</texPath>
+      <texPath>Buildings/Misc/EgyptSarcophagus</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(3,4)</drawSize>
       <damageData>
@@ -28,7 +28,7 @@
       <preventDeteriorationInside>true</preventDeteriorationInside>
       <haulToContainerDuration>500</haulToContainerDuration>
       <fullGraveGraphicData>
-        <texPath>Buildings/Misc/SarcophagusFull</texPath>
+        <texPath>Buildings/Misc/EgpytSarcophagusFull</texPath>
         <graphicClass>Graphic_Multi</graphicClass>
         <drawSize>(3,4)</drawSize>
       </fullGraveGraphicData>
