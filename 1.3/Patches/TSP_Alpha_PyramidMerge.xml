@@ -162,11 +162,11 @@
 						<li>ITab_ContentsCasket</li>
 					</inspectorTabs>
 					<statBases>
-						<MaxHitPoints>10000</MaxHitPoints>
+						<MaxHitPoints>30000</MaxHitPoints>
 						<Beauty>1000</Beauty>
 						<Mass>10000</Mass>
 						<WorkToBuild>300000</WorkToBuild>
-						<Flammability>0</Flammability>
+						<Flammability Inherit="False">0</Flammability>
 						<MeditationFocusStrength>0.3</MeditationFocusStrength>
 						<StyleDominance MayRequire="Sarg.AlphaMemes">10000</StyleDominance>
 						<SellPriceFactor>0</SellPriceFactor>
@@ -182,7 +182,7 @@
 					<fillPercent>1</fillPercent>
 					<canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
 					<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
-					<costStuffCount>1000</costStuffCount>
+					<costStuffCount>2000</costStuffCount>
 					<tradeability>None</tradeability>
 					<stuffCategories>
 						<li>Stony</li>
@@ -209,7 +209,7 @@
 							</filter>
 						</fixedStorageSettings>
 						<defaultStorageSettings>
-							<priority>Important</priority>
+							<priority>Critical</priority>
 							<filter>
 								<thingDefs>
 									<li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerAshlanderMummy</li>
@@ -268,10 +268,22 @@
 						</li>
 						<li>
 							<damageDef>Demolish</damageDef>
-							<multiplier>1.5</multiplier>
+							<multiplier>2</multiplier>
 						</li>
 						<li>
 							<damageDef>Poke</damageDef>
+							<multiplier>0.01</multiplier>
+						</li>
+						<li>
+							<damageDef>Blunt</damageDef>
+							<multiplier>0.01</multiplier>
+						</li>
+						<li>
+							<damageDef>Stab</damageDef>
+							<multiplier>0.1</multiplier>
+						</li>
+						<li>
+							<damageDef>Scratch</damageDef>
 							<multiplier>0</multiplier>
 						</li>
 					</damageMultipliers>
