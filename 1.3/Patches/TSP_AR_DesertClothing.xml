@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="Apparel_FSDesertRobe"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="Apparel_FSDesertRobe"]/apparel/tags</xpath>
+			<value>
+				<li>Muslim_apparel</li>
+				<li>EgyptianAdvanced</li>
+				<li>EgyptianScribe</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="Apparel_FSDesertRobe"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="AR_Scribe"]/apparelRequired</xpath>
+			<value>
+				<apparelRequired>
+					<li>Apparel_FSDesertRobe</li>
+				</apparelRequired>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="Apparel_FSDesertRobe"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/PawnKindDef[defName="AR_ETrader"]/apparelRequired</xpath>
+			<value>
+				<apparelRequired>
+					<li>Apparel_FSDesertRobe</li>
+				</apparelRequired>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+
+	<!--
+	<Operation Class="PatchOperationConditional">
+	Does this exist?
+		<xpath>/Defs/ThingDef[defName="SimpleWoodenShield"]</xpath>
+		If it does, add Mod support for the following Comps.
+		<match Class="PatchOperationAddModExtension">
+			<xpath>/Defs/PawnKindDef[defName="AR_ESpear"]</xpath>
+			<value>
+				<li Class="PawnShields.ShieldPawnGeneratorProperties">
+				<shieldMoney>
+					<min>100</min>
+					<max>300</max>
+				</shieldMoney>
+				<shieldTags>
+					<li>ShieldNubian</li>
+					<li>ShieldPersianLight</li>
+				</shieldTags>
+				</li>
+			</value>
+		</match>
+		If the first XPATH does not exist, the original code stands.
+	</Operation>
+	-->
+</Patch>

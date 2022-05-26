@@ -108,9 +108,6 @@
     <stuffCategories>
       <li>Fabric</li>
     </stuffCategories>
-    <thingCategories>
-      <li>Apparel</li>
-    </thingCategories>
     <statBases>
       <WorkToMake>2000</WorkToMake>
       <StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
@@ -160,7 +157,7 @@
   <thingDef ParentName="AncientApparelMakeableBase">
     <defName>AR_NetDress</defName>
     <label>net dress</label>
-    <description>A see-through dress covering just enough not to feel naked.</description>
+    <description>A see-through dress covering just enough not to feel entirely naked. Nudists don't mind wearing it. Do not wear it when it is cold out.</description>
     <graphicData>
       <texPath>Items/Apparel/NetDressOnMap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -168,20 +165,20 @@
     <costStuffCount>80</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>
+	  <li>Leathery</li>
     </stuffCategories>
-    <thingCategories>
-      <li>Apparel</li>
-    </thingCategories>
     <statBases>
       <WorkToMake>3000</WorkToMake>
       <StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Heat>1.5</StuffEffectMultiplierInsulation_Heat>
+	  <StuffEffectMultiplierInsulation_Cold>-0.2</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>2</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>0.01</EquipDelay>
-      <Mass>0.4</Mass>
+      <Mass>0.1</Mass>
     </statBases>
     <equippedStatOffsets>
 		<SocialImpact>0.1</SocialImpact>
     </equippedStatOffsets>
+	<generateCommonality>0.8</generateCommonality>
     <apparel>
       <bodyPartGroups>
         <li>Legs</li>
@@ -198,6 +195,8 @@
         <li>Worker</li>
       </defaultOutfitTags>
       <gender>Female</gender>
+		<canBeGeneratedToSatisfyWarmth Inherit="False">false</canBeGeneratedToSatisfyWarmth>
+		<countsAsClothingForNudity>false</countsAsClothingForNudity>
     </apparel>
     <colorGenerator Class="ColorGenerator_Options">
       <options>
@@ -232,7 +231,7 @@
       <li>Apparel</li>
     </thingCategories>
     <statBases>
-      <WorkToMake>2000</WorkToMake>
+      <WorkToMake>4000</WorkToMake>
       <StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
       <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>1.5</EquipDelay>
@@ -242,6 +241,7 @@
 		<SocialImpact>0.2</SocialImpact>
 		<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
     </equippedStatOffsets>
+	<generateCommonality>1.1</generateCommonality>
     <apparel>
       <bodyPartGroups>
         <li>Legs</li>
@@ -353,9 +353,6 @@
       <li>Fabric</li>
       <li>Leathery</li>
     </stuffCategories>
-    <thingCategories>
-      <li>Apparel</li>
-    </thingCategories>
     <statBases>
       <MaxHitPoints>500</MaxHitPoints>
       <WorkToMake>10000</WorkToMake>
@@ -413,9 +410,6 @@
 		<li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
 		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
-    <thingCategories>
-      <li>Apparel</li>
-    </thingCategories>
     <statBases>
       <WorkToMake>14000</WorkToMake>
       <Mass>10</Mass>
@@ -451,6 +445,7 @@
       </skillRequirements>
     </recipeMaker>
   </thingDef>
+
   <thingDef ParentName="OrientArmourMakeableBase">
     <defName>AR_ScaleArmour</defName>
     <description>Heavy armor laid in such a fashion as to resemble layers of scales. Unexpectedly effective to this day, and resistant to almost all melee weapons and even some projectiles.</description>
@@ -469,16 +464,13 @@
 		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
 		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
-    <thingCategories>
-      <li>Apparel</li>
-    </thingCategories>
     <equippedStatOffsets>
 		<MoveSpeed>-0.25</MoveSpeed>
     </equippedStatOffsets>
     <statBases>
       <WorkToMake>19000</WorkToMake>
       <Mass>12</Mass>
-      <StuffEffectMultiplierArmor>0.85</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierArmor>0.75</StuffEffectMultiplierArmor> <!-- By comparison, FLAK armor is 0.7 -->
       <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>10</EquipDelay>
     </statBases>
@@ -513,9 +505,10 @@
       </skillRequirements>
     </recipeMaker>
   </thingDef>
+
   <thingDef ParentName="OrientArmourMakeableBase">
     <defName>AR_VultureArmour</defName>
-    <description>Heavy rmor made of metallic scales and decorated with golden wings.</description>
+    <description>Heavy armor made of metallic scales and decorated with golden wings. Its protection exceeds that of almost all modern day armor, with the sole exception of Spacer Tech and Ultra Tech protection. The methods of its creation are a closely guarded secret. Gaining the ability to build them will require technology significantly advanced beyond the Egyptians that hold the Vulture Armor's hidden knowledge.</description>
     <label>vulture armor</label>
     <graphicData>
       <texPath>Items/Apparel/VultureArmourOnMap</texPath>
@@ -523,7 +516,7 @@
       <shaderType>CutoutComplex</shaderType>
     </graphicData>
 	<tradeability>Sellable</tradeability>
-    <costStuffCount>150</costStuffCount>
+    <costStuffCount>300</costStuffCount>
     <stuffCategories>
 		<li>Metallic</li>
 
@@ -537,19 +530,17 @@
     <costList>
       <Gold>30</Gold>
     </costList>
-    <thingCategories>
-      <li>Apparel</li>
-    </thingCategories>
     <equippedStatOffsets>
-		<MoveSpeed>-0.1</MoveSpeed>
-		<SocialImpact>0.25</SocialImpact>
+		<MoveSpeed>-0.25</MoveSpeed>
+		<SocialImpact>0.30</SocialImpact>
 		<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.6</SlaveSuppressionOffset>
+		<Beauty>1</Beauty>
     </equippedStatOffsets>
     <statBases>
-      <WorkToMake>22000</WorkToMake>
+      <WorkToMake>30000</WorkToMake>
       <Mass>6</Mass>
-      <StuffEffectMultiplierArmor>1</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+      <StuffEffectMultiplierArmor>0.85</StuffEffectMultiplierArmor> <!-- By comparison, FLAK Armor is 0.7 and Cataphract Armor is 1 -->
+      <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>10</EquipDelay>
     </statBases>
     <apparel>
@@ -582,5 +573,8 @@
         <Crafting>8</Crafting>
       </skillRequirements>
     </recipeMaker>
+	<comps>
+		<li Class="CompProperties_Biocodable"/>
+	</comps>
   </thingDef>
 </Defs>
