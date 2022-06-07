@@ -116,18 +116,7 @@
 		<li>CraftingSpot</li> <!-- Should inherit the other production centers from the Base -->
 	  </recipeUsers>
     </recipeMaker>
-    <colorGenerator Class="ColorGenerator_Options">
-      <options>
-        <li>
-          <weight>20</weight>
-          <only>(0,0,1,1)</only>
-        </li>
-        <li>
-          <weight>5</weight>
-          <only>(0.7,0.63,0.2,1)</only>
-        </li>
-      </options>
-    </colorGenerator>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
   <!-- Military -->
@@ -183,18 +172,7 @@
         <Crafting>3</Crafting>
       </skillRequirements>
     </recipeMaker>
-    <colorGenerator Class="ColorGenerator_Options">
-      <options>
-        <li>
-          <weight>20</weight>
-          <only>(1,1,1,1)</only>
-        </li>
-        <li>
-          <weight>5</weight>
-          <only>(0.7,0.63,0.2,1)</only>
-        </li>
-      </options>
-    </colorGenerator>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
   <!-- Royal -->
@@ -264,6 +242,7 @@
 		<canBeGeneratedToSatisfyWarmth Inherit="False">false</canBeGeneratedToSatisfyWarmth>
 		<countsAsClothingForNudity>false</countsAsClothingForNudity>
     </apparel>
+	<colorGenerator Class="ColorGenerator_StandardApparel" />
     <recipeMaker>
       <researchPrerequisite>AR_Project_Oriental_Culture</researchPrerequisite>
       <skillRequirements>
