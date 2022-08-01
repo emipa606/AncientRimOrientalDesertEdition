@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>Ancient Rim - Egyptian Edition (Continued)</name>
+  <name>Ancient Rim - Oriental/Desert Edition (Continued)</name>
   <packageId>Mlie.AncientRimOrientalDesertEdition</packageId>
   <author>koni</author>
   <url>https://github.com/emipa606/AncientRimOrientalDesertEdition</url>
@@ -31,8 +31,6 @@
     <li>jecrell.jecstools</li>
     <li>CarnySenpai.EnableOversizedWeapons</li>
     <li>Mlie.AncientRimCore</li>
-	<li>vanillaexpanded.vmemese</li>
-	<li>sarg.alphamemes</li>
   </loadAfter>
   <description>[img]https://i.imgur.com/buuPQel.png[/img]
 Update of konis mod
@@ -45,15 +43,20 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1907318659
         [td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
         [td][url=https://github.com/emipa606/AncientRimOrientalDesertEdition][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
     [/tr]
+    [tr]
+        [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
+        [td][img]https://i.imgur.com/Be8E2qJ.png[/img][/td]
+    [/tr]
 [/table]
 	
 [img]https://i.imgur.com/Z4GOv8H.png[/img]
 Ancient Rim is a mod series that expands the cultural and technological timeline beyond the vanilla neolithic, industrial and spacer stages.
-This submod contains everything related to the ancient civilizations of Egypt.
+This submod contains everything related to the ancient civilizations of Egypt and the old Orient.
 
 Details:
 
-Ancient Rim - Egyptian Edition is in development and only includes some pieces of Egyptian clothing and weaponry, with armour and furniture as well.
+Ancient Rim - Dessert Edition is in development and only includes some pieces of Egyptian clothing and weaponry.
+Armour, furniture etc. as well as Persian and Mesopotamian styled items may follow.
 
 [img]https://i.imgur.com/PwoNOj4.png[/img]
 [list]
@@ -64,5 +67,6 @@ Ancient Rim - Egyptian Edition is in development and only includes some pieces o
 [*] Do not report errors by making a discussion-thread, I get no notification of that.
 [*] If you have the solution for a problem, please post it to the GitHub repository.
 [/list]
+
 </description>
 </ModMetaData>
