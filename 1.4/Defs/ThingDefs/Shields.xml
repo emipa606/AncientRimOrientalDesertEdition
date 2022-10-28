@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="OrientShields" Abstract="True" ParentName="BaseAncientShield">
+    <recipeMaker>
+      <recipeUsers>
+        <li>AR_Smithy_Orient</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+  <!--0==============================0 General 0==============================0 -->
+  <ThingDef ParentName="OrientShields">
+    <defName>AR_TowerShield</defName>
+    <label>wooden tower shield</label>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Items/Shields/Tower_south</texPath>
+      <drawSize>(1.2, 1.2)</drawSize>
+    </graphicData>
+    <description>A tall and heavy shield.</description>
+    <equipmentType>None</equipmentType>
+    <techLevel>Medieval</techLevel>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>1.0</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.65</MoveSpeed>
+    </equippedStatOffsets>
+    <equippedAngleOffset>0</equippedAngleOffset>
+    <costList>
+      <WoodLog>110</WoodLog>
+    </costList>
+    <weaponTags>
+      <li>ShieldsOrientHeavy</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>side</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>buckle</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10.0</power>
+        <cooldownTime>2.0</cooldownTime>
+      </li>
+    </tools>
+    <comps>
+      <li Class="PawnShields.CompProperties_Shield">
+        <wieldedGraphic>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <texPath>Items/Shields/Tower</texPath>
+          <drawSize>(1.2, 1.2)</drawSize>
+        </wieldedGraphic>
+        <renderProperties>
+          <northOffset>(-0.1, -0.017, -0.2)</northOffset>
+          <southOffset>(0.1, 0.033, -0.2)</southOffset>
+          <westOffset>(-0.1, 0.053, -0.2)</westOffset>
+          <eastOffset>(0.1, -0.017, -0.2)</eastOffset>
+          <flipRotation>true</flipRotation>
+          <renderWhenPeaceful>false</renderWhenPeaceful>
+        </renderProperties>
+        <canBlockRanged>true</canBlockRanged>
+        <canBlockMelee>true</canBlockMelee>
+        <meleeBlockChanceFactor>0.7</meleeBlockChanceFactor>
+        <rangedBlockChanceFactor>0.7</rangedBlockChanceFactor>
+        <shieldTakeDamage>true</shieldTakeDamage>
+        <shieldTakeDamageFactor>0.4</shieldTakeDamageFactor>
+        <canBeAutoDiscarded>true</canBeAutoDiscarded>
+        <healthAutoDiscardThreshold>0.2</healthAutoDiscardThreshold>
+        <useFatigue>true</useFatigue>
+        <damageToFatigueFactor>0.005</damageToFatigueFactor>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- 0==============================0 Egyptian 0==============================0 -->
+</Defs>
