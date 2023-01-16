@@ -4,7 +4,7 @@
   <ThingDef ParentName="AncientHatMakeableBase">
     <defName>AR_Headscarf</defName>
     <label>egyptian headscarf</label>
-    <description>A rectangular piece of cloth worn around the head by common people from the Nile.</description>
+    <description>A rectangular piece of cloth worn around the head of common people from the Nile.</description>
     <graphicData>
       <texPath>Items/Apparel/HeadWrapOnMap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -53,7 +53,7 @@
   </ThingDef>
   <ThingDef ParentName="AncientHatMakeableBase">
     <defName>AR_SkullCap</defName>
-    <label>skull cap</label>
+    <label>scull cap</label>
     <description>A cap for the head.</description>
     <graphicData>
       <texPath>Items/Apparel/CapOnMap</texPath>
@@ -104,8 +104,8 @@
   <!-- Military -->
   <ThingDef ParentName="AncientHatMakeableBase">
     <defName>AR_PaddedHelmet</defName>
-    <label>Egyptian padded helmet</label>
-    <description>A set of layered strips of fabric for covering one's head.</description>
+    <label>egyptian padded helmet</label>
+    <description>A head covering set of laminar textile stripes..</description>
     <graphicData>
       <texPath>Items/Apparel/PaddedOnMap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -160,8 +160,8 @@
   <!-- Royal -->
   <ThingDef ParentName="AncientHatMakeableBase">
     <defName>AR_Nemes</defName>
-    <label>nemes</label>
-    <description>A crown designed after the headscarf. It was popular with the Pharaohs across the ages and not bound to ceremonies.</description>
+    <label>Nemes</label>
+    <description>A crown that is made after the headscarf. It was popular to the Pharaos trough all era and not bound to ceremonies.</description>
     <graphicData>
       <texPath>Items/Apparel/NemesOnMap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -206,8 +206,8 @@
   </ThingDef>
   <ThingDef ParentName="AncientHatMakeableBase">
     <defName>AR_Khepresh</defName>
-    <label>khepresh</label>
-    <description>Also known as a blue crown or a war crown, a headgear for the Pharaohs. It was mostly worn for war ceremonies and in battle.</description>
+    <label>Khepresh</label>
+    <description>Also known as blue crown or war crown is a headgear for the Pharaos. It was mostly worn for war ceremonies and in battle.</description>
     <graphicData>
       <texPath>Items/Apparel/KhepreshOnMap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -253,8 +253,8 @@
   </ThingDef>
   <ThingDef ParentName="AncientHatMakeableBase">
     <defName>AR_CylindricalCrown</defName>
-    <label>cylindrical crown</label>
-    <description>A cylinder-shaped crown. It was popular with the Pharaohs across the ages and not bound to ceremonies.</description>
+    <label>Cylindrical Crown</label>
+    <description>A crown in cylindrical shape. It was popular to the Pharaos trough all era and not bound to ceremonies.</description>
     <graphicData>
       <texPath>Items/Apparel/CylindricalOnMap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -299,8 +299,8 @@
   </ThingDef>
   <ThingDef ParentName="OrientArmourMakeableBase">
     <defName>AR_VultureCrown</defName>
-    <label>vulture crown</label>
-    <description>An Egyptian type of crown that resembles a vulture.</description>
+    <label>Vulture Crown</label>
+    <description>An egyptian kind of crown that resembles a vulture.</description>
     <techLevel>Medieval</techLevel>
     <graphicData>
       <texPath>Items/Apparel/VultureCrownOnMap</texPath>

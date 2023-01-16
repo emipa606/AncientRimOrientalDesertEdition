@@ -2,7 +2,7 @@
 <Defs>
   <ThingDef ParentName="BuildingBase">
     <defName>AR_SarcophagusA</defName>
-    <label>Egyptian sarcophagus</label>
+    <label>egyptian sarcophagus</label>
     <description>An ornamented burial receptacle for the honored dead.</description>
     <thingClass>Building_Sarcophagus</thingClass>
     <graphicData>

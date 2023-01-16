@@ -45,7 +45,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Orient">
     <defName>AR_Khopesh</defName>
     <label>kopesh</label>
-    <description>A strange, curved sword with a sharp inner edge. Surprisingly, it's good for both cutting for fencing.</description>
+    <description>A strangely curved sword which is at its concave side sharpened. Unboviosly it's good for both cutting for fencing.</description>
     <graphicData>
       <texPath>Items/Weapons/Khopesh</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -103,7 +103,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Orient">
     <defName>AR_SimpleAxe</defName>
     <label>simple axe</label>
-    <description>A primitive axe, made from a wooden handle and a cast head.</description>
+    <description>An primitve axe made from a wooden hanlde and a casted head.</description>
     <graphicData>
       <texPath>Items/Weapons/Axe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -153,7 +153,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Orient">
     <defName>AR_EyeAxe</defName>
     <label>eye axe</label>
-    <description>An axe with two remarkable holes in its head, compared to eyes.</description>
+    <description>An axe which head has two remarkable holes refering as eyes.</description>
     <graphicData>
       <texPath>Items/Weapons/EyeAxe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -203,7 +203,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Orient">
     <defName>AR_FanAxe</defName>
     <label>fan axe</label>
-    <description>An axe with a very remarkable shape: its head is fixed to the shaft at a horizontal angle. Still, such an axe has never been found by archeologist; we only know of them from hieroglyphs.</description>
+    <description>An axe a very remarkable shape that its head is in an horizantal angle fixed at its shaft. Thought such an axe was never found by archeologist; only visible from hieroglyphs.</description>
     <graphicData>
       <texPath>Items/Weapons/FanAxe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
