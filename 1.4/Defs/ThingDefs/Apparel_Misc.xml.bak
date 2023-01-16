@@ -34,8 +34,8 @@
   <!-- Civil -->
   <thingDef ParentName="AncientApparelMakeableBase">
     <defName>AR_Shendyt</defName>
-    <label>shendyt</label>
-    <description>A rectangular piece of cloth, wrappped around the waist.</description>
+    <label>Shendyt</label>
+    <description>A rectangular piece of cloth which is wrappped around the waist.</description>
     <graphicData>
       <texPath>Items/Apparel/ShendytOnMap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -144,7 +144,7 @@
   <thingDef ParentName="AncientApparelMakeableBase">
     <defName>AR_NetDress</defName>
     <label>net dress</label>
-    <description>A see-through dress, covering just enough to not feel naked.</description>
+    <description>A see-trough dress covering just enough not to feel naked.</description>
     <graphicData>
       <texPath>Items/Apparel/NetDressOnMap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -198,7 +198,7 @@
   <thingDef ParentName="AncientApparelMakeableBase">
     <defName>AR_EgyptFancy</defName>
     <label>fancy Egyptian dress</label>
-    <description>An elegant dress of thin woven cloth.</description>
+    <description>A elegant dress of thin woven cloth.</description>
     <graphicData>
       <texPath>Items/Apparel/FancyDressOnMap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -257,8 +257,8 @@
   <!-- Military -->
   <thingDef ParentName="OrientArmourMakeableBase">
     <defName>AR_BandArmour</defName>
-    <description>Just strips of fabric crossed over the torso. Not very protective, but better than nothing at all.</description>
-    <label>band armor</label>
+    <description>Just some textile bands crossed over the torso. Not very protective but better than nothing at all</description>
+    <label>band armour</label>
     <graphicData>
       <texPath>Items/Apparel/BandArmourOnMap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -298,7 +298,7 @@
   </thingDef>
   <thingDef ParentName="OrientArmourMakeableBase">
     <defName>AR_PaddedCuirass</defName>
-    <description>A chest covering set of layered strips of fabric.</description>
+    <description>A chest covering set of laminar textile stripes.</description>
     <label>padded cuirass</label>
     <graphicData>
       <texPath>Items/Apparel/PaddedCuirassOnMap</texPath>
@@ -345,7 +345,7 @@
   </thingDef>
   <thingDef ParentName="OrientArmourMakeableBase">
     <defName>AR_ScaleCuirass</defName>
-    <description>A light armor made of metallic scales.</description>
+    <description>A light armour made of metallic scales.</description>
     <label>scale cuirass</label>
     <graphicData>
       <texPath>Items/Apparel/ScaleCuirassOnMap</texPath>
@@ -392,8 +392,8 @@
   </thingDef>
   <thingDef ParentName="OrientArmourMakeableBase">
     <defName>AR_ScaleArmour</defName>
-    <description>A light armor made of metallic scales.</description>
-    <label>scale armor</label>
+    <description>A light armour made of metallic scales.</description>
+    <label>scale armour</label>
     <graphicData>
       <texPath>Items/Apparel/ScaleArmourOnMap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -444,8 +444,8 @@
   </thingDef>
   <thingDef ParentName="OrientArmourMakeableBase">
     <defName>AR_VultureArmour</defName>
-    <description>A light armor made of metallic scales and decorated with golden wings.</description>
-    <label>vulture armor</label>
+    <description>A light armour made of metallic scales and decorated with golden wings</description>
+    <label>vulture armour</label>
     <graphicData>
       <texPath>Items/Apparel/VultureArmourOnMap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
