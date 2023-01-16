@@ -15,7 +15,8 @@
       <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Smith</soundWorking>
       <recipeUsers>
-		<li>ElectricSmithy</li><li>FueledSmithy</li>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
       </recipeUsers>
       <defaultIngredientFilter>
         <categories>
@@ -42,8 +43,8 @@
     </graphicData>
     <costStuffCount>35</costStuffCount>
     <stuffCategories>
-		<li>Fabric</li>
-		<li>Leathery</li>
+      <li>Fabric</li>
+      <li>Leathery</li>
     </stuffCategories>
     <thingCategories>
       <li>Apparel</li>
@@ -56,9 +57,9 @@
       <EquipDelay>1.5</EquipDelay>
       <Mass>0.3</Mass>
     </statBases>
-	<equippedStatOffsets>
-		<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
-	</equippedStatOffsets>
+    <equippedStatOffsets>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">0.1</SlaveSuppressionOffset>
+    </equippedStatOffsets>
     <apparel>
       <bodyPartGroups>
         <li>Legs</li>
@@ -72,8 +73,8 @@
       </tags>
       <defaultOutfitTags>
         <li>Worker</li>
-		<li>Soldier</li>
-		<li>Slave</li>
+        <li>Soldier</li>
+        <li>Slave</li>
       </defaultOutfitTags>
     </apparel>
     <colorGenerator Class="ColorGenerator_Options">
@@ -89,13 +90,13 @@
       </options>
     </colorGenerator>
     <recipeMaker>
-		<researchPrerequisite>AR_Project_Oriental_Culture</researchPrerequisite>
-		<recipeUsers> <!-- Should be able to inherit this -->
-			<li>CraftingSpot</li>
-		</recipeUsers>
+      <researchPrerequisite>AR_Project_Oriental_Culture</researchPrerequisite>
+      <recipeUsers>
+        <!-- Should be able to inherit this -->
+        <li>CraftingSpot</li>
+      </recipeUsers>
     </recipeMaker>
   </thingDef>
-
   <thingDef ParentName="AncientApparelMakeableBase">
     <defName>AR_EgyptSimple</defName>
     <label>simple Egyptian dress</label>
@@ -128,10 +129,10 @@
       <tags>
         <li>EgyptianBasic</li>
       </tags>
-	  <gender>Female</gender>
+      <gender>Female</gender>
       <defaultOutfitTags>
-		<li>Worker</li>
-		<li>Slave</li>
+        <li>Worker</li>
+        <li>Slave</li>
       </defaultOutfitTags>
     </apparel>
     <colorGenerator Class="ColorGenerator_Options">
@@ -147,13 +148,13 @@
       </options>
     </colorGenerator>
     <recipeMaker>
-		<researchPrerequisite>AR_Project_Oriental_Culture</researchPrerequisite>
-		<recipeUsers> <!-- This should inherit from the Base -->
-			<li>CraftingSpot</li>
-		</recipeUsers>
+      <researchPrerequisite>AR_Project_Oriental_Culture</researchPrerequisite>
+      <recipeUsers>
+        <!-- This should inherit from the Base -->
+        <li>CraftingSpot</li>
+      </recipeUsers>
     </recipeMaker>
   </thingDef>
-
   <thingDef ParentName="AncientApparelMakeableBase">
     <defName>AR_NetDress</defName>
     <label>net dress</label>
@@ -165,20 +166,20 @@
     <costStuffCount>80</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>
-	  <li>Leathery</li>
+      <li>Leathery</li>
     </stuffCategories>
     <statBases>
       <WorkToMake>3000</WorkToMake>
       <StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
-	  <StuffEffectMultiplierInsulation_Cold>-0.2</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Cold>-0.2</StuffEffectMultiplierInsulation_Cold>
       <StuffEffectMultiplierInsulation_Heat>2</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>0.01</EquipDelay>
       <Mass>0.1</Mass>
     </statBases>
     <equippedStatOffsets>
-		<SocialImpact>0.1</SocialImpact>
+      <SocialImpact>0.1</SocialImpact>
     </equippedStatOffsets>
-	<generateCommonality>0.8</generateCommonality>
+    <generateCommonality>0.8</generateCommonality>
     <apparel>
       <bodyPartGroups>
         <li>Legs</li>
@@ -195,8 +196,8 @@
         <li>Worker</li>
       </defaultOutfitTags>
       <gender>Female</gender>
-		<canBeGeneratedToSatisfyWarmth Inherit="False">false</canBeGeneratedToSatisfyWarmth>
-		<countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <canBeGeneratedToSatisfyWarmth Inherit="False">false</canBeGeneratedToSatisfyWarmth>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
     </apparel>
     <colorGenerator Class="ColorGenerator_Options">
       <options>
@@ -207,13 +208,13 @@
       </options>
     </colorGenerator>
     <recipeMaker>
-		<researchPrerequisite>AR_Project_Oriental_Culture</researchPrerequisite>
-		<recipeUsers> <!-- This should inherit from the Base -->
-			<li>CraftingSpot</li>
-		</recipeUsers>
+      <researchPrerequisite>AR_Project_Oriental_Culture</researchPrerequisite>
+      <recipeUsers>
+        <!-- This should inherit from the Base -->
+        <li>CraftingSpot</li>
+      </recipeUsers>
     </recipeMaker>
   </thingDef>
-
   <thingDef ParentName="AncientApparelMakeableBase">
     <defName>AR_EgyptFancy</defName>
     <label>fancy Egyptian dress</label>
@@ -238,10 +239,10 @@
       <Mass>0.4</Mass>
     </statBases>
     <equippedStatOffsets>
-		<SocialImpact>0.2</SocialImpact>
-		<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
+      <SocialImpact>0.2</SocialImpact>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
     </equippedStatOffsets>
-	<generateCommonality>1.1</generateCommonality>
+    <generateCommonality>1.1</generateCommonality>
     <apparel>
       <bodyPartGroups>
         <li>Legs</li>
@@ -253,10 +254,10 @@
         <li>Middle</li>
       </layers>
       <tags>
-		<li>EgyptianNoble</li>
-		<li>EgyptialRoyal</li>
+        <li>EgyptianNoble</li>
+        <li>EgyptialRoyal</li>
       </tags>
-	  <gender>Female</gender>
+      <gender>Female</gender>
       <defaultOutfitTags>
         <li>Worker</li>
       </defaultOutfitTags>
@@ -277,7 +278,6 @@
       <researchPrerequisite>AR_Project_Oriental_Culture</researchPrerequisite>
     </recipeMaker>
   </thingDef>
-
   <!-- Military -->
   <!--
   <thingDef ParentName="OrientArmourMakeableBase">
@@ -339,7 +339,6 @@
 	</recipeMaker>
   </thingDef>
   -->
-
   <thingDef ParentName="OrientArmourMakeableBase">
     <defName>AR_PaddedCuirass</defName>
     <description>A chest covering set of laminar textile stripes.</description>
@@ -372,23 +371,23 @@
       <tags>
         <li>OrientalLight</li>
         <li>EgyptianLight</li>
-		<li>MedievalArmorBasic</li>
+        <li>MedievalArmorBasic</li>
       </tags>
       <defaultOutfitTags>
         <li>Soldier</li>
       </defaultOutfitTags>
     </apparel>
     <recipeMaker>
-		<researchPrerequisite>AR_Project_Light_Armour</researchPrerequisite>
-		<recipeUsers> <!-- This should inherit -->
-			<li>CraftingSpot</li>
-		</recipeUsers>
-		<skillRequirements>
-			<Crafting>1</Crafting>
-		</skillRequirements>
+      <researchPrerequisite>AR_Project_Light_Armour</researchPrerequisite>
+      <recipeUsers>
+        <!-- This should inherit -->
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>1</Crafting>
+      </skillRequirements>
     </recipeMaker>
   </thingDef>
-
   <thingDef ParentName="OrientArmourMakeableBase">
     <defName>AR_ScaleCuirass</defName>
     <description>A light armor made of material organized in layers of scales.</description>
@@ -399,16 +398,15 @@
     </graphicData>
     <costStuffCount>100</costStuffCount>
     <stuffCategories>
-		<li>Metallic</li>
-		<li>Stony</li>
-		<li>Woody</li>
-		
-		<!-- Mod Support -->
-		<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-		<li MayRequire="Dubwise.Rimefeller">Composite</li>
-		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-		<li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
-		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+      <li>Metallic</li>
+      <li>Stony</li>
+      <li>Woody</li>
+      <!-- Mod Support -->
+      <li MayRequire="Dubwise.Rimefeller">Plastic</li>
+      <li MayRequire="Dubwise.Rimefeller">Composite</li>
+      <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
     <statBases>
       <WorkToMake>14000</WorkToMake>
@@ -427,9 +425,9 @@
       </layers>
       <tags>
         <li>OrientalMedium</li>
-		<li>EgyptianMedium</li>
-		<li>MedievalMilitary</li>
-		<li>MedievalArmorDecent</li>
+        <li>EgyptianMedium</li>
+        <li>MedievalMilitary</li>
+        <li>MedievalArmorDecent</li>
       </tags>
       <defaultOutfitTags>
         <li>Soldier</li>
@@ -437,15 +435,15 @@
     </apparel>
     <recipeMaker>
       <researchPrerequisite>AR_Project_Chainmail</researchPrerequisite>
-	  <recipeUsers> <!-- This should inherit -->
-		<li>TableMachining</li>
-	  </recipeUsers>
+      <recipeUsers>
+        <!-- This should inherit -->
+        <li>TableMachining</li>
+      </recipeUsers>
       <skillRequirements>
         <Crafting>3</Crafting>
       </skillRequirements>
     </recipeMaker>
   </thingDef>
-
   <thingDef ParentName="OrientArmourMakeableBase">
     <defName>AR_ScaleArmour</defName>
     <description>Heavy armor laid in such a fashion as to resemble layers of scales. Unexpectedly effective to this day, and resistant to almost all melee weapons and even some projectiles.</description>
@@ -456,40 +454,40 @@
     </graphicData>
     <costStuffCount>200</costStuffCount>
     <stuffCategories>
-		<li>Metallic</li>
-		
-		<!-- Mod Support -->
-		<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-		<li MayRequire="Dubwise.Rimefeller">Composite</li>
-		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+      <li>Metallic</li>
+      <!-- Mod Support -->
+      <li MayRequire="Dubwise.Rimefeller">Plastic</li>
+      <li MayRequire="Dubwise.Rimefeller">Composite</li>
+      <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
     <equippedStatOffsets>
-		<MoveSpeed>-0.25</MoveSpeed>
+      <MoveSpeed>-0.25</MoveSpeed>
     </equippedStatOffsets>
     <statBases>
       <WorkToMake>19000</WorkToMake>
       <Mass>12</Mass>
-      <StuffEffectMultiplierArmor>0.75</StuffEffectMultiplierArmor> <!-- By comparison, FLAK armor is 0.7 -->
+      <StuffEffectMultiplierArmor>0.75</StuffEffectMultiplierArmor>
+      <!-- By comparison, FLAK armor is 0.7 -->
       <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>10</EquipDelay>
     </statBases>
     <apparel>
       <bodyPartGroups>
-		<li>Torso</li>
-		<li>Shoulders</li>
-		<li>Legs</li>
+        <li>Torso</li>
+        <li>Shoulders</li>
+        <li>Legs</li>
       </bodyPartGroups>
       <wornGraphicPath>Items/Apparel/ScaleArmour/Scale</wornGraphicPath>
       <layers>
         <li>Middle</li>
       </layers>
       <tags>
-		<li>OrientalHeavy</li>
-		<li>EgyptianHeavy</li>
-		<li>MedievalMilitary</li>
-		<li>MedievalArmorDecent</li>
-		<li>MedievalArmorElite</li>
+        <li>OrientalHeavy</li>
+        <li>EgyptianHeavy</li>
+        <li>MedievalMilitary</li>
+        <li>MedievalArmorDecent</li>
+        <li>MedievalArmorElite</li>
       </tags>
       <defaultOutfitTags>
         <li>Soldier</li>
@@ -497,15 +495,15 @@
     </apparel>
     <recipeMaker>
       <researchPrerequisite>AR_Project_Chainmail</researchPrerequisite>
-	  <recipeUsers> <!-- This should inherit -->
-		<li>TableMachining</li>
-	  </recipeUsers>
+      <recipeUsers>
+        <!-- This should inherit -->
+        <li>TableMachining</li>
+      </recipeUsers>
       <skillRequirements>
         <Crafting>7</Crafting>
       </skillRequirements>
     </recipeMaker>
   </thingDef>
-
   <thingDef ParentName="OrientArmourMakeableBase">
     <defName>AR_VultureArmour</defName>
     <description>Heavy armor made of metallic scales and decorated with golden wings. Its protection exceeds that of almost all modern day armor, with the sole exception of Spacer Tech and Ultra Tech protection. The methods of its creation are a closely guarded secret. Gaining the ability to build them will require technology significantly advanced beyond the Egyptians that hold the Vulture Armor's hidden knowledge.</description>
@@ -515,31 +513,31 @@
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
     </graphicData>
-	<tradeability>Sellable</tradeability>
+    <tradeability>Sellable</tradeability>
     <costStuffCount>300</costStuffCount>
     <stuffCategories>
-		<li>Metallic</li>
-
-		<!-- Mod Support -->
-		<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-		<li MayRequire="Dubwise.Rimefeller">Composite</li>
-		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-		<li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
-		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+      <li>Metallic</li>
+      <!-- Mod Support -->
+      <li MayRequire="Dubwise.Rimefeller">Plastic</li>
+      <li MayRequire="Dubwise.Rimefeller">Composite</li>
+      <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
     <costList>
       <Gold>30</Gold>
     </costList>
     <equippedStatOffsets>
-		<MoveSpeed>-0.25</MoveSpeed>
-		<SocialImpact>0.30</SocialImpact>
-		<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.6</SlaveSuppressionOffset>
-		<Beauty>1</Beauty>
+      <MoveSpeed>-0.25</MoveSpeed>
+      <SocialImpact>0.30</SocialImpact>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.6</SlaveSuppressionOffset>
+      <Beauty>1</Beauty>
     </equippedStatOffsets>
     <statBases>
       <WorkToMake>30000</WorkToMake>
       <Mass>6</Mass>
-      <StuffEffectMultiplierArmor>0.85</StuffEffectMultiplierArmor> <!-- By comparison, FLAK Armor is 0.7 and Cataphract Armor is 1 -->
+      <StuffEffectMultiplierArmor>0.85</StuffEffectMultiplierArmor>
+      <!-- By comparison, FLAK Armor is 0.7 and Cataphract Armor is 1 -->
       <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>10</EquipDelay>
     </statBases>
@@ -548,9 +546,9 @@
         <li>Torso</li>
         <li>Shoulders</li>
         <li>Legs</li>
-		<li>Arms</li>
-		<li>Feet</li>
-		<li>Neck</li>
+        <li>Arms</li>
+        <li>Feet</li>
+        <li>Neck</li>
       </bodyPartGroups>
       <wornGraphicPath>Items/Apparel/VultureArmour/Vulture</wornGraphicPath>
       <useWornGraphicMask>true</useWornGraphicMask>
@@ -566,15 +564,16 @@
     </apparel>
     <recipeMaker>
       <researchPrerequisite>AR_Project_Chainmail</researchPrerequisite>
-	  <recipeUsers> <!-- This should be inherited -->
-		<li>TableMachining</li>
-	  </recipeUsers>
+      <recipeUsers>
+        <!-- This should be inherited -->
+        <li>TableMachining</li>
+      </recipeUsers>
       <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>
     </recipeMaker>
-	<comps>
-		<li Class="CompProperties_Biocodable"/>
-	</comps>
+    <comps>
+      <li Class="CompProperties_Biocodable" />
+    </comps>
   </thingDef>
 </Defs>

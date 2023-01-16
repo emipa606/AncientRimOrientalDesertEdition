@@ -3,17 +3,16 @@
   <ThingDef Name="OrientShields" Abstract="True" ParentName="BaseAncientShield">
     <recipeMaker>
       <recipeUsers>
-		<li>ElectricSmithy</li>
-		<li>FueledSmithy</li>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
       </recipeUsers>
     </recipeMaker>
   </ThingDef>
-
   <!--0==============================0 General 0==============================0 -->
   <ThingDef ParentName="OrientShields">
     <defName>AR_TowerShield</defName>
     <label>tower shield</label>
-	<description Inherit="False">A tall and heavy shield. Tower shields are the size of a man and designed to protect its user from all projectiles, covering him from head to toe.</description>
+    <description Inherit="False">A tall and heavy shield. Tower shields are the size of a man and designed to protect its user from all projectiles, covering him from head to toe.</description>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>Items/Shields/Tower_south</texPath>
@@ -30,13 +29,12 @@
       <MoveSpeed>-0.5</MoveSpeed>
     </equippedStatOffsets>
     <equippedAngleOffset>0</equippedAngleOffset>
-	<!-- SHUT MY MOUTH AND SLAP MY GRANDMA! IT NOW ACCEPTS STUFF!! -->
-	<costStuffCount>110</costStuffCount>
-	<stuffCategories>
+    <!-- SHUT MY MOUTH AND SLAP MY GRANDMA! IT NOW ACCEPTS STUFF!! -->
+    <costStuffCount>110</costStuffCount>
+    <stuffCategories>
       <li>Woody</li>
-	  <li>Stony</li>
-	  
-	  <!-- Mod support -->
+      <li>Stony</li>
+      <!-- Mod support -->
       <li MayRequire="Dubwise.Rimefeller">Plastic</li>
       <li MayRequire="Dubwise.Rimefeller">Composite</li>
       <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
@@ -48,7 +46,7 @@
     <tools>
       <li>
         <label>side</label>
-		<labelUsedInLogging>false</labelUsedInLogging>
+        <labelUsedInLogging>false</labelUsedInLogging>
         <capacities>
           <li>Blunt</li>
         </capacities>

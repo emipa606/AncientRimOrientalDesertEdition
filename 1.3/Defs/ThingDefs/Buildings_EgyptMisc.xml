@@ -16,7 +16,7 @@
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
     </graphicData>
-	<dominantStyleCategory MayRequire="Sarg.AlphaMemes">AM_Kemetic</dominantStyleCategory>
+    <dominantStyleCategory MayRequire="Sarg.AlphaMemes">AM_Kemetic</dominantStyleCategory>
     <size>(1,2)</size>
     <pathCost>70</pathCost>
     <castEdgeShadows>true</castEdgeShadows>
@@ -51,32 +51,30 @@
           </specialFiltersToDisallow>
         </filter>
       </defaultStorageSettings>
-		<buildingTags>
-			<li>RitualFocus</li>
-		</buildingTags>
-	</building>
-
-	<placeWorkers>
-		<li>PlaceWorker_RitualFocus</li>
+      <buildingTags>
+        <li>RitualFocus</li>
+      </buildingTags>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_RitualFocus</li>
     </placeWorkers>
     <statBases>
-		<WorkToBuild>3400</WorkToBuild>
-		<MaxHitPoints>2500</MaxHitPoints>
-		<Flammability>0.05</Flammability>
-		<Beauty>40</Beauty>
-		<StyleDominance MayRequire="Sarg.AlphaMemes">300</StyleDominance>
+      <WorkToBuild>3400</WorkToBuild>
+      <MaxHitPoints>2500</MaxHitPoints>
+      <Flammability>0.05</Flammability>
+      <Beauty>40</Beauty>
+      <StyleDominance MayRequire="Sarg.AlphaMemes">300</StyleDominance>
     </statBases>
-	<stuffCategories>
-		<li>Metallic</li>
-		<li>Woody</li>
-		<li>Stony</li>
-
-		<!-- Mod support -->
-		<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-		<li MayRequire="Dubwise.Rimefeller">Composite</li>
-		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-		<li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
-		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+      <!-- Mod support -->
+      <li MayRequire="Dubwise.Rimefeller">Plastic</li>
+      <li MayRequire="Dubwise.Rimefeller">Composite</li>
+      <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
     <inspectorTabs>
       <li>ITab_Storage</li>
@@ -84,50 +82,50 @@
       <li>ITab_ContentsCasket</li>
     </inspectorTabs>
     <comps>
-		<li>
-			<compClass>CompQuality</compClass>
-		</li>
-		<li Class="CompProperties_Forbiddable" />
-		<li Class="CompProperties_Art">
-			<nameMaker>NamerArtSarcophagusPlate</nameMaker>
-			<descriptionMaker>ArtDescription_SarcophagusPlate</descriptionMaker>
-			<mustBeFullGrave>true</mustBeFullGrave>
-		</li>
-		<li Class="CompProperties_AssignableToPawn">
-			<drawAssignmentOverlay>false</drawAssignmentOverlay>
-			<compClass>CompAssignableToPawn_Grave</compClass>
-		</li>
-		<li Class="CompProperties_MeditationFocus">
-			<statDef>MeditationFocusStrength</statDef>
-			<focusTypes>
-				<li>Morbid</li>
-				<li>Dignified</li>
-			</focusTypes>
-			<offsets>
-				<li Class="FocusStrengthOffset_GraveFull">
-					<offset>0.12</offset>
-				</li>
-				<li Class="FocusStrengthOffset_GraveCorpseRelationship">
-					<offset>0.1</offset>
-				</li>
-				<li Class="FocusStrengthOffset_NearbyGraves">
-					<defs>
-						<li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerAshlanderMummy</li>
-						<li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerBurialUrn</li>
-						<li MayRequire="heis.edo.themed.expansion">HSHaka</li>
-						<li>AR_SarcophagusA</li>
-						<li>Sarcophagus</li>
-						<li>Grave</li>
-					</defs>
-					<!-- <offsetPerBuilding>0.0015</offsetPerBuilding> -->
-					<radius>9</radius>
-					<maxBuildings>6</maxBuildings>
-					<focusPerFullGrave>0.01</focusPerFullGrave>
-					<explanationKey>MeditationFocusPerGrave</explanationKey>
-					<explanationKeyAbstract>MeditationFocusPerGraveAbstract</explanationKeyAbstract>
-				</li>
-			</offsets>
-		</li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtSarcophagusPlate</nameMaker>
+        <descriptionMaker>ArtDescription_SarcophagusPlate</descriptionMaker>
+        <mustBeFullGrave>true</mustBeFullGrave>
+      </li>
+      <li Class="CompProperties_AssignableToPawn">
+        <drawAssignmentOverlay>false</drawAssignmentOverlay>
+        <compClass>CompAssignableToPawn_Grave</compClass>
+      </li>
+      <li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>Morbid</li>
+          <li>Dignified</li>
+        </focusTypes>
+        <offsets>
+          <li Class="FocusStrengthOffset_GraveFull">
+            <offset>0.12</offset>
+          </li>
+          <li Class="FocusStrengthOffset_GraveCorpseRelationship">
+            <offset>0.1</offset>
+          </li>
+          <li Class="FocusStrengthOffset_NearbyGraves">
+            <defs>
+              <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerAshlanderMummy</li>
+              <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerBurialUrn</li>
+              <li MayRequire="heis.edo.themed.expansion">HSHaka</li>
+              <li>AR_SarcophagusA</li>
+              <li>Sarcophagus</li>
+              <li>Grave</li>
+            </defs>
+            <!-- <offsetPerBuilding>0.0015</offsetPerBuilding> -->
+            <radius>9</radius>
+            <maxBuildings>6</maxBuildings>
+            <focusPerFullGrave>0.01</focusPerFullGrave>
+            <explanationKey>MeditationFocusPerGrave</explanationKey>
+            <explanationKeyAbstract>MeditationFocusPerGraveAbstract</explanationKeyAbstract>
+          </li>
+        </offsets>
+      </li>
     </comps>
     <costStuffCount>110</costStuffCount>
     <altitudeLayer>Building</altitudeLayer>
@@ -136,8 +134,8 @@
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <staticSunShadowHeight>0.3</staticSunShadowHeight>
     <designationCategory>Misc</designationCategory>
-	<researchPrerequisites>
-		<li>AR_Project_Oriental_Culture</li>
-	</researchPrerequisites>
+    <researchPrerequisites>
+      <li>AR_Project_Oriental_Culture</li>
+    </researchPrerequisites>
   </ThingDef>
 </Defs>

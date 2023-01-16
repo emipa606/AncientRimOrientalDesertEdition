@@ -27,13 +27,13 @@
       </damageData>
     </graphicData>
     <uiIconPath>Icon/HieroglyphicWall_MenuIcon</uiIconPath>
-	<dominantStyleCategory MayRequire="Sarg.AlphaMemes">AM_Kemetic</dominantStyleCategory>
+    <dominantStyleCategory MayRequire="Sarg.AlphaMemes">AM_Kemetic</dominantStyleCategory>
     <statBases>
-		<MaxHitPoints>350</MaxHitPoints>
-		<WorkToBuild>400</WorkToBuild>
-		<Flammability>0.5</Flammability>
-		<Beauty>7</Beauty>
-		<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">15</StyleDominance>
+      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToBuild>400</WorkToBuild>
+      <Flammability>0.5</Flammability>
+      <Beauty>7</Beauty>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">15</StyleDominance>
     </statBases>
     <costStuffCount>5</costStuffCount>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
@@ -55,17 +55,16 @@
     <blockLight>true</blockLight>
     <canOverlapZones>false</canOverlapZones>
     <stuffCategories>
-		<li>Metallic</li>
-		<li>Woody</li>
-		<li>Stony</li>
-
-		<!-- Mod Support -->
-	  	<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-		<li MayRequire="Dubwise.Rimefeller">Composite</li>
-		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-		<li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
-		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
-		<li MayRequire="taoschagic.igloo">Snowy</li>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+      <!-- Mod Support -->
+      <li MayRequire="Dubwise.Rimefeller">Plastic</li>
+      <li MayRequire="Dubwise.Rimefeller">Composite</li>
+      <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+      <li MayRequire="taoschagic.igloo">Snowy</li>
     </stuffCategories>
     <building>
       <isInert>true</isInert>
@@ -81,7 +80,7 @@
       </li>
     </damageMultipliers>
     <researchPrerequisites>
-		<li>AR_Project_Oriental_Culture</li>
+      <li>AR_Project_Oriental_Culture</li>
     </researchPrerequisites>
   </ThingDef>
 </Defs>

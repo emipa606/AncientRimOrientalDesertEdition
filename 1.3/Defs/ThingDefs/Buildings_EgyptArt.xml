@@ -10,24 +10,23 @@
       <texPath>Buildings/Art/Obelisk/Small</texPath>
       <drawSize>(5,5)</drawSize>
     </graphicData>
-	<dominantStyleCategory MayRequire="Sarg.AlphaMemes">AM_Kemetic</dominantStyleCategory>
+    <dominantStyleCategory MayRequire="Sarg.AlphaMemes">AM_Kemetic</dominantStyleCategory>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <fillPercent>0.5</fillPercent>
     <rotatable>true</rotatable>
-	<coversFloor>true</coversFloor>
+    <coversFloor>true</coversFloor>
     <statBases>
       <MaxHitPoints>250</MaxHitPoints>
       <Mass>7</Mass>
       <Beauty>100</Beauty>
       <WorkToMake>12000</WorkToMake>
-	  <StyleDominance MayRequire="Sarg.AlphaMemes">100</StyleDominance>
+      <StyleDominance MayRequire="Sarg.AlphaMemes">100</StyleDominance>
     </statBases>
-	<stuffCategories>
+    <stuffCategories>
       <li>Metallic</li>
       <li>Stony</li>
-	  <li>Woody</li>
-	  
-	  <!-- Mod support -->
+      <li>Woody</li>
+      <!-- Mod support -->
       <li MayRequire="Dubwise.Rimefeller">Plastic</li>
       <li MayRequire="Dubwise.Rimefeller">Composite</li>
       <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
@@ -36,21 +35,20 @@
     </stuffCategories>
     <costStuffCount>100</costStuffCount>
     <recipeMaker>
-		<researchPrerequisites>
-			<li>AR_Project_Oriental_Culture</li>
-			<li MayRequire="VanillaExpanded.VFEArt">VFE_Res_Obelisk</li>
-		</researchPrerequisites>
+      <researchPrerequisites>
+        <li>AR_Project_Oriental_Culture</li>
+        <li MayRequire="VanillaExpanded.VFEArt">VFE_Res_Obelisk</li>
+      </researchPrerequisites>
     </recipeMaker>
-	<building>
-		<buildingTags>
-			<li>RitualFocus</li>
-		</buildingTags>
-	</building>
-	<placeWorkers>
-		<li>PlaceWorker_RitualFocus</li>
+    <building>
+      <buildingTags>
+        <li>RitualFocus</li>
+      </buildingTags>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_RitualFocus</li>
     </placeWorkers>
   </ThingDef>
-
   <ThingDef ParentName="SculptureBase">
     <defName>AR_ObeliskMedium</defName>
     <label>medium obelisk</label>
@@ -60,48 +58,46 @@
       <texPath>Buildings/Art/Obelisk/Medium</texPath>
       <drawSize>(9,9)</drawSize>
     </graphicData>
-	<dominantStyleCategory MayRequire="Sarg.AlphaMemes">AM_Kemetic</dominantStyleCategory>
+    <dominantStyleCategory MayRequire="Sarg.AlphaMemes">AM_Kemetic</dominantStyleCategory>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <fillPercent>0.5</fillPercent>
     <rotatable>true</rotatable>
     <canOverlapZones>false</canOverlapZones>
     <blockWind>true</blockWind>
-	<holdsRoof>true</holdsRoof>
+    <holdsRoof>true</holdsRoof>
     <statBases>
       <MaxHitPoints>1000</MaxHitPoints>
       <Beauty>240</Beauty>
       <Mass>25</Mass>
       <WorkToMake>60000</WorkToMake>
-	  <StyleDominance MayRequire="Sarg.AlphaMemes">250</StyleDominance>
+      <StyleDominance MayRequire="Sarg.AlphaMemes">250</StyleDominance>
     </statBases>
-	<coversFloor>true</coversFloor>
+    <coversFloor>true</coversFloor>
     <stuffCategories>
       <li>Stony</li>
-	  <li>Metallic</li>
-	  
-	  <!-- Mod support -->
+      <li>Metallic</li>
+      <!-- Mod support -->
       <li MayRequire="Dubwise.Rimefeller">Composite</li>
       <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
       <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
     <costStuffCount>300</costStuffCount>
     <recipeMaker>
-		<researchPrerequisites>
-			<li>AR_Project_Oriental_Culture</li>
-			<li MayRequire="VanillaExpanded.VFEArt">VFE_Res_Obelisk</li>
-		</researchPrerequisites>
+      <researchPrerequisites>
+        <li>AR_Project_Oriental_Culture</li>
+        <li MayRequire="VanillaExpanded.VFEArt">VFE_Res_Obelisk</li>
+      </researchPrerequisites>
     </recipeMaker>
-	<building>
-		<buildingTags>
-			<li>RitualFocus</li>
-		</buildingTags>
-	</building>
-	<placeWorkers>
-		<li>PlaceWorker_RitualFocus</li>
-		<li>PlaceWorker_NotUnderRoof</li>
+    <building>
+      <buildingTags>
+        <li>RitualFocus</li>
+      </buildingTags>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_RitualFocus</li>
+      <li>PlaceWorker_NotUnderRoof</li>
     </placeWorkers>
   </ThingDef>
-
   <ThingDef ParentName="SculptureBase">
     <defName>AR_ObeliskBig</defName>
     <label>big obelisk</label>
@@ -111,45 +107,44 @@
       <texPath>Buildings/Art/Obelisk/Big</texPath>
       <drawSize>(9,9)</drawSize>
     </graphicData>
-	<dominantStyleCategory MayRequire="Sarg.AlphaMemes">AM_Kemetic</dominantStyleCategory>
+    <dominantStyleCategory MayRequire="Sarg.AlphaMemes">AM_Kemetic</dominantStyleCategory>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <size>(2,2)</size>
     <fillPercent>0.5</fillPercent>
     <rotatable>true</rotatable>
     <canOverlapZones>false</canOverlapZones>
     <blockWind>true</blockWind>
-	<coversFloor>true</coversFloor>
+    <coversFloor>true</coversFloor>
     <statBases>
       <MaxHitPoints>10000</MaxHitPoints>
       <Beauty>500</Beauty>
       <Mass>300</Mass>
       <WorkToMake>120000</WorkToMake>
-	  <StyleDominance MayRequire="Sarg.AlphaMemes">1000</StyleDominance>
+      <StyleDominance MayRequire="Sarg.AlphaMemes">1000</StyleDominance>
     </statBases>
     <stuffCategories>
       <li>Stony</li>
-	  <li>Metallic</li>
-	  
-	  <!-- Mod support -->
+      <li>Metallic</li>
+      <!-- Mod support -->
       <li MayRequire="Dubwise.Rimefeller">Composite</li>
       <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-	  <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
     <costStuffCount>600</costStuffCount>
     <recipeMaker>
-		<researchPrerequisites>
-			<li>AR_Project_Oriental_Culture</li>
-			<li MayRequire="VanillaExpanded.VFEArt">VFE_Res_Obelisk</li>
-		</researchPrerequisites>
+      <researchPrerequisites>
+        <li>AR_Project_Oriental_Culture</li>
+        <li MayRequire="VanillaExpanded.VFEArt">VFE_Res_Obelisk</li>
+      </researchPrerequisites>
     </recipeMaker>
-	<building>
-		<buildingTags>
-			<li>RitualFocus</li>
-		</buildingTags>
-	</building>
-	<placeWorkers>
-		<li>PlaceWorker_RitualFocus</li>
-		<li>PlaceWorker_NotUnderRoof</li>
+    <building>
+      <buildingTags>
+        <li>RitualFocus</li>
+      </buildingTags>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_RitualFocus</li>
+      <li>PlaceWorker_NotUnderRoof</li>
     </placeWorkers>
   </ThingDef>
 </Defs>
