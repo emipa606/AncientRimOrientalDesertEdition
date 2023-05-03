@@ -7,8 +7,8 @@
     <workType>Smithing</workType>
     <priorityInType>115</priorityInType>
     <fixedBillGiverDefs>
-		<li>ElectricSmithy</li>
-		<li>FueledSmithy</li>
+      <li>ElectricSmithy</li>
+      <li>FueledSmithy</li>
     </fixedBillGiverDefs>
     <verb>smith</verb>
     <gerund>smithing at</gerund>

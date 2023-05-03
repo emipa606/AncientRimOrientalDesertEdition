@@ -3,9 +3,9 @@
   <ThingDef Name="BaseMeleeWeapon_Orient" Abstract="True" ParentName="BaseWeapon">
     <techLevel>Neolithic</techLevel>
     <smeltable>true</smeltable>
-	<thingCategories Inherit="False">
-		<li>TSP_AR_RomanMelee</li>
-	</thingCategories>
+    <thingCategories Inherit="False">
+      <li>TSP_AR_RomanMelee</li>
+    </thingCategories>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -13,7 +13,8 @@
       <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Smith</soundWorking>
       <recipeUsers>
-        <li>ElectricSmithy</li><li>FueledSmithy</li>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
       </recipeUsers>
       <defaultIngredientFilter>
         <categories>
@@ -30,7 +31,9 @@
       <li>ITab_Art</li>
     </inspectorTabs>
     <comps>
-      <li><compClass>CompOversizedWeapon.CompOversizedWeapon</compClass></li>
+      <li>
+        <compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+      </li>
       <li>
         <compClass>CompQuality</compClass>
       </li>
@@ -52,14 +55,13 @@
     </graphicData>
     <costStuffCount>70</costStuffCount>
     <stuffCategories>
-		<li>Metallic</li>
-
-		<!-- Mod Support -->
-	  	<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-		<li MayRequire="Dubwise.Rimefeller">Composite</li>
-		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-		<li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
-		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+      <li>Metallic</li>
+      <!-- Mod Support -->
+      <li MayRequire="Dubwise.Rimefeller">Plastic</li>
+      <li MayRequire="Dubwise.Rimefeller">Composite</li>
+      <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
     <statBases>
       <WorkToMake>11500</WorkToMake>
@@ -67,9 +69,9 @@
     </statBases>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <weaponTags>
-		<li>EgyptianLight</li>
-		<li>EgyptianNoble</li>
-		<li>GnomeMelee</li>
+      <li>EgyptianLight</li>
+      <li>EgyptianNoble</li>
+      <li>GnomeMelee</li>
     </weaponTags>
     <tools>
       <li>
@@ -79,7 +81,7 @@
         </capacities>
         <power>9</power>
         <cooldownTime>1</cooldownTime>
-		<chanceFactor>0.33</chanceFactor>
+        <chanceFactor>0.33</chanceFactor>
       </li>
       <li>
         <label>point</label>
@@ -93,7 +95,7 @@
         <label>edge</label>
         <capacities>
           <li>Cut</li>
-		  <li>Scratch</li>
+          <li>Scratch</li>
         </capacities>
         <power>19</power>
         <cooldownTime>2</cooldownTime>
@@ -110,9 +112,7 @@
       </skillRequirements>
     </recipeMaker>
   </ThingDef>
-
   <!-- ================================= Axes ================================= -->
-
   <ThingDef ParentName="BaseMeleeWeapon_Orient">
     <defName>AR_EyeAxe</defName>
     <label>eye axe</label>
@@ -133,24 +133,22 @@
     </statBases>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <stuffCategories>
-		<li>Metallic</li>
-		
-		<!-- Mod Support -->
-	  	<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-		<li MayRequire="Dubwise.Rimefeller">Composite</li>
-		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+      <li>Metallic</li>
+      <!-- Mod Support -->
+      <li MayRequire="Dubwise.Rimefeller">Plastic</li>
+      <li MayRequire="Dubwise.Rimefeller">Composite</li>
+      <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
     <weaponTags>
-		<li>Axe</li>
-		<li>EgyptianNoble</li>
-		<li>EgyptianHeavy</li>
-	  
-		<!-- Mod Support -->
-		<li>PeeledWeapon</li>
-		<li>PeeledWeaponMelee</li>
-		<li>PeeledWeaponMeleeBasic</li>
-		<li>GnomeMelee</li>
+      <li>Axe</li>
+      <li>EgyptianNoble</li>
+      <li>EgyptianHeavy</li>
+      <!-- Mod Support -->
+      <li>PeeledWeapon</li>
+      <li>PeeledWeaponMelee</li>
+      <li>PeeledWeaponMeleeBasic</li>
+      <li>GnomeMelee</li>
     </weaponTags>
     <tools>
       <li>
@@ -160,7 +158,7 @@
         </capacities>
         <power>10</power>
         <cooldownTime>2</cooldownTime>
-		<chanceFactor>0.15</chanceFactor>
+        <chanceFactor>0.15</chanceFactor>
       </li>
       <li>
         <label>head</label>
@@ -177,7 +175,6 @@
       </skillRequirements>
     </recipeMaker>
   </ThingDef>
-
   <ThingDef ParentName="BaseMeleeWeapon_Orient">
     <defName>AR_FanAxe</defName>
     <label>fan axe</label>
@@ -198,23 +195,21 @@
     </statBases>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <stuffCategories>
-		<li>Metallic</li>
-		
-		<!-- Mod Support -->
-	  	<li MayRequire="Dubwise.Rimefeller">Plastic</li>
-		<li MayRequire="Dubwise.Rimefeller">Composite</li>
-		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+      <li>Metallic</li>
+      <!-- Mod Support -->
+      <li MayRequire="Dubwise.Rimefeller">Plastic</li>
+      <li MayRequire="Dubwise.Rimefeller">Composite</li>
+      <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+      <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
     <weaponTags>
-		<li>EgyptianNoble</li>
-		<li>EgyptianHeavy</li>
-
-		<!-- Mod Support -->
-		<li>PeeledWeapon</li>
-		<li>PeeledWeaponMelee</li>
-		<li>PeeledWeaponMeleeBasic</li>
-		<li>GnomeMelee</li>
+      <li>EgyptianNoble</li>
+      <li>EgyptianHeavy</li>
+      <!-- Mod Support -->
+      <li>PeeledWeapon</li>
+      <li>PeeledWeaponMelee</li>
+      <li>PeeledWeaponMeleeBasic</li>
+      <li>GnomeMelee</li>
     </weaponTags>
     <tools>
       <li>
@@ -229,7 +224,8 @@
         <label>head</label>
         <capacities>
           <li>Cut</li>
-		  <li>Stab</li> <!--  Cleaving -->
+          <li>Stab</li>
+          <!--  Cleaving -->
         </capacities>
         <power>27</power>
         <cooldownTime>3</cooldownTime>
