@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="AM_Pyramid"]</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/StyleCategoryDef[defName="AM_Kemetic"]/addDesignators</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/StyleCategoryDef[defName="AM_Kemetic"]/addDesignatorGroups</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/TerrainDef[@Name="AM_KemeticTileStoneBase"]/researchPrerequisites</xpath>
+			<value>
+				<li>AR_Project_Oriental_Culture</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/TerrainDef[@Name="AM_Floor_KemeticFineTiles"]/researchPrerequisites</xpath>
+			<value>
+				<li>AR_Project_Oriental_Culture</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/TerrainDef[@Name="AM_KemeticTileStoneBase"]/canGenerateDefaultDesignator</xpath>
+			<value>
+				<canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/TerrainDef[@Name="AM_KemeticFineStoneTiles"]</xpath>
+			<value>
+				<canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="AM_KemeticSlab_Medium"]/researchPrerequisites</xpath>
+			<value>
+				<li>AR_Project_Oriental_Culture</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="AM_KemeticSlab_Broad"]/researchPrerequisites</xpath>
+			<value>
+				<li>AR_Project_Oriental_Culture</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<!-- Reconfigured Alpha Memes Pyramid for this Mod -->
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+		<!-- If it does, add this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs</xpath>
+			<value>
+				<ThingDef ParentName="SteleBase">
+					<defName>TSP_AR_AM_Pyramid</defName>
+					<label>pyramid</label>
+					<description>A gigantic structure whose outer surfaces are triangular and converge to a single step at the top.</description>
+					<category>Building</category>
+					<thingClass Inherit="False">Building_Grave</thingClass>
+					<designationCategory>Misc</designationCategory>
+					<forceDebugSpawnable>true</forceDebugSpawnable>
+					<graphicData>
+						<graphicClass>Graphic_Single</graphicClass>
+						<texPath>Things/Building/BuildingStyles/Kemetic/AM_Pyramid</texPath>
+						<drawSize>(12.8,12.8)</drawSize>
+						<damageData>
+							<cornerTL>Damage/Corner</cornerTL>
+							<cornerTR>Damage/Corner</cornerTR>
+							<cornerBL>Damage/Corner</cornerBL>
+							<cornerBR>Damage/Corner</cornerBR>
+							<edgeTop>Damage/Edge</edgeTop>
+							<edgeBot>Damage/Edge</edgeBot>
+							<edgeLeft>Damage/Edge</edgeLeft>
+							<edgeRight>Damage/Edge</edgeRight>
+						</damageData>
+					</graphicData>
+					<uiIconPath>Icon/EgyptianCulture</uiIconPath>
+					<rotatable>false</rotatable>
+					<size>(12,12)</size>
+					<canOverlapZones>false</canOverlapZones>
+					<coversFloor>true</coversFloor>
+					<dominantStyleCategory MayRequire="Sarg.AlphaMemes">AM_Kemetic</dominantStyleCategory>
+					<inspectorTabs>
+						<li>ITab_Storage</li>
+						<li>ITab_Art</li>
+						<li>ITab_ContentsCasket</li>
+					</inspectorTabs>
+					<statBases>
+						<MaxHitPoints>30000</MaxHitPoints>
+						<Beauty>1000</Beauty>
+						<Mass>10000</Mass>
+						<WorkToBuild>300000</WorkToBuild>
+						<Flammability Inherit="False">0</Flammability>
+						<MeditationFocusStrength>0.3</MeditationFocusStrength>
+						<StyleDominance MayRequire="Sarg.AlphaMemes">10000</StyleDominance>
+						<SellPriceFactor>0</SellPriceFactor>
+					</statBases>
+					<altitudeLayer>MoteOverhead</altitudeLayer>
+					<passability>Impassable</passability>
+					<selectable>true</selectable>
+					<neverMultiSelect>true</neverMultiSelect>
+					<useStuffTerrainAffordance>false</useStuffTerrainAffordance>
+					<blockWind>true</blockWind>
+					<staticSunShadowHeight>2</staticSunShadowHeight>
+					<castEdgeShadows>true</castEdgeShadows>
+					<fillPercent>1</fillPercent>
+					<canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
+					<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+					<costStuffCount>2000</costStuffCount>
+					<tradeability>None</tradeability>
+					<stuffCategories>
+						<li>Stony</li>
+					</stuffCategories>
+					<building>
+						<preventDeteriorationInside>true</preventDeteriorationInside>
+						<haulToContainerDuration>0.001</haulToContainerDuration>
+						<sowTag>SupportPlantsOnly</sowTag>
+						<canPlaceOverImpassablePlant>true</canPlaceOverImpassablePlant>
+						<fullGraveGraphicData>
+							<texPath>Things/Building/BuildingStyles/Kemetic/AM_Pyramid</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+							<drawSize>(12.75,12.75)</drawSize>
+						</fullGraveGraphicData>
+						<fixedStorageSettings>
+							<filter>
+								<thingDefs>
+									<li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerAshlanderMummy</li>
+									<li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerBurialUrn</li>
+								</thingDefs>
+								<categories>
+									<li>Corpses</li>
+								</categories>
+							</filter>
+						</fixedStorageSettings>
+						<defaultStorageSettings>
+							<priority>Critical</priority>
+							<filter>
+								<thingDefs>
+									<li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerAshlanderMummy</li>
+									<li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerBurialUrn</li>
+								</thingDefs>
+								<categories>
+									<li>CorpsesHumanlike</li>
+								</categories>
+								<specialFiltersToDisallow>
+									<li>AllowCorpsesStranger</li>
+								</specialFiltersToDisallow>
+							</filter>
+						</defaultStorageSettings>
+						<repairable>true</repairable>
+						<isInert>true</isInert>
+						<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+						<ai_chillDestination>true</ai_chillDestination>
+						<buildingTags>
+							<li>RitualFocus</li>
+						</buildingTags>
+					</building>
+					<researchPrerequisites>
+						<li>AR_Project_Oriental_Culture</li>
+						<li MayRequire="vanillaexpanded.vfeart">VFE_Res_Monuments</li>
+					</researchPrerequisites>
+					<leaveResourcesWhenKilled Inherit="False">True</leaveResourcesWhenKilled>
+
+					<!-- Pyramids comes with their own foundations and, in RL, were built on unstable, soft, fine sand. Therefore, the presence of mud or any dirt is meaningless. Sadly, there is no such thing as an "anything but water" category, so this is the closest possible substitute. -->
+					<!-- <terrainAffordanceNeeded Inherit="False">None</terrainAffordanceNeeded> -->
+					
+					<!--
+					<recipeMaker>
+						<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+						<workSkill>Artistic</workSkill>
+						<unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+						<effectWorking>Sculpt</effectWorking>
+						<soundWorking>Recipe_Sculpt</soundWorking>
+						<recipeUsers>
+							<li>TableSculpting</li>
+						</recipeUsers>
+						<defaultIngredientFilter>
+							<categories>
+								<li>Root</li>
+							</categories>
+						</defaultIngredientFilter>
+						<memePrerequisitesAny>
+							<li>AM_Structure_Kemetism</li>
+						</memePrerequisitesAny>
+					</recipeMaker>
+					-->
+					
+					<damageMultipliers>
+						<li>
+							<damageDef>Bomb</damageDef>
+							<multiplier>3</multiplier>
+						</li>
+						<li>
+							<damageDef>Demolish</damageDef>
+							<multiplier>2</multiplier>
+						</li>
+						<li>
+							<damageDef>Poke</damageDef>
+							<multiplier>0.01</multiplier>
+						</li>
+						<li>
+							<damageDef>Blunt</damageDef>
+							<multiplier>0.01</multiplier>
+						</li>
+						<li>
+							<damageDef>Stab</damageDef>
+							<multiplier>0.1</multiplier>
+						</li>
+						<li>
+							<damageDef>Scratch</damageDef>
+							<multiplier>0</multiplier>
+						</li>
+					</damageMultipliers>
+					
+					<comps Inherit="False">
+						<li>
+							<compClass>CompQuality</compClass>
+						</li>
+						<li Class="CompProperties_Forbiddable" />
+						<li Class="CompProperties_MeditationFocus">
+							<statDef>MeditationFocusStrength</statDef>
+							<focusTypes>
+								<li>Artistic</li>
+								<li>Morbid</li>
+								<li>Dignified</li>
+							</focusTypes>
+							<offsets>
+								<li Class="FocusStrengthOffset_GraveFull">
+									<offset>0.2</offset>
+								</li>
+								<li Class="FocusStrengthOffset_GraveCorpseRelationship">
+									<offset>0.4</offset>
+								</li>
+								<li Class="FocusStrengthOffset_NearbyGraves">
+									<defs>
+										<li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerAshlanderMummy</li>
+										<li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerBurialUrn</li>
+										<li MayRequire="heis.edo.themed.expansion">HSHaka</li>
+										<li>AR_SarcophagusA</li>
+										<li>Sarcophagus</li>
+										<li>Grave</li>
+									</defs>
+								<!-- <offsetPerBuilding>0.015</offsetPerBuilding> -->
+								<radius>40</radius>
+								<maxBuildings>40</maxBuildings>
+								<focusPerFullGrave>0.0105</focusPerFullGrave>
+								<explanationKey>MeditationFocusPerGrave</explanationKey>
+								<explanationKeyAbstract>MeditationFocusPerGraveAbstract</explanationKeyAbstract>
+								</li>
+							</offsets>
+						</li>
+						<li Class="CompProperties_Art">
+							<nameMaker>NamerArtSarcophagusPlate</nameMaker>
+							<descriptionMaker>ArtDescription_SarcophagusPlate</descriptionMaker>
+							<mustBeFullGrave>true</mustBeFullGrave>
+						</li>
+						<li Class="CompProperties_SpawnSubplant" MayRequire="biomesteam.oasis">
+							<compClass MayRequire="biomesteam.oasis">CompSpawnSubplantDuration</compClass>
+							<subplant MayRequire="biomesteam.oasis">BMT_Papyrus</subplant>
+							<maxRadius>6</maxRadius>
+							<subplantSpawnDays>1</subplantSpawnDays>
+							<minGrowthForSpawn>0</minGrowthForSpawn>
+							<initialGrowthRange>0.5~1</initialGrowthRange>
+							<canSpawnOverPlayerSownPlants>false</canSpawnOverPlayerSownPlants>
+							<plantsToNotOverwrite MayRequire="biomesteam.oasis">
+								<li MayRequire="Ludeon.RimWorld.Ideology">Plant_TreeGauranlen</li>
+								<li MayRequire="Ludeon.RimWorld.Ideology">Plant_PodGauranlen</li>
+								<li MayRequire="Ludeon.RimWorld.Royalty">Plant_GrassAnima</li>
+								<li MayRequire="Ludeon.RimWorld.Royalty">Plant_TreeAnima</li>
+								<li MayRequire="biomesteam.oasis">BMT_Papyrus</li>
+							</plantsToNotOverwrite>
+						</li>
+						<li Class="CompProperties_AssignableToPawn">
+							<drawAssignmentOverlay>true</drawAssignmentOverlay>
+							<compClass>CompAssignableToPawn_Grave</compClass>
+						</li>
+					</comps>
+					<placeWorkers>
+						<li>PlaceWorker_RitualFocusNoArrow</li>
+						<li>PlaceWorker_MeditationOffsetBuildingsNear</li>
+						<li>PlaceWorker_RitualFocus</li>
+						<li>PlaceWorker_NotUnderRoof</li>
+					</placeWorkers>
+					<ritualFocus>
+						<spectateDistance>2~6</spectateDistance>
+						<allowedSpectateSides>All</allowedSpectateSides>
+					</ritualFocus>
+				</ThingDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>
