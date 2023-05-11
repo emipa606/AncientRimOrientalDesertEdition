@@ -1,5 +1,8 @@
 # Changelog for AncientRimOrientalDesertEdition
 
+1.4.4 - Added bug-fixes and compatibility with some other mods, now in 1.4. Thanks TurtleShroom
+
+
 1.4.3 - Added bug-fixes and compatibility with some other mods, added in 1.3 for now. Thanks TurtleShroom
 
 
