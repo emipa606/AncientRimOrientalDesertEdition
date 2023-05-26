@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <ThingDef Name="OrientArmourMakeableBase" ParentName="ApparelBase" Abstract="True">
+  <ThingDef Name="OrientArmourMakeableBase" ParentName="AncientArmourMakeableBase" Abstract="True">
     <statBases>
       <MaxHitPoints>300</MaxHitPoints>
       <Flammability>1.0</Flammability>
