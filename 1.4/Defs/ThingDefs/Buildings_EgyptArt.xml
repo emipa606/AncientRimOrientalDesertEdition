@@ -32,8 +32,8 @@
       <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
       <li MayRequire="sarg.alphabiomes">AB_ExoticWooden</li>
       <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
-	  <li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
-	  <li MayRequire="sarg.rimbees">RB_Waxy</li>
+      <li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
+      <li MayRequire="sarg.rimbees">RB_Waxy</li>
     </stuffCategories>
     <costStuffCount>100</costStuffCount>
     <recipeMaker>
@@ -82,8 +82,8 @@
       <li MayRequire="Dubwise.Rimefeller">Composite</li>
       <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
       <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
-	  <li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
-	  <li MayRequire="sarg.rimbees">RB_Waxy</li>
+      <li MayRequire="biomesteam.biomescore">BMT_ChitinStuff</li>
+      <li MayRequire="sarg.rimbees">RB_Waxy</li>
     </stuffCategories>
     <costStuffCount>300</costStuffCount>
     <recipeMaker>

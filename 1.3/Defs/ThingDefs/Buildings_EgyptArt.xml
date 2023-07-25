@@ -7,7 +7,7 @@
     <description>A monolithic rectangular pillar that symbolizes a sun ray and with it divine law. This is a quite short one and can be placed under a roof.</description>
     <graphicData>
       <graphicClass>Graphic_Multi</graphicClass>
-      <texPath>Buildings/Art/Obelisk/Small</texPath>
+      <texPath>Buildings/Art/EgyptObelisk/Small</texPath>
       <drawSize>(5,5)</drawSize>
     </graphicData>
     <dominantStyleCategory MayRequire="Sarg.AlphaMemes">AM_Kemetic</dominantStyleCategory>
@@ -55,7 +55,7 @@
     <description>A monolithic rectangular pillar that symbolizes a sun ray and with it divine law. Can't be placed under a roof.</description>
     <graphicData>
       <graphicClass>Graphic_Multi</graphicClass>
-      <texPath>Buildings/Art/Obelisk/Medium</texPath>
+      <texPath>Buildings/Art/EgyptObelisk/Medium</texPath>
       <drawSize>(9,9)</drawSize>
     </graphicData>
     <dominantStyleCategory MayRequire="Sarg.AlphaMemes">AM_Kemetic</dominantStyleCategory>
@@ -104,7 +104,7 @@
     <description>A monolithic rectangular pillar that symbolizes a sun ray and with it divine law. Can't be placed under a roof.</description>
     <graphicData>
       <graphicClass>Graphic_Multi</graphicClass>
-      <texPath>Buildings/Art/Obelisk/Big</texPath>
+      <texPath>Buildings/Art/EgyptObelisk/Big</texPath>
       <drawSize>(9,9)</drawSize>
     </graphicData>
     <dominantStyleCategory MayRequire="Sarg.AlphaMemes">AM_Kemetic</dominantStyleCategory>
