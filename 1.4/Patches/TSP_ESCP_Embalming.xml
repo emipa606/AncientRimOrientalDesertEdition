@@ -2,11 +2,11 @@
 <Patch>
   <Operation Class="PatchOperationConditional">
     <!-- DO THE GENTILES KNOW? -->
-    <xpath>/Defs/ThingDef[defName="ESCP_DunmerAshlanderMummy"]</xpath>
+    <xpath>/Defs/ThingDef[defName="ESCP_Dunmer_AshlanderMummy"]</xpath>
     <!-- If they do, SHUT IT DOWN. -->
     <match Class="PatchOperationRemove">
       <success>Always</success>
-      <xpath>Defs/ThingDef[defName="ESCP_DunmerAshlanderMummy"]/maxTechLevelToBuild</xpath>
+      <xpath>Defs/ThingDef[defName="ESCP_Dunmer_AshlanderMummy"]/maxTechLevelToBuild</xpath>
     </match>
     <!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
   </Operation>
