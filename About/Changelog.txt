@@ -1,5 +1,8 @@
 # Changelog for AncientRimOrientalDesertEdition
 
+1.4.7 - Various fixes and improvements implemented by TurtleShroom
+
+
 1.4.6 - The obelisk texture path should no longer conflict with Vanilla Expanded, thanks TurtleShroom
 
 

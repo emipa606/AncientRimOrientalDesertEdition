@@ -31,7 +31,7 @@
       </layers>
       <tags>
         <li>EgyptianBasic</li>
-		<li>Egypt</li>
+        <li>Egypt</li>
         <!-- Mod Support -->
         <li>BeetWear</li>
         <li>JeubWear</li>
@@ -95,7 +95,7 @@
         <li>Overhead</li>
       </layers>
       <tags>
-		<li>Egypt</li>
+        <li>Egypt</li>
         <li>Neolithic</li>
         <li>Tribal</li>
         <li>EgyptianBasic</li>
@@ -150,7 +150,7 @@
         <li>Overhead</li>
       </layers>
       <tags>
-		<li>Egypt</li>
+        <li>Egypt</li>
         <li>OrientalLight</li>
         <li>OrientalMedium</li>
         <li>EgyptianLight</li>
@@ -225,7 +225,7 @@
         <li>Overhead</li>
       </layers>
       <tags>
-		<li>Egypt</li>
+        <li>Egypt</li>
         <li>EgyptianRoyal</li>
         <li>Royal</li>
         <li>RoyalTier1</li>
@@ -301,7 +301,7 @@
       </layers>
       <tags>
         <li>EgyptianRoyal</li>
-		<li>Egypt</li>
+        <li>Egypt</li>
       </tags>
       <defaultOutfitTags>
         <li>Soldier</li>
@@ -375,7 +375,7 @@
       <tags>
         <li>EgyptianNomarchCrown</li>
         <li>EgyptianNoble</li>
-		<li>Egypt</li>
+        <li>Egypt</li>
       </tags>
       <defaultOutfitTags>
         <li>Worker</li>
@@ -444,7 +444,7 @@
       </defaultOutfitTags>
       <tags>
         <li>EgyptianRoyal</li>
-		<li>Egypt</li>
+        <li>Egypt</li>
       </tags>
       <canBeGeneratedToSatisfyWarmth Inherit="False">false</canBeGeneratedToSatisfyWarmth>
       <countsAsClothingForNudity>false</countsAsClothingForNudity>
@@ -495,7 +495,7 @@
       </layers>
       <tags>
         <li>EgyptianRoyal</li>
-		<li>Egypt</li>
+        <li>Egypt</li>
       </tags>
       <defaultOutfitTags>
         <li>Worker</li>

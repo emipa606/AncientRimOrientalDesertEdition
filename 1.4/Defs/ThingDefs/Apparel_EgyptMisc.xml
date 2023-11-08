@@ -8,11 +8,11 @@
       <Beauty>-4</Beauty>
       <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
-	<apparel>
-		<tags>
-			<li>Egypt</li>
-		</tags>
-	</apparel>
+    <apparel>
+      <tags>
+        <li>Egypt</li>
+      </tags>
+    </apparel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>

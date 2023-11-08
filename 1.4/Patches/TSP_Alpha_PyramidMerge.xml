@@ -150,7 +150,8 @@
             <MeditationFocusStrength>0.5</MeditationFocusStrength>
             <StyleDominance MayRequire="Sarg.AlphaMemes">10000</StyleDominance>
             <SellPriceFactor>0</SellPriceFactor>
-			<MarketValue>1</MarketValue> <!-- Since you can't move it, it shouldn't bloat your Wealth -->
+            <MarketValue>1</MarketValue>
+            <!-- Since you can't move it, it shouldn't bloat your Wealth -->
           </statBases>
           <altitudeLayer>MoteOverhead</altitudeLayer>
           <passability>Impassable</passability>
@@ -192,7 +193,7 @@
             <defaultStorageSettings>
               <priority>Critical</priority>
               <filter>
-				<!--
+                <!--
                 <thingDefs>
                   <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_Dunmer_AshlanderMummy</li>
                   <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_Dunmer_BurialUrn</li>
@@ -201,7 +202,7 @@
                 <categories>
                   <li>CorpsesHumanlike</li>
                 </categories>
-				<!--
+                <!--
                 <specialFiltersToDisallow>
                   <li>AllowCorpsesStranger</li>
                 </specialFiltersToDisallow>
@@ -280,7 +281,7 @@
                 <li>Artistic</li>
                 <li>Morbid</li>
                 <li>Dignified</li>
-				<li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerAncestralMeditation</li>
+                <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerAncestralMeditation</li>
               </focusTypes>
               <offsets>
                 <li Class="FocusStrengthOffset_GraveFull">
