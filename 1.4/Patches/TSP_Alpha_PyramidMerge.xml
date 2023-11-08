@@ -6,16 +6,6 @@
     <!-- If they do, SHUT IT DOWN. -->
     <match Class="PatchOperationRemove">
       <success>Always</success>
-      <xpath>Defs/ThingDef[defName="AM_Pyramid"]</xpath>
-    </match>
-    <!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <!-- DO THE GENTILES KNOW? -->
-    <xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
-    <!-- If they do, SHUT IT DOWN. -->
-    <match Class="PatchOperationRemove">
-      <success>Always</success>
       <xpath>/Defs/StyleCategoryDef[defName="AM_Kemetic"]/addDesignators</xpath>
     </match>
     <!-- If the first XPATH does not exist, the original code stands. All according to plan. -->
@@ -111,14 +101,14 @@
   <!-- Reconfigured Alpha Memes Pyramid for this Mod -->
   <Operation Class="PatchOperationConditional">
     <!-- Does this exist? -->
-    <xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
-    <!-- If it does, add this. -->
-    <match Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="AM_Pyramid"]</xpath>
+    <!-- If it does, do this replacement. -->
+    <match Class="PatchOperationReplace">
       <success>Always</success>
       <xpath>/Defs</xpath>
       <value>
         <ThingDef ParentName="SteleBase">
-          <defName>TSP_AR_AM_Pyramid</defName>
+          <defName>AM_Pyramid</defName>
           <label>pyramid</label>
           <description>A gigantic structure whose outer surfaces are triangular and converge to a single step at the top.</description>
           <category>Building</category>
@@ -157,9 +147,10 @@
             <Mass>10000</Mass>
             <WorkToBuild>300000</WorkToBuild>
             <Flammability Inherit="False">0</Flammability>
-            <MeditationFocusStrength>0.3</MeditationFocusStrength>
+            <MeditationFocusStrength>0.5</MeditationFocusStrength>
             <StyleDominance MayRequire="Sarg.AlphaMemes">10000</StyleDominance>
             <SellPriceFactor>0</SellPriceFactor>
+			<MarketValue>1</MarketValue> <!-- Since you can't move it, it shouldn't bloat your Wealth -->
           </statBases>
           <altitudeLayer>MoteOverhead</altitudeLayer>
           <passability>Impassable</passability>
@@ -190,8 +181,8 @@
             <fixedStorageSettings>
               <filter>
                 <thingDefs>
-                  <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerAshlanderMummy</li>
-                  <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerBurialUrn</li>
+                  <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_Dunmer_AshlanderMummy</li>
+                  <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_Dunmer_BurialUrn</li>
                 </thingDefs>
                 <categories>
                   <li>Corpses</li>
@@ -201,16 +192,20 @@
             <defaultStorageSettings>
               <priority>Critical</priority>
               <filter>
+				<!--
                 <thingDefs>
-                  <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerAshlanderMummy</li>
-                  <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerBurialUrn</li>
+                  <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_Dunmer_AshlanderMummy</li>
+                  <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_Dunmer_BurialUrn</li>
                 </thingDefs>
+				-->
                 <categories>
                   <li>CorpsesHumanlike</li>
                 </categories>
+				<!--
                 <specialFiltersToDisallow>
                   <li>AllowCorpsesStranger</li>
                 </specialFiltersToDisallow>
+				-->
               </filter>
             </defaultStorageSettings>
             <repairable>true</repairable>
@@ -227,7 +222,7 @@
           </researchPrerequisites>
           <leaveResourcesWhenKilled Inherit="False">True</leaveResourcesWhenKilled>
           <!-- Pyramids comes with their own foundations and, in RL, were built on unstable, soft, fine sand. Therefore, the presence of mud or any dirt is meaningless. Sadly, there is no such thing as an "anything but water" category, so this is the closest possible substitute. -->
-          <!-- <terrainAffordanceNeeded Inherit="False">None</terrainAffordanceNeeded> -->
+          <terrainAffordanceNeeded Inherit="False">Light</terrainAffordanceNeeded>
           <!--
 					<recipeMaker>
 						<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -247,7 +242,7 @@
 							<li>AM_Structure_Kemetism</li>
 						</memePrerequisitesAny>
 					</recipeMaker>
-					-->
+		  -->
           <damageMultipliers>
             <li>
               <damageDef>Bomb</damageDef>
@@ -263,7 +258,7 @@
             </li>
             <li>
               <damageDef>Blunt</damageDef>
-              <multiplier>0.01</multiplier>
+              <multiplier>0</multiplier>
             </li>
             <li>
               <damageDef>Stab</damageDef>
@@ -285,6 +280,7 @@
                 <li>Artistic</li>
                 <li>Morbid</li>
                 <li>Dignified</li>
+				<li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerAncestralMeditation</li>
               </focusTypes>
               <offsets>
                 <li Class="FocusStrengthOffset_GraveFull">
@@ -295,8 +291,8 @@
                 </li>
                 <li Class="FocusStrengthOffset_NearbyGraves">
                   <defs>
-                    <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerAshlanderMummy</li>
-                    <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerBurialUrn</li>
+                    <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_Dunmer_AshlanderMummy</li>
+                    <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_Dunmer_BurialUrn</li>
                     <li MayRequire="heis.edo.themed.expansion">HSHaka</li>
                     <li>AR_SarcophagusA</li>
                     <li>Sarcophagus</li>
