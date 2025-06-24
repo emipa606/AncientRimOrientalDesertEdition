@@ -5,7 +5,9 @@
 Update of konis mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1907318659
 
-![Image](https://i.imgur.com/pufA0kM.png)
+![Image](https://i.imgur.com/3npT60J.png)
+
+This mod has been replaced by [Ancient Rim Mods (Continued) (TSP)](https://steamcommunity.com/sharedfiles/filedetails/?id=3507862392) by TurtleShroom
 	
 ![Image](https://i.imgur.com/Z4GOv8H.png)
 
@@ -29,6 +31,6 @@ Armour, furniture etc. as well as Persian and Mesopotamian styled items may foll
 -  If you have the solution for a problem, please post it to the GitHub repository.
 -  Use [RimSort](https://github.com/RimSort/RimSort/releases/latest) to sort your mods
 
-
+ 
 
 [![Image](https://img.shields.io/github/v/release/emipa606/AncientRimOrientalDesertEdition?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2458187428)

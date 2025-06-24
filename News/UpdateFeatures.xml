@@ -10,4 +10,10 @@
     <content>The smithy is now possible to build out of any metal. This will make it usable earlier as you do not have to research steel before using it. You might get an error if trying to deconstruct an older smithy as it is not made of any stuff. You can remove it with dev-tools or destroy it to remove it. Unfortunate but this is a limitation in the game.
 </content>
   </HugsLib.UpdateFeatureDef>
+	<HugsLib.UpdateFeatureDef ParentName="AncientRimOrientalDesertEdition_UpdateFeatureBase">
+		<defName>AncientRimOrientalDesertEdition_1_5_1</defName>
+		<assemblyVersion>1.5.1</assemblyVersion>
+		<content>This mod will not be further updated, please use Ancient Rim Mods (Continued) (TSP) by TurtleShroom instead.</content>
+	</HugsLib.UpdateFeatureDef>
 </Defs>
+
