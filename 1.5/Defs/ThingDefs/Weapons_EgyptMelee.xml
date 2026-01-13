@@ -24,23 +24,24 @@
           <li>Gold</li>
           <li>Silver</li>
           <li>WoodLog</li>
+		  <li>Steel</li>
         </disallowedThingDefs>
       </defaultIngredientFilter>
     </recipeMaker>
-    <inspectorTabs>
+    <inspectorTabs Inherit="False">
       <li>ITab_Art</li>
     </inspectorTabs>
-    <comps>
-      <li MayRequire="jecrell.jecstools">
-        <compClass MayRequire="jecrell.jecstools">CompOversizedWeapon.CompOversizedWeapon</compClass>
-      </li>
+	<researchPrerequisites>
+		<li>AR_Project_Oriental_Culture</li>
+	</researchPrerequisites>
+	<comps>
       <li>
         <compClass>CompQuality</compClass>
       </li>
       <li Class="CompProperties_Art">
         <nameMaker>NamerArtWeaponMelee</nameMaker>
         <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
-        <minQualityForArtistic>Good</minQualityForArtistic>
+        <minQualityForArtistic>Normal</minQualityForArtistic>
       </li>
     </comps>
   </ThingDef>
@@ -72,8 +73,8 @@
       <li>EgyptianLight</li>
       <li>EgyptianNoble</li>
       <li>GnomeMelee</li>
-      <li>SurvivalistMelee</li>
-      <li>HarrierMelee</li>
+	  <li>SurvivalistMelee</li>
+	  <li>HarrierMelee</li>
     </weaponTags>
     <tools>
       <li>

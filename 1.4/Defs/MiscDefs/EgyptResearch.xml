@@ -3,7 +3,7 @@
   <ResearchProjectDef>
     <defName>AR_Project_Oriental_Culture</defName>
     <label>Egyptian culture</label>
-    <description>Discover the Egyptian and Mesopotamian ways of life, like furniture and clothing.</description>
+    <description>Discover the Egyptian way of life, like furniture, art, and clothing.</description>
     <baseCost>2000</baseCost>
     <techLevel>Neolithic</techLevel>
     <tags>

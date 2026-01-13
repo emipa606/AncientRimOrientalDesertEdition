@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="MeleeWeapon_Khopesh"]</xpath>
+		<!-- If it does, do this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="MeleeWeapon_Khopesh"]/weaponTags</xpath>
+			<value>
+				<li>EgyptianHeavy</li>
+				<li>EgyptianNoble</li>
+				<li>SurvivalistMelee</li>
+				<li>HarrierMelee</li>
+				<li>HarrowedMeleeChampion</li>
+				<li>HarrowedMeleeCommander</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="MeleeWeapon_Khopesh"]</xpath>
+		<!-- If it does, do this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="MeleeWeapon_Khopesh"]/weaponTags</xpath>
+			<value>
+				<li>EgyptianHeavy</li>
+				<li>EgyptianNoble</li>
+				<li>SurvivalistMelee</li>
+				<li>HarrierMelee</li>
+				<li>HarrowedMeleeChampion</li>
+				<li>HarrowedMeleeCommander</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>Defs/ThingDef[defName="MeleeWeapon_Khopesh"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="MeleeWeapon_Khopesh"]/thingSetMakerTags</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- DO THE GENTILES KNOW? -->
+		<xpath>Defs/ThingDef[defName="MeleeWeapon_Khopesh"]/recipeMaker/researchPrerequisite</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="MeleeWeapon_Khopesh"]/recipeMaker/researchPrerequisite</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="MeleeWeapon_Khopesh"]/recipeMaker/researchPrerequisites</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="MeleeWeapon_Khopesh"]/recipeMaker</xpath>
+			<success>Always</success>
+			<value>
+				<researchPrerequisites></researchPrerequisites>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="MeleeWeapon_Khopesh"]</xpath>
+		<!-- If it does, do this. -->
+		<match Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="MeleeWeapon_Khopesh"]/recipeMaker/researchPrerequisites</xpath>
+			<value>
+				<li>AR_Project_Oriental_Culture</li>
+				<li>LongBlades</li>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>Defs/ThingDef[defName="MeleeWeapon_Khopesh"]/label</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>Defs/ThingDef[defName="MeleeWeapon_Khopesh"]/label</xpath>
+			<value>
+				<label>greater khophesh</label>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

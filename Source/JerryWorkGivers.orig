@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<WorkGiverDef>
+		<defName>DoBills_Legacy</defName>
+		<label>Legacy bench</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Crafting</workType>
+		<priorityInType>130</priorityInType>
+		<fixedBillGiverDefs IsNull="True"></fixedBillGiverDefs>
+		<verb>legacy craft</verb>
+		<gerund>legacy crafting</gerund>
+		<requiredCapacities Inherit="False"></requiredCapacities>
+	</WorkGiverDef>
+</Defs>

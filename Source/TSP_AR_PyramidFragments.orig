@@ -172,4 +172,96 @@
 		</match>
 		<!-- If the first XPATH does not exist, the original code stands. -->
 	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="GSE_ObeliskBig"]</xpath>
+		<!-- If so, alter the inheritance of this. -->
+		<match Class="PatchOperationAttributeRemove">
+			<xpath>/Defs/ThingDef[defName="GSE_ObeliskBig"]</xpath>
+			<attribute>ParentName</attribute>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="GSE_Monolith"]</xpath>
+		<!-- If so, alter the inheritance of this. -->
+		<match Class="PatchOperationAttributeRemove">
+			<xpath>/Defs/ThingDef[defName="GSE_Monolith"]</xpath>
+			<attribute>ParentName</attribute>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist> -->
+		<xpath>/Defs/ThingDef[defName="GSE_MonolithB"]</xpath>
+		<!-- If so, alter the inheritance of this. -->
+		<match Class="PatchOperationAttributeRemove">
+			<xpath>/Defs/ThingDef[defName="GSE_MonolithB"]</xpath>
+			<attribute>ParentName</attribute>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="GSE_MonolithC"]</xpath>
+		<!-- If so, alter the inheritance of this. -->
+		<match Class="PatchOperationAttributeRemove">
+			<xpath>/Defs/ThingDef[defName="GSE_MonolithC"]</xpath>
+			<attribute>ParentName</attribute>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="GSE_Monolith"]</xpath>
+		<!-- If so, alter the inheritance of this. -->
+		<match Class="PatchOperationAttributeAdd">
+			<xpath>/Defs/ThingDef[defName="GSE_Monolith"]</xpath>
+			<attribute>ParentName</attribute>
+			<value>ObeliskSAM</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist> -->
+		<xpath>/Defs/ThingDef[defName="GSE_MonolithB"]</xpath>
+		<!-- If so, alter the inheritance of this. -->
+		<match Class="PatchOperationAttributeAdd">
+			<xpath>/Defs/ThingDef[defName="GSE_MonolithB"]</xpath>
+			<attribute>ParentName</attribute>
+			<value>ObeliskSAM</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="GSE_MonolithC"]</xpath>
+		<!-- If so, alter the inheritance of this. -->
+		<match Class="PatchOperationAttributeAdd">
+			<xpath>/Defs/ThingDef[defName="GSE_MonolithC"]</xpath>
+			<attribute>ParentName</attribute>
+			<value>ObeliskSAM</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="GSE_ObeliskBig"]</xpath>
+		<!-- If so, alter the inheritance of this. -->
+		<match Class="PatchOperationAttributeAdd">
+			<xpath>/Defs/ThingDef[defName="GSE_ObeliskBig"]</xpath>
+			<attribute>ParentName</attribute>
+			<value>ObeliskSAM</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
 </Patch>

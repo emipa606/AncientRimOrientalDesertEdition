@@ -3,7 +3,7 @@
   <!-- Civil -->
   <ThingDef ParentName="AncientHatMakeableBase">
     <defName>AR_Headscarf</defName>
-    <label>egyptian headscarf</label>
+    <label>Egyptian headscarf</label>
     <description>A rectangular piece of cloth worn around the head of common people from the Nile. Perfect for keeping people cool in the hot desert heat.</description>
     <graphicData>
       <texPath>Items/Apparel/HeadWrapOnMap</texPath>
@@ -11,10 +11,12 @@
     </graphicData>
     <costStuffCount>25</costStuffCount>
     <stuffCategories>
-      <li>Fabric</li>
-      <li>Leathery</li>
+		<li>Fabric</li>
+		<li>Leathery</li>
+		<li MayRequire="kerbinfiber.chronos">WYD_Padding</li> <!-- Reinforced leather -->
     </stuffCategories>
     <statBases>
+		<MarketValue>12</MarketValue>
       <WorkToMake>850</WorkToMake>
       <Mass>0.1</Mass>
       <StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
@@ -38,6 +40,10 @@
         <li>ST_GnomeClothing</li>
         <li>islam_head</li>
         <li>Muslim_apparel</li>
+		<li>WoodBeetWear</li>
+		<li>SurvivalistWear</li>
+		<li>HarrierWear</li>
+		<li>CaravaneerWear</li>
       </tags>
       <defaultOutfitTags>
         <li>Worker</li>
@@ -65,8 +71,13 @@
         </li>
       </options>
     </colorGenerator>
+	  <tradeTags>
+		<li>ClothingSimple</li>
+		<li>Egypt</li>
+		<li>EgyptHat</li>
+	  </tradeTags>
   </ThingDef>
-  <ThingDef ParentName="AncientHatMakeableBase">
+  <ThingDef ParentName="OrientArmourMakeableBase">
     <defName>AR_SkullCap</defName>
     <label>skull helmet</label>
     <description>A cap for the head. Initially used only by men, thousands of years have caused it to be seen as unisex for most primitive societies. Countless tribes across the galaxy employ it for basic heat protection.</description>
@@ -76,10 +87,13 @@
     </graphicData>
     <costStuffCount>15</costStuffCount>
     <stuffCategories>
-      <li>Fabric</li>
-      <li>Leathery</li>
+		<li>Fabric</li>
+		<li>Leathery</li>
+		<li MayRequire="kerbinfiber.chronos">WYD_Chitin</li>
+		<li MayRequire="kerbinfiber.chronos">WYD_Padding</li> <!-- Reinforced leather -->
     </stuffCategories>
     <statBases>
+		<MarketValue>18</MarketValue>
       <WorkToMake>1000</WorkToMake>
       <Mass>0.01</Mass>
       <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
@@ -104,7 +118,6 @@
       </tags>
       <!-- <gender>Male</gender> -->
       <defaultOutfitTags>
-        <li>Worker</li>
         <li>Soldier</li>
         <li>Slave</li>
       </defaultOutfitTags>
@@ -118,7 +131,11 @@
         <!-- Should inherit the other production centers from the Base -->
       </recipeUsers>
     </recipeMaker>
-    <colorGenerator Class="ColorGenerator_StandardApparel" />
+    <colorGenerator Class="ColorGenerator_StandardApparel"></colorGenerator>
+	<tradeTags>
+		<li>Egypt</li>
+		<li>EgyptHatArmor</li>
+	</tradeTags>
   </ThingDef>
   <!-- Military -->
   <ThingDef ParentName="AncientHatMakeableBase">
@@ -131,10 +148,12 @@
     </graphicData>
     <costStuffCount>40</costStuffCount>
     <stuffCategories>
-      <li>Fabric</li>
-      <li>Leathery</li>
+		<li>Fabric</li>
+		<li>Leathery</li>
+		<li MayRequire="kerbinfiber.chronos">WYD_Padding</li> <!-- Reinforced leather -->
     </stuffCategories>
     <statBases>
+		<MarketValue>15</MarketValue>
       <WorkToMake>5000</WorkToMake>
       <Mass>1</Mass>
       <StuffEffectMultiplierArmor>0.9</StuffEffectMultiplierArmor>
@@ -170,11 +189,12 @@
     </apparel>
     <recipeMaker>
       <researchPrerequisite>AR_Project_Light_Armour</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>3</Crafting>
-      </skillRequirements>
     </recipeMaker>
     <colorGenerator Class="ColorGenerator_StandardApparel" />
+	<tradeTags>
+		<li>Egypt</li>
+		<li>EgyptHatArmor</li>
+	</tradeTags>
   </ThingDef>
   <!-- Royal -->
   <ThingDef ParentName="AncientHatMakeableBase">
@@ -190,11 +210,12 @@
     <!-- SHUT MY MOUTH AND SLAP MY GRANDMA! IT NOW ACCEPTS STUFF! -->
     <costStuffCount>100</costStuffCount>
     <stuffCategories>
-      <li>Fabric</li>
-      <li>Leathery</li>
-      <!-- Mod Support -->
-      <li MayRequire="Dubwise.Rimefeller">Plastic</li>
-      <li MayRequire="Dubwise.Rimefeller">Composite</li>
+		<li>Fabric</li>
+		<li>Leathery</li>
+		<!-- Mod Support -->
+		<li MayRequire="Dubwise.Rimefeller">Plastic</li>
+		<li MayRequire="Dubwise.Rimefeller">Composite</li>
+		<li MayRequire="kerbinfiber.chronos">WYD_Padding</li> <!-- Reinforced leather -->
     </stuffCategories>
     <costList>
       <Gold>15</Gold>
@@ -243,7 +264,7 @@
       <canBeGeneratedToSatisfyWarmth Inherit="False">false</canBeGeneratedToSatisfyWarmth>
       <countsAsClothingForNudity>false</countsAsClothingForNudity>
     </apparel>
-    <colorGenerator Class="ColorGenerator_StandardApparel" />
+    <colorGenerator Class="ColorGenerator_StandardApparel"></colorGenerator>
     <recipeMaker>
       <researchPrerequisite>AR_Project_Oriental_Culture</researchPrerequisite>
       <skillRequirements>
@@ -251,23 +272,29 @@
       </skillRequirements>
     </recipeMaker>
     <comps>
-      <li Class="CompProperties_Biocodable" />
+      <li Class="CompProperties_Biocodable"></li>
     </comps>
+	<tradeTags>
+		<li>EgyptRoyal</li>
+		<li>Royal</li>
+	</tradeTags>
   </ThingDef>
   <ThingDef ParentName="AncientHatMakeableBase">
     <defName>AR_Khepresh</defName>
     <label>Khepresh Crown</label>
     <description>Also known as the blue crown or war crown, the Khepresh Crown was mostly worn by the Pharaoh when leading his armies or strategizing battle plans with his advisors.</description>
     <graphicData>
-      <texPath>Items/Apparel/NemesOnMap</texPath>
+      <texPath>Items/Apparel/KhepreshOnMap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <tradeability>Sellable</tradeability>
     <!-- SHUT MY MOUTH AND SLAP MY GRANDMA! IT NOW ACCEPTS STUFF! -->
     <costStuffCount>50</costStuffCount>
     <stuffCategories>
-      <li>Fabric</li>
-      <li>Leathery</li>
+		<li>Fabric</li>
+		<li>Leathery</li>
+		<li MayRequire="kerbinfiber.chronos">WYD_Chitin</li>
+		<li MayRequire="kerbinfiber.chronos">WYD_Padding</li> <!-- Reinforced leather -->
     </stuffCategories>
     <costList>
       <Dye>3</Dye>
@@ -323,6 +350,10 @@
         </li>
       </options>
     </colorGenerator>
+	<tradeTags>
+		<li>EgyptRoyal</li>
+		<li>Royal</li>
+	</tradeTags>
     <comps>
       <li Class="CompProperties_Biocodable" />
     </comps>
@@ -339,8 +370,10 @@
     <!-- SHUT MY MOUTH AND SLAP MY GRANDMA! IT NOW ACCEPTS STUFF! -->
     <costStuffCount>50</costStuffCount>
     <stuffCategories>
-      <li>Fabric</li>
-      <li>Leathery</li>
+		<li>Fabric</li>
+		<li>Leathery</li>
+		<li MayRequire="kerbinfiber.chronos">WYD_Chitin</li>
+		<li MayRequire="kerbinfiber.chronos">WYD_Padding</li> <!-- Reinforced leather -->
     </stuffCategories>
     <costList>
       <Gold>15</Gold>
@@ -397,6 +430,10 @@
         </li>
       </options>
     </colorGenerator>
+	<tradeTags>
+		<li>EgyptRoyal</li>
+		<li>Royal</li>
+	</tradeTags>
     <comps>
       <li Class="CompProperties_Biocodable" />
     </comps>
@@ -412,11 +449,12 @@
     </graphicData>
     <costStuffCount>50</costStuffCount>
     <stuffCategories>
-      <li>Metallic</li>
-      <!-- Mod Support -->
-      <li MayRequire="Dubwise.Rimefeller">Composite</li>
-      <li MayRequire="sarg.alphabiomes">AB_Exotic</li>
-      <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+		<li>Metallic</li>
+		<!-- Mod Support -->
+		<li MayRequire="Dubwise.Rimefeller">Composite</li>
+		<li MayRequire="sarg.alphabiomes">AB_Exotic</li>
+		<li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
+		<li MayRequire="kerbinfiber.chronos">WYD_Chitin</li>
     </stuffCategories>
     <statBases>
       <MaxHitPoints>800</MaxHitPoints>
@@ -454,6 +492,10 @@
         <Crafting>3</Crafting>
       </skillRequirements>
     </recipeMaker>
+	<tradeTags>
+		<li>EgyptRoyal</li>
+		<li>Royal</li>
+	</tradeTags>
     <comps>
       <li Class="CompProperties_Biocodable" />
     </comps>
@@ -481,7 +523,7 @@
       <EquipDelay>3</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <SocialImpact>0.5</SocialImpact>
+      <SocialImpact>0.65</SocialImpact>
       <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-1</SlaveSuppressionOffset>
       <!-- Pharaohs were worshipped as gods and this hat is the symbol of their divinity -->
     </equippedStatOffsets>
@@ -496,6 +538,8 @@
       <tags>
         <li>EgyptianRoyal</li>
         <li>Egypt</li>
+		<li>RoyalTier6</li>
+		<li>RoyalTier7</li>
       </tags>
       <defaultOutfitTags>
         <li>Worker</li>
@@ -509,8 +553,12 @@
         <Crafting>6</Crafting>
       </skillRequirements>
     </recipeMaker>
+	<tradeTags>
+		<li>EgyptRoyal</li>
+		<li>Royal</li>
+	</tradeTags>
     <comps>
-      <li Class="CompProperties_Biocodable" />
+      <li Class="CompProperties_Biocodable"></li>
     </comps>
   </ThingDef>
   <!--ThingDef ParentName="OrientArmourMakeableBase">
@@ -524,7 +572,9 @@
     </graphicData>
     <costStuffCount>50</costStuffCount>
     <stuffCategories>
-      <li>Metallic</li>
+		<li>Metallic</li>
+		<li MayRequire="kerbinfiber.chronos">WYD_Chitin</li>
+		<li MayRequire="kerbinfiber.chronos">WYD_Padding</li>
     </stuffCategories>
     <statBases>
       <MaxHitPoints>80</MaxHitPoints>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Per Mlie's word and honor, "don't break compatibility with existing saved games" extends so far as "don't create errors in saved games". While I think this is overkill, I respect Mlie's integrity and have incorporated these back into the Mod. -->
+
+<Defs>
+	<ThingDef ParentName="BaseFilth">
+		<defName>Legacy_Bench</defName>
+		<label>legacy manufacturing table (ERROR)</label>
+		<description>If this is ever encountered in the game as an item, inform Mlie's Github repository's Issues for the Ancient Rim Egypt Mod, because it is not meant to be seen.</description>
+		<category>Filth</category>
+		<graphicData>
+			<texPath>Things/Building/Bench/Bench</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3.5,1.5)</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<!-- <altitudeLayer>Filth</altitudeLayer> -->
+		<selectable>true</selectable>
+		<castEdgeShadows>false</castEdgeShadows>
+		<!-- <staticSunShadowHeight>0.20</staticSunShadowHeight> -->
+		<altitudeLayer>Building</altitudeLayer>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<MaxHitPoints>1</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Cleanliness>2</Cleanliness>
+		</statBases>
+		<!-- <size>(1,1)</size> -->
+		<pathCost>0</pathCost>
+	</ThingDef>
+</Defs>

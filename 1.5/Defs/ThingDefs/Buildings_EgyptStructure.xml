@@ -50,7 +50,7 @@
     <selectable>true</selectable>
     <neverMultiSelect>true</neverMultiSelect>
     <holdsRoof>true</holdsRoof>
-    <designationCategory>Structure</designationCategory>
+    <designationCategory>Jerry</designationCategory>
     <staticSunShadowHeight>1.0</staticSunShadowHeight>
     <blockLight>true</blockLight>
     <canOverlapZones>false</canOverlapZones>
@@ -79,7 +79,7 @@
         <multiplier>2</multiplier>
       </li>
     </damageMultipliers>
-    <researchPrerequisites>
+    <researchPrerequisites Inherit="False">
       <li>AR_Project_Oriental_Culture</li>
     </researchPrerequisites>
   </ThingDef>

@@ -79,7 +79,7 @@
         <multiplier>2</multiplier>
       </li>
     </damageMultipliers>
-    <researchPrerequisites>
+    <researchPrerequisites Inherit="False">
       <li>AR_Project_Oriental_Culture</li>
     </researchPrerequisites>
   </ThingDef>

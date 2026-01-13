@@ -24,15 +24,19 @@
           <li>Gold</li>
           <li>Silver</li>
           <li>WoodLog</li>
+		  <li>Steel</li>
         </disallowedThingDefs>
       </defaultIngredientFilter>
     </recipeMaker>
-    <inspectorTabs>
+    <inspectorTabs Inherit="False">
       <li>ITab_Art</li>
     </inspectorTabs>
-    <comps>
-      <li MayRequire="jecrell.jecstools">
-        <compClass MayRequire="jecrell.jecstools">CompOversizedWeapon.CompOversizedWeapon</compClass>
+	<researchPrerequisites>
+		<li>AR_Project_Oriental_Culture</li>
+	</researchPrerequisites>
+	<comps>
+      <li MayRequire="carnysenpai.enableoversizedweapons">
+        <compClass MayRequire="carnysenpai.enableoversizedweapons">CompOversizedWeapon.CompOversizedWeapon</compClass>
       </li>
       <li>
         <compClass>CompQuality</compClass>
@@ -40,7 +44,7 @@
       <li Class="CompProperties_Art">
         <nameMaker>NamerArtWeaponMelee</nameMaker>
         <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
-        <minQualityForArtistic>Good</minQualityForArtistic>
+        <minQualityForArtistic>Normal</minQualityForArtistic>
       </li>
     </comps>
   </ThingDef>
@@ -64,7 +68,7 @@
       <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
     <statBases>
-      <WorkToMake>11500</WorkToMake>
+      <WorkToMake>4500</WorkToMake>
       <Mass>0.5</Mass>
     </statBases>
     <equippedAngleOffset>-65</equippedAngleOffset>
@@ -72,6 +76,8 @@
       <li>EgyptianLight</li>
       <li>EgyptianNoble</li>
       <li>GnomeMelee</li>
+	  <li>SurvivalistMelee</li>
+	  <li>HarrierMelee</li>
     </weaponTags>
     <tools>
       <li>

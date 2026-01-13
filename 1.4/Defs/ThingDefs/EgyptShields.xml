@@ -7,6 +7,10 @@
         <li>FueledSmithy</li>
       </recipeUsers>
     </recipeMaker>
+	<tradeTags>
+		<li>EgyptShield</li>
+		<li>Egypt</li>
+	</tradeTags>
   </ThingDef>
   <!--0==============================0 General 0==============================0 -->
   <ThingDef ParentName="OrientShields">
@@ -64,13 +68,13 @@
       </li>
     </tools>
     <comps>
-      <li Class="PawnShields.CompProperties_Shield">
-        <wieldedGraphic>
+      <li Class="PawnShields.CompProperties_Shield" MayRequire="jecrell.jecstools">
+        <wieldedGraphic MayRequire="jecrell.jecstools">
           <graphicClass>Graphic_Multi</graphicClass>
           <texPath>Items/Shields/Tower</texPath>
           <drawSize>(1.2, 1.2)</drawSize>
         </wieldedGraphic>
-        <renderProperties>
+        <renderProperties MayRequire="jecrell.jecstools">
           <northOffset>(-0.1, -0.017, -0.2)</northOffset>
           <southOffset>(0.1, 0.033, -0.2)</southOffset>
           <westOffset>(-0.1, 0.053, -0.2)</westOffset>
@@ -84,7 +88,7 @@
         <rangedBlockChanceFactor>0.7</rangedBlockChanceFactor>
         <shieldTakeDamage>true</shieldTakeDamage>
         <shieldTakeDamageFactor>0.4</shieldTakeDamageFactor>
-        <canBeAutoDiscarded>true</canBeAutoDiscarded>
+        <canBeAutoDiscarded>false</canBeAutoDiscarded>
         <healthAutoDiscardThreshold>0.01</healthAutoDiscardThreshold>
         <useFatigue>true</useFatigue>
         <damageToFatigueFactor>0.005</damageToFatigueFactor>

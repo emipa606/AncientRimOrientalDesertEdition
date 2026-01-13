@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<DesignationCategoryDef>
+		<defName>Jerry</defName>
+		<label>Egypt</label>
+		<order>220</order>
+		<specialDesignatorClasses>
+			<li>Designator_Cancel</li>
+			<li>Designator_Deconstruct</li>
+			<li>Designator_RemoveFloor</li>
+		</specialDesignatorClasses>
+	</DesignationCategoryDef>
+
+	<ThingDef Name="ObeliskSAM_Jerry" Abstract="True">
+		<thingClass>Building_Art</thingClass>
+		<category>Building</category>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<rotatable>false</rotatable>
+		<canOverlapZones>false</canOverlapZones>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<!--<constructEffect>ConstructMetal</constructEffect>-->
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Jerry</designationCategory>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<useStuffTerrainAffordance>false</useStuffTerrainAffordance>
+		<blockWind>false</blockWind>
+		<blockLight>false</blockLight>
+		<fillPercent>0.85</fillPercent>
+		<forceDebugSpawnable>true</forceDebugSpawnable>
+		<staticSunShadowHeight>2</staticSunShadowHeight>
+		<castEdgeShadows>true</castEdgeShadows>
+		<tradeability>All</tradeability>
+		<stealable>true</stealable>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<soundImpactDefault>Stone_Drop</soundImpactDefault>
+		<repairEffect>CutStone</repairEffect>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<filthLeaving>Filth_RubbleBuilding</filthLeaving>
+		<!-- <leaveResourcesWhenKilled Inherit="False">True</leaveResourcesWhenKilled> -->
+		<dominantStyleCategory MayRequire="Sarg.AlphaMemes" Inherit="False">AM_Kemetic</dominantStyleCategory>
+		<canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
+		<statBases>
+			<StyleDominance MayRequire="Sarg.AlphaMemes">30</StyleDominance>
+			<SellPriceFactor>1.11</SellPriceFactor>
+		</statBases>
+		<building>
+			<ai_chillDestination>true</ai_chillDestination>
+			<isInert>true</isInert>
+		</building>
+		<stuffCategories>
+			<li>Woody</li>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<researchPrerequisites Inherit="False">
+			<li>AR_Project_Oriental_Culture</li>
+		</researchPrerequisites>
+		<inspectorTabs Inherit="False">
+			<li>ITab_Art</li>
+		</inspectorTabs>
+		<tradeTags>
+			<li>Art</li>
+			<li>Egypt</li>
+			<li>EgyptFurniture</li>
+		</tradeTags>
+		<thingCategories Inherit="False">
+			<li>BuildingsArt</li>
+		</thingCategories>
+		<comps Inherit="False">
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtSculpture</nameMaker>
+				<descriptionMaker>ArtDescription_SarcophagusPlate</descriptionMaker>
+				<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+				<minQualityForArtistic>Awful</minQualityForArtistic>
+			</li>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes>
+					<li>Artistic</li>
+					<li>Morbid</li>
+					<li MayRequire="sirmashedpotato.escp.maormer">ESCP_MaormerSerpentMeditation</li>
+				</focusTypes>
+				<offsets>
+					<li Class="FocusStrengthOffset_Quality">
+						<curve>
+							<points>
+								<li>(0,0.02)</li>
+								<!-- awful -->
+								<li>(1,0.07)</li>
+								<!-- poor -->
+								<li>(2,0.1)</li>
+								<!-- normal -->
+								<li>(3,0.12)</li>
+								<!-- good -->
+								<li>(4,0.14)</li>
+								<!-- excellent -->
+								<li>(5,0.18)</li>
+								<!-- masterwork -->
+								<li>(6,0.2)</li>
+								<!-- legendary -->
+							</points>
+						</curve>
+					</li>
+					<li Class="FocusStrengthOffset_NearbyGraves">
+						<defs>
+							<li MayRequire="sirmashedpotato.escp.dunmer">ESCP_Dunmer_AshlanderMummy</li>
+							<li MayRequire="sirmashedpotato.escp.dunmer">ESCP_Dunmer_BurialUrn</li>
+							<li MayRequire="heis.edo.themed.expansion">HSHaka</li>
+							<li>AR_SarcophagusA</li>
+							<li>Sarcophagus</li>
+							<li>Grave</li>
+						</defs>
+						<!-- <offsetPerBuilding>0.015</offsetPerBuilding> -->
+						<radius>10</radius>
+						<maxBuildings>50</maxBuildings>
+						<focusPerFullGrave>0.033</focusPerFullGrave>
+						<explanationKey>MeditationFocusPerGrave</explanationKey>
+						<explanationKeyAbstract>MeditationFocusPerGraveAbstract</explanationKeyAbstract>
+					</li>
+				</offsets>
+			</li>
+			<li Class="CompProperties_SpawnSubplant" MayRequire="biomesteam.oasis">
+				<compClass MayRequire="biomesteam.oasis">CompSpawnSubplantDuration</compClass>
+				<subplant MayRequire="biomesteam.oasis">BMT_Papyrus</subplant>
+				<maxRadius>2</maxRadius>
+				<subplantSpawnDays>1</subplantSpawnDays>
+				<minGrowthForSpawn>0</minGrowthForSpawn>
+				<initialGrowthRange>0.5~1</initialGrowthRange>
+				<canSpawnOverPlayerSownPlants>false</canSpawnOverPlayerSownPlants>
+				<plantsToNotOverwrite MayRequire="biomesteam.oasis">
+					<li MayRequire="Ludeon.RimWorld.Ideology">Plant_TreeGauranlen</li>
+					<li MayRequire="Ludeon.RimWorld.Ideology">Plant_PodGauranlen</li>
+					<li MayRequire="Ludeon.RimWorld.Royalty">Plant_GrassAnima</li>
+					<li MayRequire="Ludeon.RimWorld.Royalty">Plant_TreeAnima</li>
+					<li MayRequire="biomesteam.oasis">BMT_Papyrus</li>
+				</plantsToNotOverwrite>
+			</li>
+			<li Class="CompProperties_Styleable"></li>
+		</comps>
+	</ThingDef>
+</Defs>

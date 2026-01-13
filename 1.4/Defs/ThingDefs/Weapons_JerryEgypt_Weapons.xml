@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+
+ <ThingDef ParentName="BaseMeleeWeapon_Orient">
+    <defName>MeleeWeapon_AncientSword</defName>
+    <label>ancient longsword</label>
+    <description>The ancient weapon of Pharaoh, the ancient longsword can be used for slashing or stabbing or showing off.It's very difficult and expensive to make.</description>
+    <graphicData>
+      <texPath>Things/Weapons/Schwert</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  	  	  <shaderType>CutoutComplex</shaderType>
+			    <drawSize>2</drawSize>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <costStuffCount>200</costStuffCount>
+    <statBases>
+      <WorkToMake>20000</WorkToMake>
+      <Mass>2</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>25</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>25</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+	    <recipeMaker>
+				<workSkill>Crafting</workSkill>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+		<researchPrerequisites Inherit="False">
+			<li>AR_Project_Oriental_Culture</li>
+			<li>LongBlades</li>
+		</researchPrerequisites>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>
+	
+  </ThingDef>
+  
+  
+  
+  
+  
+<!--  AXE-->
+  
+  <ThingDef ParentName="BaseMeleeWeapon_Orient">
+    <defName>MeleeWeapon_AncientAXE</defName>
+    <label>ancient axe</label>
+    <description>The ancient weapon, the axe can be used for slashing or showing off.It's very difficult and expensive to make.</description>
+    <graphicData>
+      <texPath>Things/Weapons/Axt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	    <drawSize>2.4</drawSize>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <costStuffCount>200</costStuffCount>
+    <statBases>
+      <WorkToMake>20000</WorkToMake>
+      <Mass>2</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>28</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+	    <recipeMaker>
+				<workSkill>Crafting</workSkill>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>
+	
+  </ThingDef>
+</Defs>

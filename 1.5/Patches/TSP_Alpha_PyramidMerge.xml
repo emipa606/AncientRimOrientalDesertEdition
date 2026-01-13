@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/TerrainDef[@Name="AM_Floor_KemeticFineTiles"]/researchPrerequisites</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/TerrainDef[@Name="AM_Floor_KemeticFineTiles"]</xpath>
+			<success>Always</success>
+			<value>
+				<researchPrerequisites Inherit="False"></researchPrerequisites>
+			</value>
+		</nomatch>
+	</Operation>
   <Operation Class="PatchOperationConditional">
     <!-- DO THE GENTILES KNOW? -->
     <xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]/addDesignators</xpath>
@@ -98,6 +111,8 @@
     </match>
     <!-- If the first XPATH does not exist, the original code stands. -->
   </Operation>
+  
+  
   <Operation Class="PatchOperationConditional">
     <!-- Does this exist? -->
     <xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
@@ -124,9 +139,11 @@
     </match>
     <!-- If the first XPATH does not exist, the original code stands. -->
   </Operation>
+  
+  
   <Operation Class="PatchOperationConditional">
     <!-- Does this exist? -->
-    <xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+    <xpath>/Defs/MemeDef[defName="AM_FuturisticObelisk"]/canGenerateDefaultDesignator</xpath>
     <!-- If it does, do this replacement. -->
     <match Class="PatchOperationReplace">
       <success>Always</success>
@@ -135,6 +152,14 @@
         <canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
       </value>
     </match>
+	<!-- If it DOES NOT, add this. -->
+    <nomatch Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/ThingDef[defName="AM_FuturisticObelisk"]</xpath>
+      <value>
+        <canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
+      </value>
+    </nomatch>
     <!-- If the first XPATH does not exist, the original code stands. -->
   </Operation>
   <Operation Class="PatchOperationConditional">
@@ -146,11 +171,13 @@
       <xpath>/Defs/ThingDef[defName="AM_FuturisticObelisk"]/researchPrerequisites</xpath>
       <value>
         <li>AR_Project_Oriental_Culture</li>
-        <li MayRequire="VanillaExpanded.VFEArt">VFE_Res_Obelisk</li>
+		<li MayRequire="VanillaExpanded.VFEArt">VFE_Res_Obelisk</li>
       </value>
     </match>
     <!-- If the first XPATH does not exist, the original code stands. -->
   </Operation>
+  
+  
   <Operation Class="PatchOperationConditional">
     <!-- Does this exist? -->
     <xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
@@ -177,6 +204,9 @@
     </match>
     <!-- If the first XPATH does not exist, the original code stands. -->
   </Operation>
+  
+  
+  
   <Operation Class="PatchOperationConditional">
     <!-- Does this exist? -->
     <xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
@@ -203,6 +233,9 @@
     </match>
     <!-- If the first XPATH does not exist, the original code stands. -->
   </Operation>
+  
+  
+  
   <Operation Class="PatchOperationConditional">
     <!-- Does this exist? -->
     <xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
@@ -229,6 +262,37 @@
     </match>
     <!-- If the first XPATH does not exist, the original code stands. -->
   </Operation>
+  
+  
+  <Operation Class="PatchOperationConditional">
+    <!-- Does this exist? -->
+    <xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+    <!-- If it does, do this replacement. -->
+    <match Class="PatchOperationReplace">
+      <success>Always</success>
+      <xpath>/Defs/ThingDef[defName="AM_GreatPyramid"]/canGenerateDefaultDesignator</xpath>
+      <value>
+        <canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
+      </value>
+    </match>
+    <!-- If the first XPATH does not exist, the original code stands. -->
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <!-- Does this exist? -->
+    <xpath>/Defs/MemeDef[defName="AM_Structure_Kemetism"]</xpath>
+    <!-- If it does, add this. -->
+    <match Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/ThingDef[defName="AM_GreatPyramid"]/researchPrerequisites</xpath>
+      <value>
+        <li>AR_Project_Oriental_Culture</li>
+      </value>
+    </match>
+    <!-- If the first XPATH does not exist, the original code stands. -->
+  </Operation>
+  
+  
+  
   <!-- Reconfigured Alpha Memes Pyramid for this Mod -->
   <Operation Class="PatchOperationConditional">
     <!-- Does this exist? -->
@@ -241,15 +305,15 @@
         <ThingDef ParentName="SteleBase">
           <defName>AM_Pyramid</defName>
           <label>pyramid</label>
-          <description>A gigantic structure whose outer surfaces are triangular and converge to a single step at the top.</description>
+          <description>A gigantic structure whose outer surfaces are triangular and converge to a single step at the top. A Pawn can be granted the incredible honor of being stored here and be dignified for all of time.</description>
           <category>Building</category>
           <thingClass Inherit="False">Building_Grave</thingClass>
-          <designationCategory>Misc</designationCategory>
+          <designationCategory>Jerry</designationCategory>
           <forceDebugSpawnable>true</forceDebugSpawnable>
           <graphicData>
             <graphicClass>Graphic_Single</graphicClass>
             <texPath>Things/Building/BuildingStyles/Kemetic/AM_Pyramid</texPath>
-            <drawSize>(12.8,12.8)</drawSize>
+            <drawSize>(13,13)</drawSize>
             <damageData>
               <cornerTL>Damage/Corner</cornerTL>
               <cornerTR>Damage/Corner</cornerTR>
@@ -275,10 +339,10 @@
           <statBases>
             <MaxHitPoints>30000</MaxHitPoints>
             <Beauty>1000</Beauty>
-            <Mass>10000</Mass>
-            <WorkToBuild>300000</WorkToBuild>
+            <Mass>20000</Mass>
+            <WorkToBuild>200000</WorkToBuild>
             <Flammability Inherit="False">0</Flammability>
-            <MeditationFocusStrength>0.5</MeditationFocusStrength>
+            <MeditationFocusStrength>0.01</MeditationFocusStrength> <!-- Added in the Comps -->
             <StyleDominance MayRequire="Sarg.AlphaMemes">10000</StyleDominance>
             <SellPriceFactor>0</SellPriceFactor>
             <MarketValue>1</MarketValue>
@@ -290,12 +354,12 @@
           <neverMultiSelect>true</neverMultiSelect>
           <useStuffTerrainAffordance>false</useStuffTerrainAffordance>
           <blockWind>true</blockWind>
-          <staticSunShadowHeight>2</staticSunShadowHeight>
+          <staticSunShadowHeight>5</staticSunShadowHeight>
           <castEdgeShadows>true</castEdgeShadows>
           <fillPercent>1</fillPercent>
           <canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
-          <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
-          <costStuffCount>2000</costStuffCount>
+          <constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+          <costStuffCount>3000</costStuffCount>
           <tradeability>None</tradeability>
           <stuffCategories>
             <li>Stony</li>
@@ -315,6 +379,7 @@
                 <thingDefs>
                   <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_Dunmer_AshlanderMummy</li>
                   <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_Dunmer_BurialUrn</li>
+				  <li>AR_SarcophagusA</li>
                 </thingDefs>
                 <categories>
                   <li>Corpses</li>
@@ -402,10 +467,7 @@
             </li>
           </damageMultipliers>
           <comps Inherit="False">
-            <li>
-              <compClass>CompQuality</compClass>
-            </li>
-            <li Class="CompProperties_Forbiddable" />
+            <li Class="CompProperties_Forbiddable"></li>
             <li Class="CompProperties_MeditationFocus">
               <statDef>MeditationFocusStrength</statDef>
               <focusTypes>
@@ -416,7 +478,7 @@
               </focusTypes>
               <offsets>
                 <li Class="FocusStrengthOffset_GraveFull">
-                  <offset>0.5</offset>
+                  <offset>0.35</offset>
                 </li>
                 <li Class="FocusStrengthOffset_GraveCorpseRelationship">
                   <offset>1</offset>
@@ -433,7 +495,7 @@
                   <!-- <offsetPerBuilding>0.015</offsetPerBuilding> -->
                   <radius>80</radius>
                   <maxBuildings>40</maxBuildings>
-                  <focusPerFullGrave>0.02</focusPerFullGrave>
+                  <focusPerFullGrave>0.09</focusPerFullGrave>
                   <explanationKey>MeditationFocusPerGrave</explanationKey>
                   <explanationKeyAbstract>MeditationFocusPerGraveAbstract</explanationKeyAbstract>
                 </li>
@@ -464,9 +526,10 @@
               <drawAssignmentOverlay>true</drawAssignmentOverlay>
               <compClass>CompAssignableToPawn_Grave</compClass>
             </li>
-            <li>
-              <compClass>CompGatherSpot</compClass>
-            </li>
+			<li>
+				<compClass>CompGatherSpot</compClass>
+			</li>
+			<li Class="CompProperties_Styleable"></li>
           </comps>
           <placeWorkers>
             <li>PlaceWorker_RitualFocusNoArrow</li>
@@ -483,4 +546,151 @@
     </match>
     <!-- If the first XPATH does not exist, the original code stands. -->
   </Operation>
+  
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="AM_GreatPyramid"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="AM_GreatPyramid"]</xpath>
+			<value>
+				<ThingDef ParentName="SteleBase">
+					<defName>AM_GreatPyramid</defName>
+					<label>great pyramid</label>
+					<description>A truly colossal stone structure whose outer surfaces are triangular and converge to a single step at the top. Nothing can harm it. Nothing can stop it. Ten thousand years from now, future civilizations will stare at it in awe.</description>
+					<graphicData Inherit="False">
+						<graphicClass>Graphic_Single</graphicClass>
+						<texPath>Things/Building/BuildingStyles/Kemetic/AM_GreatPyramid</texPath>
+						<drawSize>(24,24)</drawSize>
+					</graphicData>
+					<drawOffscreen>true</drawOffscreen>
+					<thingClass>Building_Art</thingClass>
+					<useHitPoints>true</useHitPoints>
+					<passability>Impassable</passability>
+					<pathCost>999</pathCost>
+					<rotatable>false</rotatable>
+					<size>(24,24)</size>
+					<canOverlapZones>false</canOverlapZones>
+					<statBases>
+						<MaxHitPoints>175000</MaxHitPoints>
+						<Beauty>7000</Beauty>
+						<Mass>100000</Mass>
+						<WorkToBuild>400000</WorkToBuild>
+						<Flammability>0</Flammability>
+						<StyleDominance MayRequire="Ludeon.RimWorld.Ideology">2000</StyleDominance>
+						<MeditationFocusStrength>0.5</MeditationFocusStrength>
+					</statBases>
+					<building>
+						<sowTag>SupportPlantsOnly</sowTag>
+						<canPlaceOverImpassablePlant>true</canPlaceOverImpassablePlant>
+						<repairable>true</repairable>
+						<isInert>true</isInert>
+						<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+						<ai_chillDestination>true</ai_chillDestination>
+						<buildingTags>
+							<li>RitualFocus</li>
+						</buildingTags>
+					</building>
+					<altitudeLayer>Building</altitudeLayer>
+					<passability>Impassable</passability>
+					<blockWind>true</blockWind>
+					<castEdgeShadows>true</castEdgeShadows>
+					<staticSunShadowHeight>20</staticSunShadowHeight>
+					<fillPercent>1</fillPercent>
+					<canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
+					<stuffCategories>
+						<li>Stony</li>
+					</stuffCategories>
+					<minifiedDef>MinifiedThing</minifiedDef>
+					<designationCategory>Jerry</designationCategory>
+					<thingCategories>
+						<li>BuildingsMisc</li>
+					</thingCategories>
+					<costStuffCount>9000</costStuffCount>
+					<researchPrerequisites Inherit="False">
+						<li>AR_Project_Oriental_Culture</li>
+						<li MayRequire="vanillaexpanded.vfeart">VFE_Res_Monuments</li>
+					</researchPrerequisites>
+					<leaveResourcesWhenKilled Inherit="False">True</leaveResourcesWhenKilled>
+					<!-- Pyramids comes with their own foundations and, in RL, were built on unstable, soft, fine sand. Therefore, the presence of mud or any dirt is meaningless. Sadly, there is no such thing as an "anything but water" category, so this is the closest possible substitute. -->
+					<terrainAffordanceNeeded Inherit="False">Light</terrainAffordanceNeeded>
+					<placeWorkers>
+						<li>PlaceWorker_RitualFocusNoArrow</li>
+						<li>PlaceWorker_MeditationOffsetBuildingsNear</li>
+						<li>PlaceWorker_RitualFocus</li>
+						<li>PlaceWorker_NotUnderRoof</li>
+					</placeWorkers>
+					<ritualFocus>
+						<spectateDistance>2~24</spectateDistance>
+						<allowedSpectateSides>All</allowedSpectateSides>
+					</ritualFocus>
+					<inspectorTabs>
+						<li>ITab_Art</li>
+					</inspectorTabs>
+					<tradeTags>
+						<li>Art</li>
+					</tradeTags>
+					<comps Inherit="False">
+						<li Class="CompProperties_Art">
+							<nameMaker>NamerArtSarcophagusPlate</nameMaker>
+							<descriptionMaker>ArtDescription_SarcophagusPlate</descriptionMaker>
+						</li>
+						<li Class="CompProperties_MeditationFocus">
+							<statDef>MeditationFocusStrength</statDef>
+							<focusTypes>
+								<li>Artistic</li>
+								<li>Morbid</li>
+								<li>Dignified</li>
+								<li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerAncestralMeditation</li>
+							</focusTypes>
+							<offsets>
+								<li Class="FocusStrengthOffset_NearbyGraves">
+									<defs>
+										<li MayRequire="sirmashedpotato.escp.dunmer">ESCP_Dunmer_AshlanderMummy</li>
+										<li MayRequire="sirmashedpotato.escp.dunmer">ESCP_Dunmer_BurialUrn</li>
+										<li MayRequire="heis.edo.themed.expansion">HSHaka</li>
+										<li>AR_SarcophagusA</li>
+										<li>Sarcophagus</li>
+										<li>Grave</li>
+									</defs>
+									<!-- <offsetPerBuilding>0.015</offsetPerBuilding> -->
+									<radius>120</radius>
+									<maxBuildings>80</maxBuildings>
+									<focusPerFullGrave>0.12</focusPerFullGrave>
+									<explanationKey>MeditationFocusPerGrave</explanationKey>
+									<explanationKeyAbstract>MeditationFocusPerGraveAbstract</explanationKeyAbstract>
+								</li>
+							</offsets>
+						</li>
+						<li Class="CompProperties_SpawnSubplant" MayRequire="biomesteam.oasis">
+							<compClass MayRequire="biomesteam.oasis">CompSpawnSubplantDuration</compClass>
+							<subplant MayRequire="biomesteam.oasis">BMT_Papyrus</subplant>
+							<maxRadius>20</maxRadius>
+							<subplantSpawnDays>1</subplantSpawnDays>
+							<minGrowthForSpawn>0</minGrowthForSpawn>
+							<initialGrowthRange>0.5~1</initialGrowthRange>
+							<canSpawnOverPlayerSownPlants>false</canSpawnOverPlayerSownPlants>
+							<plantsToNotOverwrite MayRequire="biomesteam.oasis">
+								<li MayRequire="Ludeon.RimWorld.Ideology">Plant_TreeGauranlen</li>
+								<li MayRequire="Ludeon.RimWorld.Ideology">Plant_PodGauranlen</li>
+								<li MayRequire="Ludeon.RimWorld.Royalty">Plant_GrassAnima</li>
+								<li MayRequire="Ludeon.RimWorld.Royalty">Plant_TreeAnima</li>
+								<li MayRequire="biomesteam.oasis">BMT_Papyrus</li>
+							</plantsToNotOverwrite>
+						</li>
+						<li Class="AlphaMemes.CompProperties_CorpseContainer">
+							<transformLabel>Great Pyramid of {CORPSE}</transformLabel>
+							<inspectString>Contains the last remains of the glorious, magnanimous {CORPSE}</inspectString>
+						</li>
+						<li>
+							<compClass>CompGatherSpot</compClass>
+						</li>
+						<li Class="CompProperties_Styleable"></li>
+					</comps>
+				</ThingDef>
+			</value>
+		</match>
+	<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
 </Patch>

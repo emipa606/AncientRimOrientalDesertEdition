@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!--================================ Obelisk ======================================-->
-  <ThingDef ParentName="SculptureBase">
+  <ThingDef ParentName="ObeliskSAM_Jerry">
     <defName>AR_ObeliskSmall</defName>
     <label>small Egyptian obelisk</label>
     <description>A monolithic rectangular pillar that symbolizes a sun ray and with it divine law. This is a quite short one and can be placed under a roof.</description>
-    <thingClass>Building_Art</thingClass>
-    <graphicData>
+	<thingClass>Building_Art</thingClass>
+    <graphicData Inherit="False">
       <graphicClass>Graphic_Multi</graphicClass>
       <texPath>Buildings/Art/EgyptObelisk/Small</texPath>
       <drawSize>(5,5)</drawSize>
@@ -16,13 +16,16 @@
     <fillPercent>0.5</fillPercent>
     <rotatable>true</rotatable>
     <coversFloor>true</coversFloor>
+	<uiIconScale>0.9</uiIconScale>
     <statBases>
       <MaxHitPoints>250</MaxHitPoints>
       <Mass>7</Mass>
       <Beauty>100</Beauty>
       <WorkToMake>12000</WorkToMake>
       <StyleDominance MayRequire="Sarg.AlphaMemes">100</StyleDominance>
+	  <MeditationFocusStrength>0.05</MeditationFocusStrength>
     </statBases>
+	<size>(1,1)</size>
     <stuffCategories>
       <li>Metallic</li>
       <li>Stony</li>
@@ -37,12 +40,10 @@
       <li MayRequire="sarg.rimbees">RB_Waxy</li>
     </stuffCategories>
     <costStuffCount>100</costStuffCount>
-    <recipeMaker>
       <researchPrerequisites>
         <li>AR_Project_Oriental_Culture</li>
         <li MayRequire="VanillaExpanded.VFEArt">VFE_Res_Obelisk</li>
       </researchPrerequisites>
-    </recipeMaker>
     <building>
       <buildingTags>
         <li>RitualFocus</li>
@@ -51,21 +52,76 @@
     <placeWorkers>
       <li>PlaceWorker_RitualFocus</li>
     </placeWorkers>
-  </ThingDef>
-  <tradeTags>
-    <li>Egypt</li>
-    <li>EgyptFurniture</li>
-  </tradeTags>
-  <ThingDef ParentName="SculptureBase">
+	<tradeTags>
+		<li>Egypt</li>
+		<li>EgyptFurniture</li>
+	</tradeTags>
+	<comps Inherit="False">
+            <li Class="CompProperties_MeditationFocus" Inherit="False">
+              <statDef>MeditationFocusStrength</statDef>
+              <focusTypes Inherit="False">
+                <li>Artistic</li>
+                <li>Morbid</li>
+                <li>Dignified</li>
+                <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerAncestralMeditation</li>
+				<li MayRequire="sirmashedpotato.escp.maormer">ESCP_MaormerSerpentMeditation</li>
+              </focusTypes>
+              <offsets Inherit="False">
+                <li Class="FocusStrengthOffset_NearbyGraves">
+                  <defs>
+                    <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_Dunmer_AshlanderMummy</li>
+                    <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_Dunmer_BurialUrn</li>
+                    <li MayRequire="heis.edo.themed.expansion">HSHaka</li>
+                    <li>AR_SarcophagusA</li>
+                    <li>Sarcophagus</li>
+                    <li>Grave</li>
+                  </defs>
+                  <!-- <offsetPerBuilding>0.015</offsetPerBuilding> -->
+                  <radius>4</radius>
+                  <maxBuildings>40</maxBuildings>
+                  <focusPerFullGrave>0.02</focusPerFullGrave>
+                  <explanationKey>MeditationFocusPerGrave</explanationKey>
+                  <explanationKeyAbstract>MeditationFocusPerGraveAbstract</explanationKeyAbstract>
+                </li>
+              </offsets>
+            </li>
+            <li Class="CompProperties_Art">
+				<nameMaker>NamerArtSarcophagusPlate</nameMaker>
+				<descriptionMaker>ArtDescription_SarcophagusPlate</descriptionMaker>
+				<mustBeFullGrave>false</mustBeFullGrave>
+				<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+				<minQualityForArtistic>Awful</minQualityForArtistic>
+            </li>
+            <li Class="CompProperties_SpawnSubplant" MayRequire="biomesteam.oasis">
+              <compClass MayRequire="biomesteam.oasis">CompSpawnSubplantDuration</compClass>
+              <subplant MayRequire="biomesteam.oasis">BMT_Papyrus</subplant>
+              <maxRadius>6</maxRadius>
+              <subplantSpawnDays>1</subplantSpawnDays>
+              <minGrowthForSpawn>0</minGrowthForSpawn>
+              <initialGrowthRange>0.5~1</initialGrowthRange>
+              <canSpawnOverPlayerSownPlants>false</canSpawnOverPlayerSownPlants>
+              <plantsToNotOverwrite MayRequire="biomesteam.oasis">
+                <li MayRequire="Ludeon.RimWorld.Ideology">Plant_TreeGauranlen</li>
+                <li MayRequire="Ludeon.RimWorld.Ideology">Plant_PodGauranlen</li>
+                <li MayRequire="Ludeon.RimWorld.Royalty">Plant_GrassAnima</li>
+                <li MayRequire="Ludeon.RimWorld.Royalty">Plant_TreeAnima</li>
+                <li MayRequire="biomesteam.oasis">BMT_Papyrus</li>
+              </plantsToNotOverwrite>
+            </li>
+		</comps>
+	</ThingDef>
+
+  <ThingDef ParentName="ObeliskSAM_Jerry">
     <defName>AR_ObeliskMedium</defName>
     <label>medium Egyptian obelisk</label>
-    <description>A monolithic rectangular pillar that symbolizes a sun ray and with it divine law. Can't be placed under a roof.</description>
-    <thingClass>Building_Art</thingClass>
+    <description>A monolithic rectangular pillar that symbolizes a sun ray and with it divine law.</description>
+	<thingClass>Building_Art</thingClass>
     <graphicData>
       <graphicClass>Graphic_Multi</graphicClass>
       <texPath>Buildings/Art/EgyptObelisk/Medium</texPath>
-      <drawSize>(9,9)</drawSize>
+      <drawSize>(8,7)</drawSize>
     </graphicData>
+	<uiIconScale>0.33</uiIconScale>
     <dominantStyleCategory MayRequire="Sarg.AlphaMemes">AM_Kemetic</dominantStyleCategory>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <fillPercent>0.5</fillPercent>
@@ -79,7 +135,9 @@
       <Mass>25</Mass>
       <WorkToMake>60000</WorkToMake>
       <StyleDominance MayRequire="Sarg.AlphaMemes">250</StyleDominance>
+	  <MeditationFocusStrength>0.1</MeditationFocusStrength>
     </statBases>
+	<size>(1,1)</size>
     <coversFloor>true</coversFloor>
     <stuffCategories>
       <li>Stony</li>
@@ -92,31 +150,88 @@
       <li MayRequire="sarg.rimbees">RB_Waxy</li>
     </stuffCategories>
     <costStuffCount>300</costStuffCount>
-    <recipeMaker>
-      <researchPrerequisites>
+      <researchPrerequisites Inherit="False">
         <li>AR_Project_Oriental_Culture</li>
         <li MayRequire="VanillaExpanded.VFEArt">VFE_Res_Obelisk</li>
       </researchPrerequisites>
-    </recipeMaker>
+    <!-- <recipeMaker></recipeMaker> -->
     <building>
       <buildingTags>
         <li>RitualFocus</li>
       </buildingTags>
     </building>
-    <placeWorkers>
+    <placeWorkers Inherit="False">
       <li>PlaceWorker_RitualFocus</li>
-      <li>PlaceWorker_NotUnderRoof</li>
     </placeWorkers>
-    <tradeTags>
-      <li>Egypt</li>
-      <li>EgyptFurniture</li>
-    </tradeTags>
+	  <tradeTags>
+		<li>Egypt</li>
+		<li>EgyptFurniture</li>
+	  </tradeTags>
+	  <comps Inherit="False">
+            <li Class="CompProperties_MeditationFocus" Inherit="False">
+              <statDef>MeditationFocusStrength</statDef>
+              <focusTypes>
+                <li>Artistic</li>
+                <li>Morbid</li>
+                <li>Dignified</li>
+                <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerAncestralMeditation</li>
+				<li MayRequire="sirmashedpotato.escp.maormer">ESCP_MaormerSerpentMeditation</li>
+              </focusTypes>
+              <offsets>
+                <li Class="FocusStrengthOffset_GraveFull">
+                  <offset>0.1</offset>
+                </li>
+                <li Class="FocusStrengthOffset_GraveCorpseRelationship">
+                  <offset>1</offset>
+                </li>
+                <li Class="FocusStrengthOffset_NearbyGraves">
+                  <defs>
+                    <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_Dunmer_AshlanderMummy</li>
+                    <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_Dunmer_BurialUrn</li>
+                    <li MayRequire="heis.edo.themed.expansion">HSHaka</li>
+                    <li>AR_SarcophagusA</li>
+                    <li>Sarcophagus</li>
+                    <li>Grave</li>
+                  </defs>
+                  <!-- <offsetPerBuilding>0.015</offsetPerBuilding> -->
+                  <radius>6</radius>
+                  <maxBuildings>40</maxBuildings>
+                  <focusPerFullGrave>0.03</focusPerFullGrave>
+                  <explanationKey>MeditationFocusPerGrave</explanationKey>
+                  <explanationKeyAbstract>MeditationFocusPerGraveAbstract</explanationKeyAbstract>
+                </li>
+              </offsets>
+            </li>
+            <li Class="CompProperties_Art">
+				<nameMaker>NamerArtSarcophagusPlate</nameMaker>
+				<descriptionMaker>ArtDescription_SarcophagusPlate</descriptionMaker>
+				<mustBeFullGrave>false</mustBeFullGrave>
+				<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+				<minQualityForArtistic>Awful</minQualityForArtistic>
+            </li>
+            <li Class="CompProperties_SpawnSubplant" MayRequire="biomesteam.oasis">
+              <compClass MayRequire="biomesteam.oasis">CompSpawnSubplantDuration</compClass>
+              <subplant MayRequire="biomesteam.oasis">BMT_Papyrus</subplant>
+              <maxRadius>8</maxRadius>
+              <subplantSpawnDays>1</subplantSpawnDays>
+              <minGrowthForSpawn>0</minGrowthForSpawn>
+              <initialGrowthRange>0.5~1</initialGrowthRange>
+              <canSpawnOverPlayerSownPlants>false</canSpawnOverPlayerSownPlants>
+              <plantsToNotOverwrite MayRequire="biomesteam.oasis">
+                <li MayRequire="Ludeon.RimWorld.Ideology">Plant_TreeGauranlen</li>
+                <li MayRequire="Ludeon.RimWorld.Ideology">Plant_PodGauranlen</li>
+                <li MayRequire="Ludeon.RimWorld.Royalty">Plant_GrassAnima</li>
+                <li MayRequire="Ludeon.RimWorld.Royalty">Plant_TreeAnima</li>
+                <li MayRequire="biomesteam.oasis">BMT_Papyrus</li>
+              </plantsToNotOverwrite>
+            </li>
+	  </comps>
   </ThingDef>
-  <ThingDef ParentName="SculptureBase">
+  <ThingDef ParentName="ObeliskSAM_Jerry">
     <defName>AR_ObeliskBig</defName>
     <label>big Egyptian obelisk</label>
     <description>A monolithic rectangular pillar that symbolizes a sun ray and with it divine law. Can't be placed under a roof.</description>
-    <thingClass>Building_Art</thingClass>
+	<thingClass>Building_Art</thingClass>
     <graphicData>
       <graphicClass>Graphic_Multi</graphicClass>
       <texPath>Buildings/Art/EgyptObelisk/Big</texPath>
@@ -124,18 +239,20 @@
     </graphicData>
     <dominantStyleCategory MayRequire="Sarg.AlphaMemes">AM_Kemetic</dominantStyleCategory>
     <altitudeLayer>MoteOverhead</altitudeLayer>
-    <size>(2,2)</size>
+    <size>(1,2)</size>
     <fillPercent>1</fillPercent>
     <rotatable>true</rotatable>
     <canOverlapZones>false</canOverlapZones>
     <blockWind>true</blockWind>
     <coversFloor>true</coversFloor>
+	<uiIconScale>0.25</uiIconScale>
     <statBases>
       <MaxHitPoints>10000</MaxHitPoints>
       <Beauty>500</Beauty>
       <Mass>300</Mass>
       <WorkToMake>120000</WorkToMake>
-      <StyleDominance MayRequire="Sarg.AlphaMemes">1000</StyleDominance>
+      <StyleDominance MayRequire="Sarg.AlphaMemes">500</StyleDominance>
+	  <MeditationFocusStrength>0.2</MeditationFocusStrength>
     </statBases>
     <stuffCategories>
       <li>Stony</li>
@@ -146,25 +263,82 @@
       <li MayRequire="sarg.alphabiomes">AB_ExoticMetals</li>
     </stuffCategories>
     <costStuffCount>600</costStuffCount>
-    <recipeMaker>
-      <researchPrerequisites>
-        <li>AR_Project_Oriental_Culture</li>
-        <li MayRequire="VanillaExpanded.VFEArt">VFE_Res_Obelisk</li>
-      </researchPrerequisites>
-    </recipeMaker>
+    <researchPrerequisites>
+       <li>AR_Project_Oriental_Culture</li>
+       <li MayRequire="VanillaExpanded.VFEArt">VFE_Res_Obelisk</li>
+    </researchPrerequisites>
     <building>
       <buildingTags>
         <li>RitualFocus</li>
       </buildingTags>
     </building>
-    <placeWorkers>
+    <placeWorkers Inherit="False">
       <li>PlaceWorker_RitualFocus</li>
       <li>PlaceWorker_NotUnderRoof</li>
     </placeWorkers>
-    <tradeTags>
-      <li>Egypt</li>
-      <li>EgyptFurniture</li>
-      <li>EgyptFurnitureHuge</li>
-    </tradeTags>
+	  <tradeTags Inherit="False">
+		<li>Egypt</li>
+		<li>EgyptFurniture</li>
+		<li>EgyptFurnitureHuge</li>
+	  </tradeTags>
+	  <comps Inherit="False">
+            <li Class="CompProperties_MeditationFocus" Inherit="False">
+              <statDef>MeditationFocusStrength</statDef>
+              <focusTypes>
+                <li>Artistic</li>
+                <li>Morbid</li>
+                <li>Dignified</li>
+                <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_DunmerAncestralMeditation</li>
+				<li MayRequire="sirmashedpotato.escp.maormer">ESCP_MaormerSerpentMeditation</li>
+              </focusTypes>
+              <offsets>
+                <li Class="FocusStrengthOffset_GraveFull">
+                  <offset>0.2</offset>
+                </li>
+                <li Class="FocusStrengthOffset_GraveCorpseRelationship">
+                  <offset>1</offset>
+                </li>
+                <li Class="FocusStrengthOffset_NearbyGraves">
+                  <defs>
+                    <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_Dunmer_AshlanderMummy</li>
+                    <li MayRequire="sirmashedpotato.escp.dunmer">ESCP_Dunmer_BurialUrn</li>
+                    <li MayRequire="heis.edo.themed.expansion">HSHaka</li>
+                    <li>AR_SarcophagusA</li>
+                    <li>Sarcophagus</li>
+                    <li>Grave</li>
+                  </defs>
+                  <!-- <offsetPerBuilding>0.015</offsetPerBuilding> -->
+                  <radius>6</radius>
+                  <maxBuildings>40</maxBuildings>
+                  <focusPerFullGrave>0.05</focusPerFullGrave>
+                  <explanationKey>MeditationFocusPerGrave</explanationKey>
+                  <explanationKeyAbstract>MeditationFocusPerGraveAbstract</explanationKeyAbstract>
+                </li>
+              </offsets>
+            </li>
+            <li Class="CompProperties_Art">
+				<nameMaker>NamerArtSarcophagusPlate</nameMaker>
+				<descriptionMaker>ArtDescription_SarcophagusPlate</descriptionMaker>
+				<mustBeFullGrave>false</mustBeFullGrave>
+				<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+				<minQualityForArtistic>Awful</minQualityForArtistic>
+            </li>
+            <li Class="CompProperties_SpawnSubplant" MayRequire="biomesteam.oasis">
+              <compClass MayRequire="biomesteam.oasis">CompSpawnSubplantDuration</compClass>
+              <subplant MayRequire="biomesteam.oasis">BMT_Papyrus</subplant>
+              <maxRadius>8</maxRadius>
+              <subplantSpawnDays>1</subplantSpawnDays>
+              <minGrowthForSpawn>0</minGrowthForSpawn>
+              <initialGrowthRange>0.5~1</initialGrowthRange>
+              <canSpawnOverPlayerSownPlants>false</canSpawnOverPlayerSownPlants>
+              <plantsToNotOverwrite MayRequire="biomesteam.oasis">
+                <li MayRequire="Ludeon.RimWorld.Ideology">Plant_TreeGauranlen</li>
+                <li MayRequire="Ludeon.RimWorld.Ideology">Plant_PodGauranlen</li>
+                <li MayRequire="Ludeon.RimWorld.Royalty">Plant_GrassAnima</li>
+                <li MayRequire="Ludeon.RimWorld.Royalty">Plant_TreeAnima</li>
+                <li MayRequire="biomesteam.oasis">BMT_Papyrus</li>
+              </plantsToNotOverwrite>
+            </li>
+	  </comps>
   </ThingDef>
 </Defs>

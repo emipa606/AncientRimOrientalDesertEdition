@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!-- Aelanna's Model No-Match Detector and Insertion Code -->
-  <!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
-  <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ResearchProjectDef[defName="VFE_Res_Obelisk"]/tags</xpath>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ResearchProjectDef[defName="VFE_Res_Obelisk"]</xpath>
-      <success>Always</success>
-      <value>
-        <tags>
-        </tags>
-      </value>
-    </nomatch>
-  </Operation>
-  <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ResearchProjectDef[defName="FRX_PrimalObeliskResearch"]/tags</xpath>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ResearchProjectDef[defName="FRX_PrimalObeliskResearch"]</xpath>
-      <success>Always</success>
-      <value>
-        <tags>
-        </tags>
-      </value>
-    </nomatch>
-  </Operation>
-  <!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
-  <Operation Class="PatchOperationConditional">
-    <xpath>/Defs/ResearchProjectDef[defName="FRX_ObeliskAdvResearch"]/tags</xpath>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>/Defs/ResearchProjectDef[defName="FRX_ObeliskAdvResearch"]</xpath>
-      <success>Always</success>
-      <value>
-        <tags>
-        </tags>
-      </value>
-    </nomatch>
-  </Operation>
+	<!-- Aelanna's Model No-Match Detector and Insertion Code -->
+	<!-- Special thanks to Aelanna for straight-up saving me scores of headaches! -->
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ResearchProjectDef[defName="VFE_Res_Obelisk"]/tags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ResearchProjectDef[defName="VFE_Res_Obelisk"]</xpath>
+			<success>Always</success>
+			<value>
+				<tags></tags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ResearchProjectDef[defName="FRX_PrimalObeliskResearch"]/tags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ResearchProjectDef[defName="FRX_PrimalObeliskResearch"]</xpath>
+			<success>Always</success>
+			<value>
+				<tags></tags>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	<!-- Add comps field to Settlement WorldObjectDef if it doesn't exist -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ResearchProjectDef[defName="FRX_ObeliskAdvResearch"]/tags</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ResearchProjectDef[defName="FRX_ObeliskAdvResearch"]</xpath>
+			<success>Always</success>
+			<value>
+				<tags></tags>
+			</value>
+		</nomatch>
+	</Operation>
+
   <Operation Class="PatchOperationConditional">
     <!-- Does this exist? -->
     <xpath>/Defs/ResearchProjectDef[defName="VFE_Res_Obelisk"]</xpath>
@@ -46,7 +46,7 @@
       <success>Always</success>
       <xpath>/Defs/ResearchProjectDef[defName="VFE_Res_Obelisk"]/tags</xpath>
       <value>
-        <li>EgyptStart</li>
+          <li>EgyptStart</li>
       </value>
     </match>
     <!-- If the first XPATH does not exist, the original code stands. -->
@@ -59,7 +59,7 @@
       <success>Always</success>
       <xpath>/Defs/ResearchProjectDef[defName="FRX_PrimalObeliskResearch"]/tags</xpath>
       <value>
-        <li>EgyptStart</li>
+          <li>EgyptStart</li>
       </value>
     </match>
     <!-- If the first XPATH does not exist, the original code stands. -->
@@ -72,7 +72,7 @@
       <success>Always</success>
       <xpath>/Defs/ResearchProjectDef[defName="FRX_ObeliskAdvResearch"]/tags</xpath>
       <value>
-        <li>EgyptStart</li>
+          <li>EgyptStart</li>
       </value>
     </match>
     <!-- If the first XPATH does not exist, the original code stands. -->

@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationReplace" MayRequire="sovereign.kemet">
+		<xpath MayRequire="sovereign.kemet">Defs/ThingDef[defName = "GS_Sarcophagus"]/designationCategory</xpath>
+		<success>Always</success>
+		<value MayRequire="sovereign.kemet">
+			<designationCategory MayRequire="sovereign.kemet">Jerry</designationCategory>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace" MayRequire="sovereign.kemet">
+		<xpath MayRequire="sovereign.kemet">Defs/ThingDef[defName = "GSE_ObeliskBig"]/designationCategory</xpath>
+		<success>Always</success>
+		<value>
+			<designationCategory MayRequire="sovereign.kemet">Jerry</designationCategory>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace" MayRequire="sovereign.kemet">
+		<xpath MayRequire="sovereign.kemet">Defs/ThingDef[defName = "GS_SarcophagusB"]/designationCategory</xpath>
+		<success>Always</success>
+		<value MayRequire="sovereign.kemet">
+			<designationCategory MayRequire="sovereign.kemet">Jerry</designationCategory>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace" MayRequire="sovereign.kemet">
+		<xpath MayRequire="sovereign.kemet">Defs/ThingDef[defName = "GS_HieroglyphicWall"]/designationCategory</xpath>
+		<success>Always</success>
+		<value MayRequire="sovereign.kemet">
+			<designationCategory MayRequire="sovereign.kemet">Jerry</designationCategory>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace" MayRequire="sovereign.kemet">
+		<xpath MayRequire="sovereign.kemet">Defs/ThingDef[defName = "GS_SarcophagusB"]/designationCategory</xpath>
+		<success>Always</success>
+		<value MayRequire="sovereign.kemet">
+			<designationCategory MayRequire="sovereign.kemet">Jerry</designationCategory>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/TerrainDef[@Name="AM_KemeticTileStoneBase"]/designationCategory</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/TerrainDef[@Name="AM_KemeticTileStoneBase"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Jerry</designationCategory>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/TerrainDef[@Name="AM_KemeticTileStoneBase"]</xpath>
+			<value>
+				<designationCategory>Jerry</designationCategory>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/TerrainDef[@Name="AM_KemeticFineStoneTiles"]/designationCategory</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/TerrainDef[@Name="AM_KemeticFineStoneTiles"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Jerry</designationCategory>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/TerrainDef[@Name="AM_KemeticFineStoneTiles"]</xpath>
+			<value>
+				<designationCategory>Jerry</designationCategory>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/TerrainDef[@Name="AM_KemeticFineStoneTiles"]/designationCategory</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="AM_KemeticSlab_Medium"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Jerry</designationCategory>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="AM_KemeticSlab_Medium"]</xpath>
+			<value>
+				<designationCategory>Jerry</designationCategory>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="AM_KemeticSlab_Broad"]/designationCategory</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="AM_KemeticSlab_Broad"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Jerry</designationCategory>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="AM_KemeticSlab_Broad"]</xpath>
+			<value>
+				<designationCategory>Jerry</designationCategory>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="AM_Sphynx"]/designationCategory</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="AM_Sphynx"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Jerry</designationCategory>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="AM_Sphynx"]</xpath>
+			<value>
+				<designationCategory>Jerry</designationCategory>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="AM_GrandGate"]/designationCategory</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="AM_GrandGate"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Jerry</designationCategory>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="AM_GrandGate"]</xpath>
+			<value>
+				<designationCategory>Jerry</designationCategory>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="AM_FuturisticObelisk"]/designationCategory</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="AM_FuturisticObelisk"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Jerry</designationCategory>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="AM_FuturisticObelisk"]</xpath>
+			<value>
+				<designationCategory>Jerry</designationCategory>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="AM_FuturisticPyramid"]/designationCategory</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="AM_FuturisticPyramid"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Jerry</designationCategory>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="AM_FuturisticPyramid"]</xpath>
+			<value>
+				<designationCategory>Jerry</designationCategory>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="AM_FuturisticStele"]/designationCategory</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="AM_FuturisticStele"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Jerry</designationCategory>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="AM_FuturisticStele"]</xpath>
+			<value>
+				<designationCategory>Jerry</designationCategory>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="GS_Sarcophagus"]/designationCategory</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="GS_Sarcophagus"]/designationCategory</xpath>
+			<value>
+				<designationCategory>Jerry</designationCategory>
+			</value>
+		</match>
+		<!-- If it DOES NOT, add this instead. -->
+		<nomatch Class="PatchOperationAdd">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="GS_Sarcophagus"]</xpath>
+			<value>
+				<designationCategory>Jerry</designationCategory>
+			</value>
+		</nomatch>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationConditional">
+	<!-- Does this exist? -->
+		<xpath>/Defs/ThingDef[defName="GSE_ObeliskBig"]</xpath>
+		<!-- If it does, do this replacement. -->
+		<match Class="PatchOperationReplace">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="GSE_ObeliskBig"]</xpath>
+			<value>
+				<ThingDef Name="Obelisk" ParentName="ObeliskSAM_Jerry" Abstract="True">
+					<!--
+					<defName>GSE_ObeliskBig</defName>
+					<label>rectangular Egyptian obelisk</label>
+					<description>A monolithic rectangular pillar that has strange symbols on it.</description>
+					-->
+					<!--
+					<thingClass>Building_Art</thingClass>
+					<drawerType>MapMeshAndRealTime</drawerType>
+					-->
+					<!--
+					<graphicData>
+						<graphicClass>Graphic_Single</graphicClass>
+						<texPath>Things/Building/Obelisk/ObeliskBig</texPath>
+						<drawSize>(9,9)</drawSize>
+					</graphicData>
+					-->
+					<altitudeLayer>MoteOverhead</altitudeLayer>
+					<passability>Impassable</passability>
+					<pathCost>50</pathCost>
+					<blockWind>false</blockWind>
+					<fillPercent>0.5</fillPercent>
+					<size>(2,4)</size>
+					<statBases>
+						<MaxHitPoints>350</MaxHitPoints>
+						<Beauty>100</Beauty>
+						<Mass>80</Mass>
+						<WorkToMake>5000</WorkToMake>
+						<Flammability>0</Flammability>
+					</statBases>
+					<costStuffCount Inherit="False">80</costStuffCount>
+					<stuffCategories>
+						<li>Woody</li>
+						<li>Metallic</li>
+						<li>Stony</li>
+					</stuffCategories>
+					<rotatable>false</rotatable>
+					<canOverlapZones>false</canOverlapZones>
+					<!--<constructEffect>ConstructMetal</constructEffect>-->
+					<designationCategory>Jerry</designationCategory>
+					<researchPrerequisites Inherit="False">
+						<li>AR_Project_Oriental_Culture</li>
+						<li MayRequire="VanillaExpanded.VFEArt">VFE_Res_Obelisk</li>
+					</researchPrerequisites>
+				</ThingDef>
+				
+				<ThingDef ParentName="Obelisk">
+					<defName>GSE_ObeliskBig</defName>
+					<label>rectangular Egyptian obelisk</label>
+					<description>A monolithic rectangular pillar that has strange symbols on it.</description>
+					<thingClass>Building_Art</thingClass>
+					<drawerType>MapMeshAndRealTime</drawerType>
+					<graphicData>
+						<graphicClass>Graphic_Single</graphicClass>
+						<texPath>Things/Building/Obelisk/ObeliskBig</texPath>
+						<drawSize>(9,9)</drawSize>
+					</graphicData>
+					<altitudeLayer>MoteOverhead</altitudeLayer>
+					<passability>Impassable</passability>
+					<pathCost>50</pathCost>
+					<blockWind>false</blockWind>
+					<fillPercent>0.5</fillPercent>
+					<size>(2,4)</size>
+					<statBases>
+						<MaxHitPoints>350</MaxHitPoints>
+						<Beauty>100</Beauty>
+						<Mass>80</Mass>
+						<WorkToMake>5000</WorkToMake>
+						<Flammability>0</Flammability>
+					</statBases>
+					<costStuffCount Inherit="False">80</costStuffCount>
+					<stuffCategories>
+						<li>Woody</li>
+						<li>Metallic</li>
+						<li>Stony</li>
+					</stuffCategories>
+					<rotatable>false</rotatable>
+					<canOverlapZones>false</canOverlapZones>
+					<!--<constructEffect>ConstructMetal</constructEffect>-->
+					<designationCategory>Jerry</designationCategory>
+					<researchPrerequisites Inherit="False">
+						<li>AR_Project_Oriental_Culture</li>
+						<li MayRequire="VanillaExpanded.VFEArt">VFE_Res_Obelisk</li>
+					</researchPrerequisites>
+				</ThingDef>
+			</value>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. -->
+	</Operation>
+</Patch>

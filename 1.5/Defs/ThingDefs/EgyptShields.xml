@@ -7,6 +7,10 @@
         <li>FueledSmithy</li>
       </recipeUsers>
     </recipeMaker>
+	<tradeTags>
+		<li>EgyptShield</li>
+		<li>Egypt</li>
+	</tradeTags>
   </ThingDef>
   <!--0==============================0 General 0==============================0 -->
   <ThingDef ParentName="OrientShields">
@@ -84,7 +88,7 @@
         <rangedBlockChanceFactor>0.7</rangedBlockChanceFactor>
         <shieldTakeDamage>true</shieldTakeDamage>
         <shieldTakeDamageFactor>0.4</shieldTakeDamageFactor>
-        <canBeAutoDiscarded>true</canBeAutoDiscarded>
+        <canBeAutoDiscarded>false</canBeAutoDiscarded>
         <healthAutoDiscardThreshold>0.01</healthAutoDiscardThreshold>
         <useFatigue>true</useFatigue>
         <damageToFatigueFactor>0.005</damageToFatigueFactor>
